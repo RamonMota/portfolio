@@ -1,0 +1,20 @@
+.container-footer {
+    position: absolute;
+    bottom: 4vh;
+    left: 5vh;
+    ;
+
+    @media(max-width: 959px) {
+        left: 3vh;
+    };
+
+    a {
+        fill: black;
+        margin-right: 30px;
+        ;
+    }
+    svg {
+        width: 25px;
+        height: auto;
+    }
+}

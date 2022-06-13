@@ -12,7 +12,7 @@ export const Btntheme = styled.button`
   right: 4vh;
   background-color: inherit;
   border: none;
-  transition: 1.5s;
+  ;
   cursor: pointer;
   
     @media(max-width: 959px) {

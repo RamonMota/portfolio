@@ -1,0 +1,32 @@
+.container-header {
+    position: absolute;
+    top: 4vh;
+    right: 9vh;
+    margin: auto;
+    ;
+
+    @media(max-width: 959px) {
+      right: 8vh;
+    };
+
+    .btn-txt {
+        font: 300 20px 'Roboto',sans-serif;
+        text-decoration: none;
+        color: white;
+        margin-right: 3vh;
+
+        :hover {
+            color: #27EADC;
+        }
+    }
+
+    .btn {
+        font: 300 16px 'Roboto',sans-serif;
+        background-color: unset;
+        border: solid 1.5px white;
+        border-radius: 50px;
+        padding: 6px 26px;  
+        color: white;
+        margin-top: -4px;
+    }
+}
