@@ -1,0 +1,16 @@
+@import './color.scss';
+
+body {
+    background: $black;
+}
+
+.title-section {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: $white;
+}
+.subtitle-section {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 200;
+}

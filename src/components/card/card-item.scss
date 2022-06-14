@@ -1,0 +1,37 @@
+@import '../../assets/style/color.scss';
+
+.container-card {
+    width: 100%;
+    padding: 1.5rem;
+    min-height: 320px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    background: $black70;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: normal, overlay, normal;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.21), rgba(0, 0, 0, 0.21)), url(https://images.unsplash.com/photo-1557264337-e8a93017fe92?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80), #0000003b;
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            font-size: 13px;
+            border-radius: 50px;
+            border: 2px solid $white;
+            padding: 0.2rem 0.5rem;
+        }
+    }
+    span, h3 {
+        color: $white;
+    }
+}
+.me-2 {
+    margin-top: 0.5rem !important;
+  }

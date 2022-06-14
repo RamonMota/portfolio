@@ -1,39 +1,54 @@
+@import '../../assets/style/color.scss';
+
 .container-home {
-    img {
-        width: 70px;
-        height: auto;
-        display: block;
-        margin-bottom: 10px;
-        transition: 0.3s;
-    }
-    span {
-        font: 800 25px 'Roboto',sans-serif;
-        color: black;
-        ;
+    padding: 2rem;
+    .container-full-height {
+        
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
 
-        @media(max-width: 959px) {
-            margin-left: -3px;
-        };
+        .box-info {
+            margin-top: -3rem;
+            
+            img {
+                width: 70px;
+                height: auto;
+                display: block;
+                margin-bottom: 10px;
+                transition: 0.3s;
+            }
+            span {
+                font: 800 25px 'Roboto',sans-serif;
+                color: $white;
+                ;
+        
+                @media(max-width: 959px) {
+                    margin-left: -3px;
+                };
+            }
+            h1 {
+                font: 700 7.3vw 'Roboto',sans-serif;
+                color: $white;
+                margin: -15px 0 -15px -5px;
+                ;
+        
+                @media(max-width: 959px) {
+                    font: 700 12vw 'Roboto',sans-serif;
+                    margin: -2px 0 -2px -5px;
+                };
+            }
+            h2 {
+                font: 300 6vw 'Roboto',sans-serif;
+                color: $white;
+                margin-left: -6px;
+                ;
+        
+                @media(max-width: 959px) {
+                    font: 300 9vw 'Roboto',sans-serif;
+                };
+            }
+        }
     }
-    h1 {
-        font: 700 7.3vw 'Roboto',sans-serif;
-        color: black;
-        margin: -15px 0 -15px -5px;
-        ;
 
-        @media(max-width: 959px) {
-            font: 700 12vw 'Roboto',sans-serif;
-            margin: -2px 0 -2px -5px;
-        };
-    }
-    h2 {
-        font: 300 6vw 'Roboto',sans-serif;
-        color: black;
-        margin-left: -6px;
-        ;
-
-        @media(max-width: 959px) {
-            font: 300 9vw 'Roboto',sans-serif;
-        };
-    }
 }

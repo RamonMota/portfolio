@@ -1,3 +1,5 @@
+@import '../../assets/style/color.scss';
+
 .container-footer {
     position: absolute;
     bottom: 4vh;
@@ -9,7 +11,7 @@
     };
 
     a {
-        fill: black;
+        fill: $white;
         margin-right: 30px;
         ;
     }
