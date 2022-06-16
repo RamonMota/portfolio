@@ -7,6 +7,8 @@ import listaIcon from "../../assets/img/iconmoon/selection.json"
 import itsMe from '../../assets/img/I.png'
 import './home.scss'
 import { CardItem } from '../../components/card/card-item';
+import img from '../../assets/img/imgTest.jpg'
+import img2 from '../../assets/img/imgTest2.jpg'
 
 function Home() {
     const [height, setHeight] = useState(window.innerHeight);
@@ -39,8 +41,26 @@ function Home() {
            <div className=''>
                 <h2 className='title-section'>Case studies</h2>
                 <span className='subtitle-section'>Selected projects</span>
-                <div>
-                    <CardItem/>
+                <div className='container-cards'>
+                    <CardItem 
+                    uiux={true} 
+                    illustrator={true} 
+                    frontend={false} 
+                    new={true} 
+                    date={'2020'} 
+                    name={'Event sistem mi facilisis in elit'} 
+                    image={img2}
+                    router={'/'}/>
+
+                    <CardItem 
+                    uiux={true} 
+                    illustrator={true} 
+                    frontend={true} 
+                    new={false} 
+                    date={'2018 - Today'} 
+                    name={'E-commerce sebrae dolor sit amet consectetur adipiscing elitPP'} 
+                    image={img}
+                    router={'/'}/>
                 </div>
            </div>
         </div>

@@ -2,6 +2,19 @@
 
 body {
     background: $black;
+    &::-webkit-scrollbar-track{
+        border-radius: 10px;
+      background-color: #0000004d;
+      }
+  
+      &::-webkit-scrollbar{
+        width: 5px;
+      }
+  
+      &::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        background-color: $black20;
+      }
 }
 
 .title-section {
