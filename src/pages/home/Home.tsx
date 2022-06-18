@@ -9,24 +9,15 @@ import './home.scss'
 import { CardItem } from '../../components/card/card-item';
 import img from '../../assets/img/imgTest.jpg'
 import img2 from '../../assets/img/imgTest2.jpg'
+import { FooterSocial } from '../../components/footer-social/footer-social';
+import { useSizeScreen } from '../../hooks/height-screen';
 
 function Home() {
-    const [height, setHeight] = useState(window.innerHeight);
-    
-    const hundleHeight = window.innerHeight
-    const updateHeight = () => setHeight(window.innerHeight)
-
-    useEffect(() => {
-        window.addEventListener('resize', updateHeight)
-        return () => {
-            window.removeEventListener('resize', updateHeight)
-        }
-  
-    }, [hundleHeight]);
+    const screenSize = useSizeScreen()
 
     return (
         <div className='container-home' >
-           <div className='container-full-height' style={{height: height}}>
+           <div className='container-full-height' style={{height: screenSize.heightScreen}}>
                 <div className='box-info'>
                     <img src={itsMe} alt="it's Me!" />
                     <span>Hey, i’m</span>
@@ -63,6 +54,7 @@ function Home() {
                     router={'/'}/>
                 </div>
            </div>
+           <FooterSocial/>
         </div>
     )
 }

@@ -1,22 +1,6 @@
-@import '../../assets/style/color.scss';
-
-.container-footer {
-    position: absolute;
-    bottom: 4vh;
-    left: 5vh;
-    ;
-
-    @media(max-width: 959px) {
-        left: 3vh;
-    };
-
-    a {
-        fill: $white;
-        margin-right: 30px;
-        ;
-    }
-    svg {
-        width: 25px;
-        height: auto;
-    }
+.footer-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5rem 0;
 }

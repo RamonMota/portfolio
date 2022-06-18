@@ -1,4 +1,5 @@
 @import '../../assets/style/color.scss';
+@import '../../assets/style/media-query.scss';
 
 .container-home {
     padding: 2rem;
@@ -28,7 +29,7 @@
                 };
             }
             h1 {
-                font: 700 7.3vw 'Roboto',sans-serif;
+                font: 700 5rem 'Roboto',sans-serif;
                 color: $white;
                 margin: -15px 0 -15px -5px;
                 ;
@@ -39,7 +40,7 @@
                 };
             }
             h2 {
-                font: 300 6vw 'Roboto',sans-serif;
+                font: 300 4rem 'Roboto',sans-serif;
                 color: $white;
                 margin-left: -6px;
                 ;
@@ -53,8 +54,17 @@
     .container-cards {
         margin-top: 1rem;
         display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 1em;
+        
+        @include sm {
+            grid-template-columns: 1fr;
+        }
+        @include md {
+              grid-template-columns: 1fr 1fr;
+          }
+        @include lg {
+              grid-template-columns: 1fr 1fr 1fr;
+          }
     }
 
 }

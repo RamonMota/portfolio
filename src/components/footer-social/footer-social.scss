@@ -1,0 +1,27 @@
+@import '../../assets/style/color.scss';
+
+.container-footer {
+    position: absolute;
+    bottom: 4vh;
+    left: 5vh;
+    right: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    a {
+        fill: $white;
+        margin-right: 30px;
+        ;
+    }
+    svg {
+        width: 25px;
+        height: auto;
+    }
+
+    .btn-case {
+        color: $white;
+        margin-right: 0;
+        cursor: pointer;
+    }
+}
