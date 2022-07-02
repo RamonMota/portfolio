@@ -1,7 +1,9 @@
 import React from 'react'
 import './card-item.scss'
 import img from '../../assets/img/imgTest.jpg'
-import { Link } from 'react-router-dom'
+import { Link, Route, Switch } from 'react-router-dom'
+import {AnimatePresence, motion} from 'framer-motion/dist/framer-motion'
+import { TemplateCase } from '../../pages/cases/template-case'
 
 export default interface Icard {
   uiux : boolean
@@ -16,19 +18,24 @@ export default interface Icard {
 
 export const CardItem = (props: Icard) => {
   return (
-    <Link className='container-card' to={props.router} style={{backgroundImage: `url(` + props.image + `)`}}>
-        <header>
-            <div>
-                {props.uiux && <span className='me-2' >UI/UX</span>}
-                {props.illustrator &&<span className='me-2' >Illustrator</span>}
-                {props.frontend &&<span>front end</span>}
-            </div>
-            {props.new && <span>New</span>}
-        </header>
-        <main>
-            <span>{props.date}</span>
-            <h3>{props.name}</h3>
-        </main>
-    </Link>
+      <div className='page-card'>
+        <Link className='container-card' to={props.router} style={{backgroundImage: `url(` + props.image + `)`}}>
+            <header>
+                <div>
+                    {props.uiux && <span className='me-2' >UI/UX</span>}
+                    {props.illustrator &&<span className='me-2' >Illustrator</span>}
+                    {props.frontend &&<span>front end</span>}
+                </div>
+                {props.new && <span>New</span>}
+            </header>
+            <main>
+                <span>{props.date}</span>
+                <h3>{props.name}</h3>
+            </main>
+            <Switch>
+              <Route path="/case" exact component={TemplateCase}/>
+            </Switch>
+        </Link>
+      </div>
   )
 }

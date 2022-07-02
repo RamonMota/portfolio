@@ -6,6 +6,7 @@
     padding: 1.5rem;
     min-height: 320px;
     border-radius: 10px;
+   
 
     display: flex;
     flex-direction: column;
@@ -17,6 +18,16 @@
     background-size: cover;
     background-blend-mode: normal, overlay, normal;
     
+    &.expend {
+        position: fixed;
+        right: 0rem;
+        left: 0rem;
+        top: 5rem;
+        bottom: 5rem;
+        z-index: 999;
+        margin: auto;
+        max-width: 900px;
+    }
     header {
         display: flex;
         justify-content: space-between;

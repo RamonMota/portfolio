@@ -38,7 +38,7 @@ function Home() {
                     date={'2020'} 
                     name={'Event sistem mi facilisis in elit'} 
                     image={img2}
-                    router={'/'}/>
+                    router={'/case'}/>
 
                     <CardItem 
                     uiux={true} 

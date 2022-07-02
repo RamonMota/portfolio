@@ -3,6 +3,7 @@ import React from 'react'
 import './introdution.scss'
 
 export const Introdution = () => {
+    
   return (
     <div className='container-introdution'>
         <h1>
@@ -12,8 +13,8 @@ export const Introdution = () => {
             <span className="row">
                 <span></span>
             </span>
-            <span className="row">
-                <span>you love</span>
+            <span className="row mt">
+                <span>you <b>love</b></span>
             </span>
         </h1>
     </div>

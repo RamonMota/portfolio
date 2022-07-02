@@ -55,14 +55,12 @@
         margin-top: 1rem;
         display: grid;
         gap: 1em;
+        grid-template-columns: 1fr 1fr;
         
-        @include sm {
+        @include lt-sm {
             grid-template-columns: 1fr;
         }
-        @include md {
-              grid-template-columns: 1fr 1fr;
-          }
-        @include lg {
+        @include gt-md {
               grid-template-columns: 1fr 1fr 1fr;
           }
     }
