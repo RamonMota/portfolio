@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-export const Opening = styled.div`
+.container-introdution {
     background: black;
     z-index: 9;
     position: absolute;
@@ -15,7 +13,7 @@ export const Opening = styled.div`
         font-size: calc(1.8em + 6vw);
         text-align: left;
         font-family: sans-serif;
-        color: ${({theme}) => theme.text};
+        color: white;
         padding: 10vh 10vh 10vh 180px;
         font-weight: 400;
 
@@ -35,7 +33,7 @@ export const Opening = styled.div`
     
     .row span {
         display: block;
-        animation: frames 3s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+        // animation: frames 3s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
     }
     
     .row:nth-child(2) span {
@@ -57,6 +55,4 @@ export const Opening = styled.div`
     @keyframes switch {
         50%, 100% { content: attr(data-alt) }
     }
-
-`;      
-        
+}

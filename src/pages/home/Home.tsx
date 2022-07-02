@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TextLoop from "react-text-loop";
 
-import IcomoonReact, { iconList } from "icomoon-react"
-import listaIcon from "../../assets/img/iconmoon/selection.json"
-
 import itsMe from '../../assets/img/I.png'
 import './home.scss'
 import { CardItem } from '../../components/card/card-item';
