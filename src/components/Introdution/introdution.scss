@@ -1,9 +1,8 @@
-body {
-    overflow: hidden !important;
-}
+@import '../../assets/style/color.scss';
+
 
 .container-introdution {
-    background: black;
+    background: $black;
     z-index: 9;
     position: absolute;
     top: 0;
@@ -11,61 +10,18 @@ body {
     left: 0;
     right: 0;
     margin: auto;
-
-    align-items: center;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
 
-    h1 {
-        padding: 14px 4px 4px 4px;
+    h2 {
         font-size: 5rem;
-        text-align: left;
-        font-family: sans-serif;
         color: white;
-        padding: 10vh 10vh 10vh 180px;
         font-weight: 200;
 
-        @media(max-width: 959px) {
-            padding: 10vh 1rem;
-        };
-        b{
-            font-weight: 500;
+        &:last-child {
+            margin-top: -5px;
         }
-        .mt {
-            margin-top: -0.8rem !important;
-        }
-    }
-    
-    .row {
-        display: block;
-        overflow: hidden;
-    }
-    
-    .row + .row {
-        margin-top: 1px;
-    }
-    
-    .row span {
-        display: block;
-        animation: frames 3s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
-    }
-    
-    .row:nth-child(2) span {
-        animation-delay: .05s;
-    }
-    
-    
-    .row span:before {
-        content: attr(title);
-        animation: switch 0.5s steps(1) infinite;
-    }
-    
-    @keyframes frames {
-        0% { transform: translateY(120%) rotate(-5deg); }
-        20%, 80% { transform: translateY(0) rotate(0); }
-        100% { transform: translateY(-120%) rotate(5deg); }
-    }
-    
-    @keyframes switch {
-        50%, 100% { content: attr(data-alt) }
     }
 }
