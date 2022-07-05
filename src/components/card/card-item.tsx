@@ -1,8 +1,6 @@
 import React from 'react'
 import './card-item.scss'
-import img from '../../assets/img/imgTest.jpg'
 import { Link, Route, Switch } from 'react-router-dom'
-import {AnimatePresence, motion} from 'framer-motion/dist/framer-motion'
 import { TemplateCase } from '../../pages/cases/template-case'
 
 export default interface Icard {

@@ -6,18 +6,24 @@ import { Footer } from "./components/footer/footer";
 import "./App.scss";
 import Routers from "./Routers";
 import { Introdution } from "./components/Introdution/Introdution";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 
 function App() {
+  const [showIntrodution, SetShowIntrodution] = useState('')
+  useEffect(() => {
+    localStorage.setItem('showIntrodution', 'true');
+  }, []);
 
   return (
-    <>
-      <Introdution/>
+    <AnimatePresence>
+      {/* <Introdution/> */}
       <Header/>
       <main>
         <Routers />
       </main>
       <Footer/>
-    </>
+    </AnimatePresence>
   );
 }
 

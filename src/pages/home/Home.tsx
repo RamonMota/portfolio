@@ -38,7 +38,7 @@ function Home() {
                     date={'2020'} 
                     name={'Event sistem mi facilisis in elit'} 
                     image={img2}
-                    router={'/case'}/>
+                    router={'/betpix365'}/>
 
                     <CardItem 
                     uiux={true} 
@@ -48,7 +48,7 @@ function Home() {
                     date={'2018 - Today'} 
                     name={'E-commerce sebrae dolor sit amet consectetur adipiscing elitPP'} 
                     image={img}
-                    router={'/'}/>
+                    router={'/sebrae'}/>
                 </div>
            </div>
            <FooterSocial/>
