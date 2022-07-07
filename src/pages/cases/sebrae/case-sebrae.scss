@@ -1,6 +1,22 @@
 @import '../../../assets/style/color-and-fonts.scss';
 
+.container-iframe{ 
+    display: flex;
+    justify-content: center;
 
-.title-case {
-    color: $white
+    iframe {
+        width: 100%;
+        height: 500px;
+        border-radius: 0.7rem;
+        border: none;
+
+    }
+}
+.container-case {
+    margin-top: 10rem;
+    padding: 1rem;
+
+    h1 {
+        margin-bottom: 2rem;
+    }
 }
