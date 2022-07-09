@@ -10,7 +10,7 @@
 }
 
 body {
-    background: $black;
+    background: $black !important;
     &::-webkit-scrollbar-track{
         border-radius: 10px;
       background-color: #1414144d;
