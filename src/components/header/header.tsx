@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { DrawerContact } from '../drawer-contact/drawer-contact';
 import './header.scss';
 
 export const Header = () => {
@@ -10,8 +11,10 @@ export const Header = () => {
         <div>
           <a className='btn-txt' href={resume} target="_blank">resume</a>
           <a className='btn-txt' href="#">About me</a>
-          <a className='btn' href="#">Contact</a>
+          <a className='btn' href='/'>Contact</a>
+          <DrawerContact/>
         </div>
     </header>
   )
 }
+

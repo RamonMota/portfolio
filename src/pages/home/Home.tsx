@@ -11,7 +11,7 @@ import { useSizeScreen } from '../../hooks/height-screen';
 
 function Home() {
     const screenSize = useSizeScreen()
-
+    
     return (
         <div className='container-home' >
            <div className='container-full-height' style={{height: screenSize.heightScreen}}>
@@ -25,6 +25,7 @@ function Home() {
                         <h2>UI/UX Designer</h2>
                     </TextLoop>
                 </div>
+                <FooterSocial/>
            </div>
            <div className=''>
                 <h2 className='title-section'>Case studies</h2>
@@ -51,7 +52,6 @@ function Home() {
                     router={'/sebrae'}/>
                 </div>
            </div>
-           <FooterSocial/>
         </div>
     )
 }

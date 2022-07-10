@@ -9,6 +9,7 @@ import { Introdution } from "./components/Introdution/Introdution";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
+import {CustomTheme} from "./assets/theme/costumer-theme"
 
 function App() {
   const [showIntrodution, SetShowIntrodution] = useState('')
@@ -17,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={CustomTheme}>
       {/* <Introdution/> */}
       <Header/>
       <main>
