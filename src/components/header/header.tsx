@@ -11,7 +11,6 @@ export const Header = () => {
         <div>
           <a className='btn-txt' href={resume} target="_blank">resume</a>
           <a className='btn-txt' href="#">About me</a>
-          <a className='btn' href='/'>Contact</a>
           <DrawerContact/>
         </div>
     </header>

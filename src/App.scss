@@ -25,7 +25,9 @@ body {
         background-color: $black20;
       }
 }
-
+.chakra-slide {
+  transition: unset;
+}
 .title-section {
     font-weight: 700;
     font-size: $fontlg;
@@ -68,6 +70,7 @@ body {
   padding: 2px 15px;  
   color: $white;
   text-decoration: none;
+  cursor: pointer;
   margin-top: -4px;
 
   &:hover {

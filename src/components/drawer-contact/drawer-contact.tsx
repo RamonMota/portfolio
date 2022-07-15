@@ -1,24 +1,25 @@
 
-import React from 'react'
+import React, { useState } from 'react'
+import './drawer-contact.scss'
 import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Stack, Textarea, useDisclosure } from '@chakra-ui/react';
 
 export const DrawerContact = () => {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const [ size, setSize ] = useState('xs')
     
     return (
     <>
-      
-    <Button size='sm' variant='outline' onClick={onOpen}>
-        Contact
-    </Button>
+        <a className='btn' onClick={onOpen}>Contact</a>
         <Drawer
             isOpen={isOpen}
-            placement='top'
+            placement='right'
             onClose={onClose}
+            blockScrollOnMount={false}
+            size={size}
           >
             <DrawerOverlay />
-            <DrawerContent>
+            <DrawerContent className='drawer-contact'>
               <DrawerCloseButton />
               <DrawerHeader borderBottomWidth='1px'>
                 Create a new account
