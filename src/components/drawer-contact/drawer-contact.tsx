@@ -21,8 +21,9 @@ export const DrawerContact = () => {
             <DrawerOverlay />
             <DrawerContent className='drawer-contact'>
               <DrawerCloseButton />
-              <DrawerHeader borderBottomWidth='1px'>
-                Create a new account
+              <DrawerHeader>
+                <label className='subtitle-section'>Ok, now</label>
+                <h2 className='title-section '>What do you want?</h2>
               </DrawerHeader>
     
               <DrawerBody>

@@ -6,4 +6,17 @@
     top: 2rem !important;
     bottom: 2rem !important;
     border-radius: 10px;
+
+    header {
+        .title-section{
+            font-size: $fontlg;
+            color: $black;
+            margin-top: -8px;
+        } 
+        .subtitle-section {
+            font-size: $fontmd;
+            color: $black;
+            font-weight: 400;
+        }
+    }
 }
