@@ -12,7 +12,7 @@ export const DrawerContact = () => {
     <>
       <a className='btn' onClick={onOpen}>Contact</a>
       <Drawer
-        isOpen={isOpen}
+        isOpen={true}
         placement='right'
         onClose={onClose}
         blockScrollOnMount={false}
@@ -61,12 +61,15 @@ export const DrawerContact = () => {
           </DrawerBody>
 
           <DrawerFooter borderTopWidth='1px'>
-            <Button colorScheme='blue'>Submit</Button>
+            <Button 
+            isLoading={false} 
+            loadingText='Submitting'
+            colorScheme='gray'
+            width='100%'
+            borderRadius='5px'>Submit</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
-
     </>
   )
 }
-

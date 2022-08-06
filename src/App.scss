@@ -50,6 +50,12 @@ body {
       color: $black20;
   }
 }
+.btn-full {
+  background: $black70;
+  border: 1px splid $black70;
+  color: $white;
+  width: 100%;
+}
 .btn {
   font-size: $fontsm;
   font-weight: 400;
