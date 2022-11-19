@@ -5,9 +5,9 @@ import itsMe from '../../assets/img/I.png'
 import './home.scss'
 import { CardItem } from '../../components/card/card-item';
 import img from '../../assets/img/imgTest.jpg'
-import img2 from '../../assets/img/imgTest2.jpg'
 import { FooterSocial } from '../../components/footer-social/footer-social';
 import { useSizeScreen } from '../../hooks/height-screen';
+import { Paths } from '../../config/paths/path';
 
 function Home() {
     const screenSize = useSizeScreen()
@@ -34,22 +34,12 @@ function Home() {
                     <CardItem 
                     uiux={true} 
                     illustrator={true} 
-                    frontend={false} 
-                    new={true} 
-                    date={'2020'} 
-                    name={'Event sistem mi facilisis in elit'} 
-                    image={img2}
-                    router={'/betpix365'}/>
-
-                    <CardItem 
-                    uiux={true} 
-                    illustrator={true} 
                     frontend={true} 
                     new={false} 
                     date={'2018 - Today'} 
                     name={'E-commerce sebrae dolor sit amet consectetur adipiscing elitPP'} 
                     image={img}
-                    router={'/sebrae'}/>
+                    router={Paths.CASES_WELCOME_VAIDEBET}/>
                 </div>
            </div>
         </div>

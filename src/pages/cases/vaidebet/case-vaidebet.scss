@@ -14,9 +14,16 @@
 }
 .container-case {
     margin-top: 10rem;
-    padding: 2rem;
 
     h1 {
         margin-bottom: 2rem;
     }
+}
+
+.chakra-modal__content {
+    transition: 0.1s !important;
+}
+.scroll-content {
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
 }

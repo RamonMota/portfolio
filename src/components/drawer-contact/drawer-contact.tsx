@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
 import './drawer-contact.scss'
-import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Stack, Textarea, useDisclosure } from '@chakra-ui/react';
+import { Box, Button, Drawer, Text, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Stack, Textarea, useDisclosure } from '@chakra-ui/react';
 
 export const DrawerContact = () => {
 
@@ -12,22 +12,23 @@ export const DrawerContact = () => {
     <>
       <a className='btn' onClick={onOpen}>Contact</a>
       <Drawer
-        isOpen={true}
+        isOpen={isOpen}
         placement='right'
         onClose={onClose}
         blockScrollOnMount={false}
         size={size}
+
       >
         <DrawerOverlay />
         <DrawerContent className='drawer-contact'>
           <DrawerCloseButton />
           <DrawerHeader>
-            <label className='subtitle-section'>Ok, now</label>
-            <h2 className='title-section '>What do you want?</h2>
+            <Text fontWeight='400' fontSize='md' color='lightGreen'>Ok, now</Text>
+            <Text mt={-2} fontSize='lg' color='lightGreen'>What do you want?</Text>
           </DrawerHeader>
 
           <DrawerBody>
-            <Stack spacing='24px'>
+            <Stack spacing='15px'>
 
               <Box>
                 <label className='label-input' htmlFor='owner'>What about</label>
@@ -60,13 +61,11 @@ export const DrawerContact = () => {
             </Stack>
           </DrawerBody>
 
-          <DrawerFooter borderTopWidth='1px'>
-            <Button 
-            isLoading={false} 
-            loadingText='Submitting'
-            colorScheme='gray'
-            width='100%'
-            borderRadius='5px'>Submit</Button>
+          <DrawerFooter>
+            <Button
+              isLoading={false}
+              loadingText='Submitting'
+              width='100%'>Submit</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

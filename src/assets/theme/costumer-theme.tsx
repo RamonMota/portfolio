@@ -4,23 +4,33 @@ import { StyleFunctionProps } from '@chakra-ui/theme-tools'
 
 
 export const CustomTheme = extendTheme({
-  components: {
-    Button: {
-        // 1. We can update the base styles
-        baseStyle: {
-            fontWeight: '400', // Normally, it is "semibold"
-            padding: '2px 15px',
-            border: '1.5px solid',
-            borderRadius: '50px'
-        },
-        // 2. We can add a new button size or extend existing
-        sizes: {
-            xl: {
-            h: '56px',
-            fontSize: 'lg',
-            px: '32px',
-            },
-        },
-    },
+  colors: {
+    black: '#1a202c',
+    white: '#f31717',
+    lightGreen: '#4fd1c5'
+
   },
+  fontSizes: {
+    sm: '0.85rem',
+    md: '1rem',
+    lg: '1.8rem',
+  },
+  // components: {
+  //   Button: {
+  //     baseStyle: {
+  //       fontWeight: '400',
+  //       padding: '2px 15px',
+  //       border: '1.5px solid',
+  //       borderRadius: '50px',
+  //     },
+      
+  //     sizes: {
+  //       xl: {
+  //         h: '56px',
+  //         fontSize: 'lg',
+  //         px: '32px',
+  //       },
+  //     },
+  //   },
+  // }
 })

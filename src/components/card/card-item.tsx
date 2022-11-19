@@ -1,7 +1,6 @@
 import React from 'react'
 import './card-item.scss'
 import { Link, Route, Switch } from 'react-router-dom'
-import { TemplateCase } from '../../pages/cases/template-case'
 
 export default interface Icard {
   uiux : boolean
@@ -30,9 +29,6 @@ export const CardItem = (props: Icard) => {
                 <span>{props.date}</span>
                 <h3>{props.name}</h3>
             </main>
-            <Switch>
-              <Route path="/case" exact component={TemplateCase}/>
-            </Switch>
         </Link>
       </div>
   )

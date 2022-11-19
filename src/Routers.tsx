@@ -1,17 +1,15 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import { CaseSebrae } from "./pages/cases/sebrae/case-sebrae";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Paths } from "./config/paths/path";
+import { CaseWelcomeVaidebet } from "./pages/cases/vaidebet/case-vaidebet";
 
 import Home from './pages/home/Home';
 
-function Router() {
+export const Routers = () => {
     return(
-        <BrowserRouter>
-            <Route path="/" exact component={Home}/>
-            <Route path="/sebrae" exact component={CaseSebrae}/>
-            <Route path="/betpix365" exact component={Home}/>
-        </BrowserRouter>
+        <>
+            <Route path={Paths.CASES_WELCOME_VAIDEBET} component={CaseWelcomeVaidebet}/>
+            <Route path={Paths.HOME} component={Home}/>
+        </>
     ) 
 }
-
-export default Router;

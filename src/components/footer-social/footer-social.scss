@@ -8,12 +8,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
+    .icon-footer {
+        font-size: 1.5rem
+    }
+
     a {
         fill: $white;
         margin-right: 30px;
         ;
     }
+
     svg {
         width: 25px;
         height: auto;
