@@ -9,7 +9,7 @@ import { FooterSocial } from '../../components/footer-social/footer-social';
 import { useSizeScreen } from '../../hooks/height-screen';
 import { Paths } from '../../config/paths/path';
 
-function Home() {
+export const Home = () => {
     const screenSize = useSizeScreen()
     
     return (
@@ -36,7 +36,7 @@ function Home() {
                     illustrator={true} 
                     frontend={true} 
                     new={false} 
-                    date={'2018 - Today'} 
+                    date={'2002'} 
                     name={'E-commerce sebrae dolor sit amet consectetur adipiscing elitPP'} 
                     image={img}
                     router={Paths.CASES_WELCOME_VAIDEBET}/>
@@ -45,5 +45,3 @@ function Home() {
         </div>
     )
 }
-
-export default Home;

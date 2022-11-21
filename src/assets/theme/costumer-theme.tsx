@@ -1,12 +1,10 @@
 // theme.ts (tsx file with usage of StyleFunctions, see 4.)
 import { extendTheme } from '@chakra-ui/react'
-import { StyleFunctionProps } from '@chakra-ui/theme-tools'
-
 
 export const CustomTheme = extendTheme({
   colors: {
     black: '#1a202c',
-    white: '#f31717',
+    white: '#fff',
     lightGreen: '#4fd1c5'
 
   },

@@ -2,40 +2,43 @@
 @import '../src/assets/style/color-and-fonts.scss';
 
 * {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: 0.3s;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
 }
 
 body {
-    &::-webkit-scrollbar-track{
-        border-radius: 10px;
-      background-color: #1414144d;
-      }
-  
-      &::-webkit-scrollbar{
-        width: 5px;
-      }
-  
-      &::-webkit-scrollbar-thumb{
-        border-radius: 10px;
-        background-color: $black20;
-      }
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #1414144d;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $black20;
+  }
 }
+
 .chakra-slide {
   transition: unset;
 }
+
 .title-section {
-    font-weight: 700;
-    font-size: $fontxl;
-    color: $white;
+  font-weight: 700;
+  font-size: $fontxl;
+  color: $white;
 }
+
 .subtitle-section {
-    color: white;
-    font-size: 1.3rem;
-    font-weight: 200;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 200;
 }
 
 .btn-txt {
@@ -46,30 +49,32 @@ body {
   margin-right: 3vh;
 
   &:hover {
-      color: $black20;
+    color: $black20;
   }
 }
+
 .btn-full {
   background: $black70;
   border: 1px splid $black70;
   color: $white;
   width: 100%;
 }
+
 .btn {
   font-size: $fontsm;
   font-weight: 400;
   background-color: unset;
   border: solid 1.5px $white;
   border-radius: 50px;
-  padding: 2px 15px;  
+  padding: 2px 15px;
   color: $white;
   text-decoration: none;
   cursor: pointer;
   margin-top: -4px;
 
   &:hover {
-      background: $white;
-      color: $black;
+    background: $white;
+    color: $black;
   }
 }
 
