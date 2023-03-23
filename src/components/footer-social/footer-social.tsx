@@ -1,34 +1,39 @@
-import React from 'react'
-
-import IcomoonReact from 'icomoon-react';
-import listaIcon from "../../assets/img/iconmoon/selection.json"
+import { useSizeScreen } from '../../hooks/height-screen';
+import { Box, Button, Flex } from '@chakra-ui/react';
 
 import './footer-social.scss';
-import { useSizeScreen } from '../../hooks/height-screen';
 
 export const FooterSocial = () => {
 
-  const screenSize = useSizeScreen()
-
-  const goToCases = () => window.scrollTo({ top: screenSize.heightScreen, behavior: 'smooth' })
+  const social = [
+    {
+      icon: 'icon-linkedin',
+      link: 'https://www.linkedin.com/in/ramon-mota-3b4b9413a/'
+    },
+    {
+      icon: 'icon-Instagram',
+      link: 'https://www.instagram.com/ramon_mota117/'
+    },
+    {
+      icon: 'icon-Dribble',
+      link: 'https://dribbble.com/ramonmota'
+    },
+  ]
 
   return (
-    <footer className='container-footer'>
-      <div>
-        <a target="_blank" href="https://www.linkedin.com/in/ramon-mota-3b4b9413a/">
-          <i className='icon-footer icon-linkedin' />
-        </a>
-        <a target="_blank" href="#">
-          <i className='icon-footer icon-Facebook' />
-        </a>
-        <a target="_blank" href="https://www.instagram.com/ramon_mota117/">
-          <i className='icon-footer icon-Instagram' />
-        </a>
-        <a target="_blank" href="https://dribbble.com/ramonmota">
-          <i className='icon-footer icon-Dribble' />
-        </a>
-      </div>
-      {screenSize.widthScreen > 600 && <a onClick={goToCases} className='btn-case'>Cases</a>}
-    </footer>
+    <Flex as='footer' gap={2} position='absolute' bottom='-5' left='-3' right='0'>
+      {social.map((social, i) => (
+        <Button key={i}
+          as='a'
+          p={0}
+          bg='none !important'
+          color='#fff'
+          target='_blank'
+          fontSize={22}
+          fontWeight={0}
+          className={social.icon}
+          href={social.link} />
+      ))}
+    </Flex >
   )
 }

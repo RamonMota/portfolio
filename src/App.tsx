@@ -21,8 +21,8 @@ function App() {
   return (
     <BrowserRouter>
       <ChakraProvider theme={CustomTheme}>
-        <ModalIntroduction />
-        <Header />
+        {/* <ModalIntroduction /> */}
+        {/* <Header /> */}
         <main>
           <Routers />
         </main>

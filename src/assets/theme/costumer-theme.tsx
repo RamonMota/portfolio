@@ -2,10 +2,17 @@
 import { extendTheme } from '@chakra-ui/react'
 
 export const CustomTheme = extendTheme({
+  styles: {
+    global: () => ({
+      body: {
+        bg: "#0f0e15",
+      },
+    }),
+  },
   colors: {
-    black: '#1a202c',
+    black: 'red',
     white: '#fff',
-    lightGreen: '#4fd1c5'
+    lightGreen: '#4fd1c5',
 
   },
   fontSizes: {
@@ -13,22 +20,11 @@ export const CustomTheme = extendTheme({
     md: '1rem',
     lg: '1.8rem',
   },
-  // components: {
-  //   Button: {
-  //     baseStyle: {
-  //       fontWeight: '400',
-  //       padding: '2px 15px',
-  //       border: '1.5px solid',
-  //       borderRadius: '50px',
-  //     },
-      
-  //     sizes: {
-  //       xl: {
-  //         h: '56px',
-  //         fontSize: 'lg',
-  //         px: '32px',
-  //       },
-  //     },
-  //   },
-  // }
+  
+  fontWeight: {
+    light: '300',
+    regular: '400',
+    bold: '600',
+
+  }
 })

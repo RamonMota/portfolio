@@ -1,5 +1,5 @@
 import { Box, Button, Container, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory, useLocation } from 'react-router'
 import { Link } from 'react-router-dom'
 import { Paths } from '../../../config/paths/path'
@@ -10,26 +10,36 @@ import './case-vaidebet.scss'
 export const CaseWelcomeVaidebet = () => {
   const screenSize = useSizeScreen()
   const actualpath = useLocation().pathname;
+  const [isOpenModal, setIsOpenModal] = useState(false)
 
   let history = useHistory();
 
   function CloseModal() {
-    history.push(Paths.HOME);
+    setIsOpenModal(false)
+    setTimeout(() => {
+      history.push(Paths.HOME);
+    }, 300)
   }
+
+  useEffect(() => {
+    if (actualpath === Paths.CASES_WELCOME_VAIDEBET) {
+      setIsOpenModal(true)
+    }
+  }, [])
 
   return (
     <Modal
       isCentered
       onClose={CloseModal}
       size='full'
-      isOpen={actualpath === Paths.CASES_WELCOME_VAIDEBET}
+      isOpen={isOpenModal}
       motionPreset='slideInBottom'
     >
       <ModalOverlay bg='blackAlpha.300' backdropFilter='blur(10px)' />
-      <ModalContent mt={8} mx={{ base: 4, md: 8 }} mb={0} borderTopRadius='0.375rem' borderBottomRadius='0'>
-        <ModalHeader px='16px' py='10px'>Modal Title</ModalHeader>
+      <ModalContent h='100dvh' className='content-modal-case' mt={8} mx={{ base: 4, md: 8 }} mb={0} borderTopRadius='1rem' borderBottomRadius='0'>
+        <ModalHeader fontSize='sm' fontWeight='light' px='1rem' py='.85rem'>E-commerce Sebrae</ModalHeader>
         <ModalCloseButton />
-        <ModalBody px='16px' py='5px'>
+        <ModalBody px='1rem' py='.85rem'>
           <Container className='scroll-content' maxW='xl' p='0'>
             <span className='subtitle-section'>2018 - Today</span>
             <h1 className='title-section'>E-commerce Sebrae</h1>

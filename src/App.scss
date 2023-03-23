@@ -6,10 +6,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 0.3s;
+  // transition: 0.3s;
 }
 
 body {
+  height: 100dvh;
+
   &::-webkit-scrollbar-track {
     border-radius: 10px;
     background-color: #1414144d;
