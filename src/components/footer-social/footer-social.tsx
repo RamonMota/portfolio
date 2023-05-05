@@ -18,17 +18,21 @@ export const FooterSocial = () => {
       icon: 'icon-Dribble',
       link: 'https://dribbble.com/ramonmota'
     },
+    {
+      icon: 'icon-github',
+      link: 'https://github.com/ramonmota'
+    },
   ]
 
   return (
-    <Flex as='footer' gap={2} position='absolute' bottom='-5' left='-3' right='0'>
+    <Flex as='footer' gap={2} marginTop={{ base: '3rem', lg: '5rem' }} marginLeft={'-.5rem'}>
       {social.map((social, i) => (
         <Button key={i}
           as='a'
           p={0}
           bg='none !important'
           color='#fff'
-          target='_blank'
+          target='blank'
           fontSize={22}
           fontWeight={0}
           className={social.icon}

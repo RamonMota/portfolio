@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './drawer-contact.scss'
 import { Box, Button, Drawer, Text, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Stack, Textarea, useDisclosure } from '@chakra-ui/react';
 
@@ -7,32 +7,57 @@ export const DrawerContact = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [size, setSize] = useState('xs')
+  const [isSending, setIsSending] = useState(false)
+  const firstField = useRef<HTMLInputElement>(null);
+
+
+  const IMG_SAND = 'https://lottiefiles.com/63315-mail-send'
+
+  useEffect(() => {
+    if (isSending) {
+      setTimeout(() => {
+        setIsSending(!isSending)
+      }, 1000)
+    }
+  }, [isSending])
 
   return (
     <>
-      <a className='btn' onClick={onOpen}>Contact</a>
+      <a className='btn-sm' onClick={onOpen}>Contact</a>
       <Drawer
         isOpen={isOpen}
         placement='right'
+        initialFocusRef={firstField}
         onClose={onClose}
-        blockScrollOnMount={false}
         size={size}
 
       >
         <DrawerOverlay />
-        <DrawerContent className='drawer-contact'>
-          <DrawerCloseButton />
+        <DrawerContent bg={'#2d3748'} className='drawer-contact'>
+          <DrawerCloseButton color='white'/>
           <DrawerHeader>
-            <Text fontWeight='400' fontSize='md' color='lightGreen'>Ok, now</Text>
-            <Text mt={-2} fontSize='lg' color='lightGreen'>What do you want?</Text>
+            <Text fontWeight='400' fontSize='md' color='white'>Ok, now</Text>
+            <Text mt={-2} fontSize='lg' color='white'>What do you want?</Text>
           </DrawerHeader>
 
           <DrawerBody>
             <Stack spacing='15px'>
-
               <Box>
-                <label className='label-input' htmlFor='owner'>What about</label>
-                <Select id='owner' defaultValue='segun'>
+                <FormLabel color='white'  fontWeight={300} fontSize={14} >Name</FormLabel>
+                <Input
+                  ref={firstField}
+                  id='username'
+                  placeholder='Please enter your name'
+                  color='white'
+                  _placeholder={{ opacity: .4, color: 'white' }}
+                />
+              </Box>
+              <Box>
+                <FormLabel color='white'  fontWeight={300} fontSize={14} >What about</FormLabel>
+                <Select
+                  color='white'
+                  id='owner'
+                  defaultValue='segun'>
                   <option value='segun'>-</option>
                   <option value='kola'>Kola Tioluwani</option>
                   <option value='kola'>Kola Tioluwani</option>
@@ -40,32 +65,35 @@ export const DrawerContact = () => {
               </Box>
 
               <Box>
-                <label className='label-input' htmlFor='username'>Your name</label>
-                <Input
-                  id='username'
-                  placeholder='Please enter your name'
-                />
-              </Box>
-              <Box>
-                <label className='label-input' htmlFor='username'>Your e-mail</label>
+                <FormLabel color='white'  fontWeight={300} fontSize={14} >E-mail</FormLabel>
                 <Input
                   id='username'
                   placeholder='Please enter your e-mail'
+                  color='white'
+                  _placeholder={{ opacity: .4, color: 'white' }}
                 />
               </Box>
 
               <Box>
-                <label className='label-input' htmlFor='desc'>Tell me more</label>
-                <Textarea placeholder='What is your interest?' id='desc' />
+                <FormLabel color='white'  fontWeight={300} fontSize={14} >Tell about</FormLabel>
+                <Textarea
+                  placeholder='What is your interest?'
+                  color='white'
+                  _placeholder={{ opacity: .4, color: 'white' }}
+                  id='desc' />
               </Box>
             </Stack>
           </DrawerBody>
 
           <DrawerFooter>
             <Button
-              isLoading={false}
+              bg={'#fff !important'}
+              color='#000 !important'
+              mx={'auto'}
               loadingText='Submitting'
-              width='100%'>Submit</Button>
+              onClick={() => setIsSending(!isSending)}
+              isLoading={isSending}
+              width={'100%'}>Submit</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

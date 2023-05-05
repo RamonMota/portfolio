@@ -32,27 +32,27 @@
             }
 
             h1 {
-                font: 700 5rem 'Roboto', sans-serif;
+                font: 700 3rem 'Roboto', sans-serif;
                 color: $white;
-                margin: -15px 0 -15px -5px;
+                margin: -2px 0 -2px -5px;
                 ;
-
-                @media(max-width: 959px) {
-                    font: 700 12vw 'Roboto', sans-serif;
-                    margin: -2px 0 -2px -5px;
+                
+                @media(min-width: 62em) {
+                    font: 700 5rem 'Roboto', sans-serif;
+                    margin: -15px 0 -15px -5px;
                 }
 
                 ;
             }
 
             h2 {
-                font: 300 4rem 'Roboto', sans-serif;
+                font: 300 2rem 'Roboto', sans-serif;
                 color: $white;
                 margin-left: -6px;
                 ;
-
-                @media(max-width: 959px) {
-                    font: 300 9vw 'Roboto', sans-serif;
+                
+                @media(min-width: 62em) {
+                    font: 300 4rem 'Roboto', sans-serif;
                 }
 
                 ;

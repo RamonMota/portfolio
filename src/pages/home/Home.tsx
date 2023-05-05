@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import TextLoop from "react-text-loop";
+// import TextLoop from "react-text-loop";
 
 import itsMe from '../../assets/img/i.png'
 import './home.scss'
@@ -8,41 +8,28 @@ import img from '../../assets/img/imgTest.jpg'
 import { FooterSocial } from '../../components/footer-social/footer-social';
 import { useSizeScreen } from '../../hooks/height-screen';
 import { Paths } from '../../config/paths/path';
-import { Box, Button } from '@chakra-ui/react';
+import { Box, Button, Image, Text } from '@chakra-ui/react';
+import { SkillList } from '../../components/skill-list/skill-list';
+import { useMoveScrollWindowsDown } from '../../hooks/move-scroll';
 
 export const Home = () => {
 
-    const [opacity, setOpacity] = useState(1);
     const screenSize = useSizeScreen()
     const goToCases = () => window.scrollTo({ top: screenSize.heightScreen, behavior: 'smooth' })
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const distanceFromTop = window.pageYOffset || document.documentElement.scrollTop;
-            const newOpacity = distanceFromTop > 150 ? 0 : 1 - (distanceFromTop / 150);
-
-            setOpacity(newOpacity);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    const opacityCase = useMoveScrollWindowsDown(150)
+    const opacityContent = useMoveScrollWindowsDown(300)
 
     return (
         <div className='container-home' >
             <Box className='container-full-height' p='1rem' h='100vh' w='100%' position='relative'>
-                <Box className='box-info' position='relative' pb='12'>
-                    <img src={itsMe} alt="it's Me!" />
-                    <span>Hey, i’m</span>
-                    <h1>Ramon Mota</h1>
-                    <TextLoop springConfig={{ stiffness: 180, damping: 12 }}>
-                        <h2>Front End Developer</h2>
-                        <h2>Illustrator</h2>
-                        <h2>UI/UX Designer</h2>
-                    </TextLoop>
+                <Box opacity={opacityContent} className='box-info' position='relative' pb='12'>
+                    <Image src={itsMe} alt="it's Me!" />
+                    <Text as='span' >Hey, i’m</Text>
+                    <Text as='h1' >Ramon Mota</Text>
+                    <Box mb='1rem'>
+                        <SkillList />
+                    </Box>
                     <FooterSocial />
                 </Box>
                 <Button bg='none !important'
@@ -53,8 +40,8 @@ export const Home = () => {
                     bottom='1rem'
                     right='1rem'
                     onClick={goToCases}
-                    opacity={opacity}
-                    display={opacity === 0 ? 'none' : ''}
+                    opacity={opacityCase}
+                    display={opacityCase === 0 ? 'none' : ''}
                 >Cases</Button>
             </Box>
             <Box p='1rem' w='100%'>

@@ -22,7 +22,7 @@ function App() {
     <BrowserRouter>
       <ChakraProvider theme={CustomTheme}>
         {/* <ModalIntroduction /> */}
-        {/* <Header /> */}
+        <Header />
         <main>
           <Routers />
         </main>
