@@ -1,17 +1,13 @@
 
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './drawer-contact.scss'
-import { Box, Button, Drawer, Text, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Stack, Textarea, useDisclosure } from '@chakra-ui/react';
+import { Box, Button, Drawer, Text, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, FormLabel, Input, Select, Stack, Textarea, useDisclosure } from '@chakra-ui/react';
 
 export const DrawerContact = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const [size, setSize] = useState('xs')
   const [isSending, setIsSending] = useState(false)
   const firstField = useRef<HTMLInputElement>(null);
-
-
-  const IMG_SAND = 'https://lottiefiles.com/63315-mail-send'
 
   useEffect(() => {
     if (isSending) {
@@ -23,18 +19,17 @@ export const DrawerContact = () => {
 
   return (
     <>
-      <a className='btn-sm' onClick={onOpen}>Contact</a>
+      <Button as={'a'} className='btn-sm' onClick={onOpen}>Contact</Button>
       <Drawer
         isOpen={isOpen}
         placement='right'
         initialFocusRef={firstField}
         onClose={onClose}
-        size={size}
-
+        size={'xs'} 
       >
         <DrawerOverlay />
         <DrawerContent bg={'#2d3748'} className='drawer-contact'>
-          <DrawerCloseButton color='white'/>
+          <DrawerCloseButton color='white' />
           <DrawerHeader>
             <Text fontWeight='400' fontSize='md' color='white'>Ok, now</Text>
             <Text mt={-2} fontSize='lg' color='white'>What do you want?</Text>
@@ -43,7 +38,7 @@ export const DrawerContact = () => {
           <DrawerBody>
             <Stack spacing='15px'>
               <Box>
-                <FormLabel color='white'  fontWeight={300} fontSize={14} >Name</FormLabel>
+                <FormLabel color='white' fontWeight={300} fontSize={14} >Name</FormLabel>
                 <Input
                   ref={firstField}
                   id='username'
@@ -53,7 +48,7 @@ export const DrawerContact = () => {
                 />
               </Box>
               <Box>
-                <FormLabel color='white'  fontWeight={300} fontSize={14} >What about</FormLabel>
+                <FormLabel color='white' fontWeight={300} fontSize={14} >What about</FormLabel>
                 <Select
                   color='white'
                   id='owner'
@@ -65,7 +60,7 @@ export const DrawerContact = () => {
               </Box>
 
               <Box>
-                <FormLabel color='white'  fontWeight={300} fontSize={14} >E-mail</FormLabel>
+                <FormLabel color='white' fontWeight={300} fontSize={14} >E-mail</FormLabel>
                 <Input
                   id='username'
                   placeholder='Please enter your e-mail'
@@ -75,7 +70,7 @@ export const DrawerContact = () => {
               </Box>
 
               <Box>
-                <FormLabel color='white'  fontWeight={300} fontSize={14} >Tell about</FormLabel>
+                <FormLabel color='white' fontWeight={300} fontSize={14} >Tell about</FormLabel>
                 <Textarea
                   placeholder='What is your interest?'
                   color='white'

@@ -1,12 +1,11 @@
-import { Box, Button, Container, Flex, Img, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Skeleton, Text, useDisclosure } from '@chakra-ui/react'
-import React, { useEffect, useRef, useState } from 'react'
+import { Box, Container, Flex, Img, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Skeleton, Text } from '@chakra-ui/react'
+import { useEffect, useRef, useState } from 'react'
 import { useHistory, useLocation } from 'react-router'
-import { Link } from 'react-router-dom'
 import { Paths } from '../../../config/paths/path'
 
 import bannerCase from './img/thumbnail.png'
 import './case-vaidebet.scss'
-import { useMoveScrollContent } from '../../../hooks/move-scroll'
+// import { useMoveScrollContent } from '../../../hooks/move-scroll'
 
 export const CaseWelcomeVaidebet = () => {
 
@@ -28,8 +27,7 @@ export const CaseWelcomeVaidebet = () => {
     if (contentText.current) {
       const minhaDiv = contentText.current;
       const posicaoScroll = minhaDiv.scrollTop;
-      /* eslint-disable no-console */
-      console.log('posicaoScroll', posicaoScroll);
+      
       setParallaxImg(posicaoScroll)
     }
   };
@@ -58,7 +56,7 @@ export const CaseWelcomeVaidebet = () => {
     if (actualpath === Paths.CASES_WELCOME_VAIDEBET) {
       setIsOpenModal(true)
     }
-  }, [])
+  }, [actualpath])
 
 
   return (
@@ -100,7 +98,7 @@ export const CaseWelcomeVaidebet = () => {
           <Box className='container-banner'>
             <Img src={bannerCase} className='img-effect' top={parallaxImg} />
           </Box>
-          <Container>
+          <Container maxW='xl' p={0}>
             <Text color={'white'} opacity={.5} fontWeight={300} fontSize='lg' mb='1rem' lineHeight='2.4rem'>
               There are many benefits to a joint design and development system. Not only
               does it bring benefits to the design team, but it also brings benefits to
@@ -111,12 +109,12 @@ export const CaseWelcomeVaidebet = () => {
               does it bring benefits to the design team, but it also brings benefits to
               engineering teams. It makes sure that our experiences have a consistent look
               and feel, not just in our design specs, but in production.
-
             </Text>
           </Container>
           <Box maxW='900px' mx='auto' my='2rem'>
             <Skeleton isLoaded={!isLoadingFrame} borderRadius='8px'>
-              {/* <iframe className='frame-content'
+              <iframe className='frame-content'
+                title='figma'
                 width="100%" height="400"
                 src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FG5LP5npZCmW2gBvDFcVrec%2FE-commerce-Sebrae%3Fnode-id%3D0%253A1%26t%3DQLAbh3DkHL1X49F7-1"
                 allowFullScreen
@@ -124,7 +122,7 @@ export const CaseWelcomeVaidebet = () => {
               </iframe>
               <Text fontSize='sm' textAlign='center' mt='.3rem' color='white' opacity={.5}>
                 e-comerce Sebrae prototype
-              </Text> */}
+              </Text>
             </Skeleton>
           </Box>
           <Container maxW='xl' p='0'>

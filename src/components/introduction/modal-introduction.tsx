@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { Text, Modal, ModalBody, ModalContent, Button, SlideFade, Box, Flex } from "@chakra-ui/react";
-import useLocalStorage from "../../hooks/localStrege";
+import { Text, Box, Flex } from "@chakra-ui/react";
 
 import './modal-introduction.scss'
 
 export const ModalIntroduction = () => {
 
-  const timeAnimation = 4000
 
   const [keyFrameIntrodutuin, setKeyFrameIntrodutuin] = useState(0)
 

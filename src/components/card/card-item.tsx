@@ -1,6 +1,5 @@
-import React from 'react'
 import './card-item.scss'
-import { Link, Route, Switch } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default interface Icard {
   uiux : boolean

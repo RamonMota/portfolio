@@ -1,6 +1,5 @@
-import { Box, Flex, Image } from '@chakra-ui/react';
-import { DrawerContact } from '../drawer-contact/drawer-contact';
-import itsMe from '../../assets/img/i.png'
+import { Flex, Image } from '@chakra-ui/react';
+import itsMe from '../../assets/img/iface.png'
 import './header.scss';
 import { useEffect, useState } from 'react';
 
@@ -13,10 +12,6 @@ export const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const distanceFromTop = window.pageYOffset;
-      // const distanceFromTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      /* eslint-disable no-console */
-      console.log('distanceFromTop', distanceFromTop);
       if (distanceFromTop > 277) {
         setShowFace(true)
       } else setShowFace(false)
@@ -34,8 +29,9 @@ export const Header = () => {
     <Flex alignItems={'Center'} p={{ base: 4, md: 8 }} className='container-header'>
       <Image src={itsMe} w={42} alt="logo" opacity={showFace ? 1 : 0} transition={'.3s'}/>
       <Flex gap={3}>
-        <a className='btn-sm' href={resume} target="_blank">Resume</a>
-        <DrawerContact />
+        <a className='btn-sm' href={resume} target="blank">Resume</a>
+        <a className='btn-sm' href="mailto:ramonmotha@gmail.com">Contact</a>
+        {/* <DrawerContact /> */}
       </Flex>
     </Flex>
   )

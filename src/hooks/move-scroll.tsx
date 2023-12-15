@@ -17,7 +17,7 @@ export const useMoveScrollWindowsDown = (props: number) => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    });
 
     return scrollOpacity
 }
@@ -45,7 +45,7 @@ export const useMoveScrollContent = (props: IUseMoveScrollContent) => {
             };
         }
 
-    }, []);
+    });
 
     return scrollOpacity
 }

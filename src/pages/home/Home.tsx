@@ -1,7 +1,4 @@
-import { useState, useEffect } from 'react';
-// import TextLoop from "react-text-loop";
-
-import itsMe from '../../assets/img/i.png'
+import itsMe from '../../assets/img/iface.png'
 import './home.scss'
 import { CardItem } from '../../components/card/card-item';
 import img from '../../assets/img/imgTest.jpg'

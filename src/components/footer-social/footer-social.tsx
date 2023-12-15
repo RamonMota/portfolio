@@ -1,5 +1,4 @@
-import { useSizeScreen } from '../../hooks/height-screen';
-import { Box, Button, Flex } from '@chakra-ui/react';
+import { Button, Flex } from '@chakra-ui/react';
 
 import './footer-social.scss';
 
