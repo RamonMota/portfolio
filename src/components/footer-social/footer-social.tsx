@@ -1,5 +1,5 @@
-import { Button, Flex } from '@chakra-ui/react';
 
+import { Fragment } from 'react';
 import './footer-social.scss';
 
 export const FooterSocial = () => {
@@ -24,19 +24,10 @@ export const FooterSocial = () => {
   ]
 
   return (
-    <Flex as='footer' gap={2} marginTop={{ base: '3rem', lg: '5rem' }} marginLeft={'-.5rem'}>
+    <Fragment>
       {social.map((social, i) => (
-        <Button key={i}
-          as='a'
-          p={0}
-          bg='none !important'
-          color='#fff'
-          target='blank'
-          fontSize={22}
-          fontWeight={0}
-          className={social.icon}
-          href={social.link} />
+        <a key={i} className={social.icon} href={social.link} />
       ))}
-    </Flex >
+    </Fragment>
   )
 }
