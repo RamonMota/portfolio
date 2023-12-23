@@ -1,18 +1,18 @@
 import { Fragment } from 'react';
-import { useSizeScreen } from '../../hooks/height-screen';
 import { SocialMedia } from '../social-media';
 import './index.scss';
+import { useScreenSize } from '../../hooks/size-screen';
 
 export const FloatSidebar = () => {
 
-    const { widthScreen } = useSizeScreen()
+    const screen = useScreenSize()
 
     return (
         <div className='content-float-sidebar'>
             <div className='circle-icon' />
             <p>Cases</p>
             <p>Last works</p>
-            {widthScreen > 599 &&
+            {!screen.isMobile &&
                 <Fragment>
                     <i className='vertical-line' />
                     <SocialMedia />

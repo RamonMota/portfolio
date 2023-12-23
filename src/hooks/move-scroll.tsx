@@ -22,12 +22,10 @@ export const useMoveScrollWindowsDown = (props: number) => {
     return scrollOpacity
 }
 
-interface IUseMoveScrollContent {
+export const useMoveScrollContent = (props: {
     containerSize: number;
     velocity: number;
-}
-
-export const useMoveScrollContent = (props: IUseMoveScrollContent) => {
+}) => {
     const [scrollOpacity, setScrollOpacity] = useState<number>(1);
 
     useEffect(() => {
