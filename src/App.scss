@@ -41,20 +41,7 @@ body {
   min-width: 380px;
   height: 100dvh;
   background: var(--color-black);
-
-  &::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background-color: var(--color-black);
-  }
-
-  &::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: var(--color-black-transparent);
-  }
+  overflow: hidden;
 }
 
 .color-principal {
