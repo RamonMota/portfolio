@@ -1,4 +1,4 @@
-@import '../../assets/style/color-and-fonts.scss';
+
 
 .container-card {
     text-decoration: none;
@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: space-between;
     
-    background: $black70;
+    background: background-color: var(--color-black);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,7 +40,7 @@
 
             &:hover {
                 background: $white;
-                color: $black70;
+                color: background-color: var(--color-black);
             }
         }
     }

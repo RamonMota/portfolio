@@ -1,4 +1,3 @@
-@import '../../assets/style/color-and-fonts.scss';
 
 .container-tag {
     span {
@@ -9,7 +8,7 @@
 
         &:hover {
             background: $white;
-            color: $black70;
+            color: var(--color-black);
         }
     }
 }

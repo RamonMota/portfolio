@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import "./App.scss";
 import './assets/img/iconmoon/style.css'
-import './assets/style/fade-animation.scss'
+import { FloatSidebar } from "./components/float-sidebar";
 
 function App() {
 
@@ -11,6 +11,7 @@ function App() {
     <BrowserRouter>
       <main>
         <Routers />
+        <FloatSidebar/>
       </main>
     </BrowserRouter>
   );
