@@ -1,0 +1,44 @@
+.content-horizontal-scroll {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    gap: var(--space-sm);
+    height: fit-content;
+    overflow-x: scroll;
+    align-items: center;
+    padding: 30px var(--space-md);
+    transition: transform 0.3s ease-in-out;
+
+
+
+    .left,
+    .right {
+        height: 600px;
+        position: sticky;
+        top: 0;
+        bottom: 0;
+    }
+
+    .left {
+        background: linear-gradient(90deg, #151A22 0%, rgba(21, 26, 34, 0.00) 100%);
+        min-width: 100px;
+        left: -22px;
+    }
+
+    .right {
+        background: linear-gradient(-90deg, #151A22 0%, rgba(21, 26, 34, 0.00) 100%);
+        right: -22px;
+        min-width: 300px;
+    }
+
+    .card-fake {
+        min-width: 400px;
+        height: 400px;
+        border-radius: 8px;
+        background: var(--color-principal);
+    }
+}

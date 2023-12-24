@@ -19,6 +19,8 @@ export const CustomCursor = () => {
     };
   }, []);
 
+  //LINK: https://codepen.io/Qualley/pen/YzdzaOj?editors=1100
+
   return (
     <div className='custom-cursos' ref={cursorRef} />
   )

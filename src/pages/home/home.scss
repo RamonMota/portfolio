@@ -66,39 +66,3 @@
         }
     }
 }
-
-.content-horizontal-scroll {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    display: flex;
-    gap: var(--space-sm);
-    height: fit-content;
-    overflow-x: scroll;
-    align-items: center;
-    padding: 30px var(--space-md);
-
-    &::-webkit-scrollbar-track {
-        border-radius: 10px;
-        background-color: #ffffff18;
-    }
-
-    &::-webkit-scrollbar {
-        height: 2px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background-color: #ffffff18;
-    }
-}
-
-.card-fake {
-    min-width: 400px;
-    height: 400px;
-    border-radius: 8px;
-    background: var(--color-principal);
-}

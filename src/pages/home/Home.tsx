@@ -1,33 +1,31 @@
-import { useRef } from 'react';
+
 import { SocialMedia } from '../../components/social-media';
 import './home.scss'
+import { HorizontalScroll } from '../../components/horizontal-scroll';
+import { useScreenSize } from '../../hooks/size-screen';
 
 export const Home = () => {
-    const containerRef = useRef<HTMLDivElement>(null);
 
-    const handleScroll = (e: React.WheelEvent) => {
-        if (e.deltaY !== 0 && containerRef.current) {
-            e.preventDefault();
-
-            const currentScrollLeft = containerRef.current.scrollLeft;
-            containerRef.current.scrollLeft = currentScrollLeft + e.deltaY;
-        }
-    }
-
+    const screen = useScreenSize()
 
     return (
         <div className='container-home' >
-            <div className='content-title'>
-                <h1>RAMON <b>MOTA</b></h1>
-                <div className='content-social'>
-                    <SocialMedia />
+            {screen.isMobile &&
+                <div className='content-title'>
+                    <h1>RAMON <b>MOTA</b></h1>
+                    <div className='content-social'>
+                        <SocialMedia />
+                    </div>
                 </div>
-            </div>
-            <div ref={containerRef}
-                onWheel={handleScroll}
-                className='content-horizontal-scroll'>
+            }
+            <HorizontalScroll>
                 <div className='content-float-main'>
                     <div className='content-text-main'>
+                        {!screen.isMobile &&
+                            <div className='content-title'>
+                                <h1>RAMON <b>MOTA</b></h1>
+                            </div>
+                        }
                         <p className='color-principal'>DIRTYING</p>
                         <p className='color-principal'>MY</p>
                         <p className='color-principal'>FINGERS</p>
@@ -43,9 +41,7 @@ export const Home = () => {
                 <div className='card-fake' />
                 <div className='card-fake' />
                 <div className='card-fake' />
-                <div className='card-fake' />
-                <div className='card-fake' />
-            </div>
-        </div>
+            </HorizontalScroll >
+        </div >
     )
 }
