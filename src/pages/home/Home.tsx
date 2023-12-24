@@ -40,11 +40,11 @@ export const Home = () => {
                         <p>UI/UX</p>
                     </div>
                 </div>
-                <div className='card-fake'/>
-                <div className='card-fake'/>
-                <div className='card-fake'/>
-                <div className='card-fake'/>
-                <div className='card-fake'/>
+                <div className='card-fake' />
+                <div className='card-fake' />
+                <div className='card-fake' />
+                <div className='card-fake' />
+                <div className='card-fake' />
             </div>
         </div>
     )

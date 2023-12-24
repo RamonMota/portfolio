@@ -1,0 +1,14 @@
+* {
+    cursor: none;
+}
+
+.custom-cursos {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ffffffe6;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    z-index: 1;
+}
