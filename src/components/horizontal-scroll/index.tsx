@@ -1,12 +1,18 @@
-import React, { ReactNode, useEffect, useRef, useState } from 'react'
+import React, { Fragment, ReactNode, useEffect, useRef, useState } from 'react'
 import './index.scss'
+import { useScreenSize } from '../../hooks/size-screen';
+import { useIdContext } from '../../config/idContext';
 
 
 export const HorizontalScroll = (props: { children?: ReactNode }) => {
 
-    const containerRef = useRef<HTMLDivElement>(null);
-    const [larguraJanela, setLarguraJanela] = useState(window.innerWidth);
-    const [padddingDinamid, setPadddingDinamid] = useState(0);
+    const screen = useScreenSize()
+
+    const containerRef = useRef<any>(null);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [padddingDinamid, setPadddingDinamid] = useState<number>(0);
+    const [noScroll, setNoScroll] = useState<boolean>(false);
+    const { id } = useIdContext();
 
     const handleScroll = (e: React.WheelEvent) => {
         if (e.deltaY !== 0 && containerRef.current) {
@@ -18,7 +24,7 @@ export const HorizontalScroll = (props: { children?: ReactNode }) => {
 
     useEffect(() => {
         const handleResize = () => {
-            setLarguraJanela(window.innerWidth);
+            setWindowWidth(window.innerWidth);
         };
 
         window.addEventListener('resize', handleResize);
@@ -29,53 +35,51 @@ export const HorizontalScroll = (props: { children?: ReactNode }) => {
     }, []);
 
     useEffect(() => {
-        const larguraContainer = 1024;
-        const dimensaoSobra = larguraJanela - larguraContainer;
+        const maxScreen = 1024;
+        const dimensaoSobra = windowWidth - maxScreen;
         setPadddingDinamid(dimensaoSobra / 2);
-    }, [larguraJanela]);
+    }, [windowWidth]);
 
+    const scrollToCard = (cardId: any) => {
+        const container = containerRef.current;
+        const card = document.getElementById(cardId);
 
-
-
-
-    const [scrollPosition, setScrollPosition] = useState(0);
-
-    const handleScrollNew = () => {
-        const scrollCenter = window.innerWidth / 2;
-        const scrollPosition = window.scrollX + scrollCenter;
-        setScrollPosition(scrollPosition);
+        if (card && container) {
+            const containerCenter = container.offsetWidth / 2;
+            const cardCenter = card.offsetLeft - container.offsetLeft + card.offsetWidth / 2;
+            const scrollLeft = cardCenter - containerCenter;
+            container.scrollTo({
+                left: scrollLeft + 200,
+                behavior: 'smooth',
+            })
+        }
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScrollNew);
-
-        return () => {
-            window.removeEventListener('scroll', handleScrollNew);
-        };
-    }, []);
-
-    const calculateScale = (position: any) => {
-        // Defina os valores máximos e mínimos de escala
-        const maxScale = 2;
-        const minScale = 0.5;
-
-        // Calcula a escala com base na posição do scroll
-        const scale = Math.max(
-            minScale,
-            maxScale - Math.abs(window.innerWidth / 2 - position) / (window.innerWidth / 2)
-        );
-
-        return scale;
-    };
+        if (id.idName !== '') {
+            scrollToCard(id.idName);
+            // setTimeout(() => { setNoScroll(true) }, 300
+        } else {
+            // setNoScroll(false)
+        }
+    }, [id.idName]);
 
     return (
-        <div ref={containerRef}
-            onWheel={handleScroll}
-            className='content-horizontal-scroll'>
-            <div className='left' />
-            <div style={{ minWidth: `${padddingDinamid - 172}px` }} />
-            {props.children}
-            <div className='right' />
-        </div>
+        <>
+            <div ref={containerRef}
+                onWheel={handleScroll}
+                className={`content-horizontal-scroll ${noScroll ? 'no-scroll' : ''}`}>
+                {screen.isDesktop &&
+                    <Fragment>
+                        <div className='left' />
+                        <div style={{ minWidth: `${padddingDinamid - 172}px` }} />
+                    </Fragment>
+                }
+                {props.children}
+                {screen.isDesktop &&
+                    <div className='right' />
+                }
+            </div>
+        </>
     )
 }

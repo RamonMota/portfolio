@@ -3,6 +3,8 @@ import { SocialMedia } from '../../components/social-media';
 import './home.scss'
 import { HorizontalScroll } from '../../components/horizontal-scroll';
 import { useScreenSize } from '../../hooks/size-screen';
+import { CardItem } from '../../components/card';
+import { useState } from 'react';
 
 export const Home = () => {
 
@@ -38,9 +40,10 @@ export const Home = () => {
                         <p>UI/UX</p>
                     </div>
                 </div>
-                <div className='card-fake' />
-                <div className='card-fake' />
-                <div className='card-fake' />
+                <CardItem idName={'primeiro'}/>
+                <CardItem idName={'terceiro'}/>
+                <CardItem idName={'quarto'}/>
+                <CardItem idName={'quinto'}/>
             </HorizontalScroll >
         </div >
     )

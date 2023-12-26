@@ -1,5 +1,6 @@
 import { Routers } from "./Routers";
 import { BrowserRouter } from "react-router-dom";
+import { IdProvider } from './/config/idContext'
 
 import "./App.scss";
 import './assets/img/iconmoon/style.css'
@@ -11,13 +12,15 @@ function App() {
 
 
   return (
-    <BrowserRouter>
-      <main>
-        {/* <CustomCursor /> */}
-        <Routers />
-        <FloatSidebar />
-      </main>
-    </BrowserRouter>
+    <IdProvider>
+      <BrowserRouter>
+        <main>
+          {/* <CustomCursor /> */}
+          <Routers />
+          <FloatSidebar />
+        </main>
+      </BrowserRouter>
+    </IdProvider>
   );
 }
 

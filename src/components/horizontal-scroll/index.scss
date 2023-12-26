@@ -13,11 +13,25 @@
     padding: 30px var(--space-md);
     transition: transform 0.3s ease-in-out;
 
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #ffffff18;
+    }
+
+    &::-webkit-scrollbar {
+        height: 0px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #ffffff18;
+    }
+
 
 
     .left,
     .right {
-        height: 600px;
+        height: 100vh;
         position: sticky;
         top: 0;
         bottom: 0;

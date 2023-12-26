@@ -4,6 +4,7 @@
 :root {
   // COLORS
   --color-black: #151A22;
+  --color-gray: #2d3645;
   --color-black-transparent: #151a2234;
   --color-principal: #A74EFF;
   --color-white: #fff;
@@ -43,7 +44,12 @@ body {
   background: var(--color-black);
   overflow: hidden;
 }
-
+.no-scroll {
+  overflow: unset !important;
+}
+.z-99 {
+  z-index: 99;
+}
 .color-principal {
   color: var(--color-principal) !important;
 }
