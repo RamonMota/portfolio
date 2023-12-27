@@ -1,0 +1,16 @@
+.content-header, .content-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+        color: var(--color-white);
+        font-weight: 300;
+        font-size: var(--font-lg);
+    }
+
+    .content-social {
+        gap: var(--space-sm);
+        display: flex;
+    }
+}

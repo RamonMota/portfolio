@@ -11,7 +11,6 @@ export const HorizontalScroll = (props: { children?: ReactNode }) => {
     const containerRef = useRef<any>(null);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [padddingDinamid, setPadddingDinamid] = useState<number>(0);
-    const [noScroll, setNoScroll] = useState<boolean>(false);
     const { id } = useIdContext();
 
     const handleScroll = (e: React.WheelEvent) => {
@@ -40,27 +39,20 @@ export const HorizontalScroll = (props: { children?: ReactNode }) => {
         setPadddingDinamid(dimensaoSobra / 2);
     }, [windowWidth]);
 
-    const scrollToCard = (cardId: any) => {
-        const container = containerRef.current;
-        const card = document.getElementById(cardId);
-
-        if (card && container) {
-            const containerCenter = container.offsetWidth / 2;
-            const cardCenter = card.offsetLeft - container.offsetLeft + card.offsetWidth / 2;
-            const scrollLeft = cardCenter - containerCenter;
-            container.scrollTo({
-                left: scrollLeft + 200,
-                behavior: 'smooth',
-            })
-        }
-    };
-
     useEffect(() => {
         if (id.idName !== '') {
-            scrollToCard(id.idName);
-            // setTimeout(() => { setNoScroll(true) }, 300
-        } else {
-            // setNoScroll(false)
+            const contentScroll = containerRef.current;
+            const card = document.getElementById(id.idName);
+
+            if (card && contentScroll) {
+                const containerCenter = contentScroll.offsetWidth / 2;
+                const cardCenter = card.offsetLeft - contentScroll.offsetLeft + card.offsetWidth / 2;
+                const scrollLeft = cardCenter - containerCenter;
+                contentScroll.scrollTo({
+                    left: scrollLeft,
+                    behavior: 'smooth',
+                })
+            }
         }
     }, [id.idName]);
 
@@ -68,7 +60,7 @@ export const HorizontalScroll = (props: { children?: ReactNode }) => {
         <>
             <div ref={containerRef}
                 onWheel={handleScroll}
-                className={`content-horizontal-scroll ${noScroll ? 'no-scroll' : ''}`}>
+                className={`content-horizontal-scroll ${id.idName !== '' ? 'no-scroll' : ''}`}>
                 {screen.isDesktop &&
                     <Fragment>
                         <div className='left' />

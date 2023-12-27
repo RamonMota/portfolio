@@ -10,22 +10,9 @@
         margin: auto;
     }
 
-
-    .content-title {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        h1 {
-            color: var(--color-white);
-            font-weight: 300;
-            font-size: var(--font-lg);
-        }
-
-        .content-social {
-            gap: var(--space-sm);
-            display: flex;
-        }
+    .content-top {
+        height: 100vh;
+        width: 100%;
     }
 
     .content-float-main {
@@ -68,5 +55,9 @@
             color: var(--color-white);
             text-transform: uppercase
         }
+    }
+    .content-list-card {
+        display: flex;
+        gap: 18px;
     }
 }
