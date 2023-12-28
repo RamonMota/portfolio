@@ -72,3 +72,10 @@ body {
   user-select: none;
   transition: 0.3s;
 }
+
+.show {
+  opacity: 1 !important;
+}
+.hidden {
+  opacity: 0;
+}

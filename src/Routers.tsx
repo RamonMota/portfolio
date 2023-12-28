@@ -1,11 +1,11 @@
 import { Route } from "react-router-dom";
 import { Paths } from "./config/paths/path";
 
-import { Home } from './pages/home/Home';
 import { Vaidebet } from "./pages/cases/vaidebet";
 import { useIdContext } from "./config/idContext";
 import { useEffect } from "react";
 import { Sebrae } from "./pages/sebrae";
+import { Home } from "./pages/home/home";
 
 
 export const Routers = () => {
@@ -16,7 +16,9 @@ export const Routers = () => {
         if (id.idName !== '') {
             document.body.style.overflow = 'hidden';
         } else {
-            document.body.removeAttribute('style');
+            setTimeout(() => {
+                document.body.removeAttribute('style');
+            }, 300)
         }
     }, [id.idName])
 
