@@ -2,15 +2,18 @@ import { Fragment, useEffect } from 'react';
 import { SocialMedia } from '../social-media';
 import './index.scss';
 import { useScreenSize } from '../../hooks/size-screen';
-import { useIdContext } from '../../config/idContext';
+import { PathsModal } from '../../config/paths/path';
+import { useLocation } from 'react-router';
 
 export const FloatSidebar = () => {
 
     const screen = useScreenSize()
-    const { id } = useIdContext();
+    const location = useLocation()
+    const currentPath = location.pathname;
+    const scaleFloat = Object.values(PathsModal).includes(currentPath as PathsModal)
 
     return (
-        <div className={`content-float-sidebar ${id.idName !== '' ? 'open' : ''}`}>
+        <div className={`content-float-sidebar ${scaleFloat ? 'open' : ''}`}>
             <div className='circle-icon' />
             <p>Cases</p>
             <p>Last works</p>

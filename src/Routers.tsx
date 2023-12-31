@@ -1,31 +1,30 @@
-import { Route } from "react-router-dom";
-import { Paths } from "./config/paths/path";
+import { Route, useLocation } from "react-router-dom";
+import { Paths, PathsModal } from "./config/paths/path";
 
 import { Vaidebet } from "./pages/cases/vaidebet";
-import { useIdContext } from "./config/idContext";
 import { useEffect } from "react";
 import { Sebrae } from "./pages/sebrae";
 import { Home } from "./pages/home/home";
 
 
 export const Routers = () => {
-
-    const { id } = useIdContext();
+    const location = useLocation()
+    const currentPath = location.pathname;
+    const blockScroll = Object.values(PathsModal).includes(currentPath as PathsModal)
 
     useEffect(() => {
-        if (id.idName !== '') {
+        if (blockScroll) {
             document.body.style.overflow = 'hidden';
         } else {
             setTimeout(() => {
                 document.body.removeAttribute('style');
             }, 300)
         }
-    }, [id.idName])
+    }, [currentPath])
 
     return (
         <>
-            <Route path={Paths.SEBRAE} component={Sebrae} />
-            <Route path={Paths.CASES_WELCOME_VAIDEBET} component={Vaidebet} />
+            <Route path={PathsModal.SEBRAE} component={Sebrae} />
             <Route path={Paths.HOME} component={Home} />
         </>
     )

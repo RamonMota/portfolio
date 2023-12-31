@@ -1,6 +1,5 @@
 import { Routers } from "./Routers";
 import { BrowserRouter } from "react-router-dom";
-import { IdProvider, useIdContext } from './/config/idContext'
 
 import "./App.scss";
 import './assets/img/iconmoon/style.css'
@@ -9,7 +8,6 @@ import { CustomCursor } from "./components/custom-mouse";
 
 function App() {
   return (
-    <IdProvider>
       <BrowserRouter>
         <main>
           {/* <CustomCursor /> */}
@@ -17,7 +15,6 @@ function App() {
           <FloatSidebar />
         </main>
       </BrowserRouter>
-    </IdProvider>
   );
 }
 

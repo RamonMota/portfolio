@@ -1,0 +1,82 @@
+.content-position-svg {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #fff;
+    border-radius: 8px;
+
+    .content-astronaut,
+    .content-star {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+    }
+
+    .content-astronaut {
+        max-width: 200px;
+        animation: floatAnimation 5s infinite alternate ease-in-out;
+    }
+
+    .content-star {
+        max-width: 275px;
+
+        #blink1 {
+            animation: shine1 3s infinite alternate ease-in-out;
+        }
+        #blink2 {
+            animation: shine1 2s infinite alternate ease-in-out;
+        }
+        #blink3 {
+            animation: shine1 2.5s infinite alternate ease-in-out;
+        }
+        #blink4 {
+            animation: shine1 4s infinite alternate ease-in-out;
+        }
+    }
+
+}
+
+
+@keyframes shine1 {
+    0% {
+        scale: (1);
+        opacity: 1;
+    }
+
+    100% {
+        scale: (1.02);
+        opacity: 0.2;
+    }
+}
+
+
+@keyframes shine1 {
+    40% {
+       
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(5px) rotate(4deg);
+        scale: (1.0);
+    }
+    
+    40% {
+        transform: translateY(0) rotate(2deg);
+    }
+    
+    60% {
+        transform: translateY(3px) rotate(2deg);
+    }
+    
+    100% {
+        scale: (1.03);
+        transform: translateY(-2px) rotate(-2deg);
+    }
+}

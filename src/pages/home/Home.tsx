@@ -1,21 +1,19 @@
-
-import { SocialMedia } from '../../components/social-media';
-import './home.scss'
-import { HorizontalScroll } from '../../components/horizontal-scroll';
 import { useScreenSize } from '../../hooks/size-screen';
 import { CardItem } from '../../components/card';
-import { useState } from 'react';
-import { useIdContext } from '../../config/idContext';
 import { HeaderMobile } from '../../components/header-mobile';
-import { Paths } from '../../config/paths/path';
+import { PathsModal } from '../../config/paths/path';
+import './home.scss'
+import { useLocation } from 'react-router';
 
 export const Home = () => {
 
     const screen = useScreenSize()
-    const { id } = useIdContext();
+    const location = useLocation()
+    const currentPath = location.pathname;
+    const scaleHome = Object.values(PathsModal).includes(currentPath as PathsModal)
 
     return (
-        <div className='container-home' style={id.idName !== '' ? { transform: 'scale(0.8)' } : undefined}>
+        <div className='container-home' style={scaleHome ? { transform: 'scale(0.8)' } : undefined}>
             <div className='content-top'>
                 {screen.isMobile &&
                     <HeaderMobile />
@@ -41,7 +39,7 @@ export const Home = () => {
             </div>
             <div className='content-list-card'>
                 <CardItem idName='sebrae'
-                    link={Paths.SEBRAE} />
+                    link={PathsModal.SEBRAE} />
             </div>
 
         </div >

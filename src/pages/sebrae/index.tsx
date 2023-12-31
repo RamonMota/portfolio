@@ -1,31 +1,38 @@
 
 import { useEffect, useState } from 'react';
-import { useIdContext } from '../../config/idContext';
 import './index.scss'
-import Spline from '@splinetool/react-spline';
+import { Astronaut } from './svg/astronaut';
+import { useHistory } from 'react-router';
+import { Paths } from '../../config/paths/path';
 
 export const Sebrae = () => {
-  const { id, setId } = useIdContext();
+  const history = useHistory()
   const [isOpenPage, setIsIpenPage] = useState<boolean>(false)
 
   useEffect(() => {
-    if (id.idName !== '') {
-      setTimeout(() => {
-        setIsIpenPage(true)
-      }, 100)
-    } else {
-      setIsIpenPage(false)
-    }
-  }, [id.idName])
+    setTimeout(() => {
+      setIsIpenPage(true)
+    }, 100)
+  }, [])
+
+  const handleClose = () => {
+    setIsIpenPage(false)
+    setTimeout(() => {
+      history.push(Paths.HOME)
+    }, 100)
+  }
 
   return (
     <div className={`content-page-sebrae  ${isOpenPage ? 'show' : 'hidden'}`}>
-      <button className='btn-close-page' onClick={() => setId('')}>
+      <button className='btn-close-page' onClick={() => handleClose()}>
         <i className='icon-Dribble' />
       </button>
       <div className='banner-top' />
-      <Spline className='cover-phone' scene="https://prod.spline.design/mQhYuzAgZH1ZLbci/scene.splinecode" />
       <h1 className='title-page'>Sistema de eventos e ecommerce Sebrae</h1>
+
+      <div>
+        <Astronaut />
+      </div>
     </div>
   )
 }
