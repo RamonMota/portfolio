@@ -1,7 +1,5 @@
 import { Route, useLocation } from "react-router-dom";
 import { Paths, PathsModal } from "./config/paths/path";
-
-import { Vaidebet } from "./pages/cases/vaidebet";
 import { useEffect } from "react";
 import { Sebrae } from "./pages/sebrae";
 import { Home } from "./pages/home/home";

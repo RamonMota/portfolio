@@ -1,14 +1,8 @@
-
 .container-tag {
-    span {
-        font-size: 13px;
-        border-radius: 50px;
-        border: 2px solid $white;
-        padding: 0.2rem 0.5rem;
+    font-size: 13px;
+    border-radius: 50px;
+    border: 2px solid var(--color-white);
+    padding: 0.2rem 0.5rem;
+    color: var(--color-white);
 
-        &:hover {
-            background: $white;
-            color: var(--color-black);
-        }
-    }
 }

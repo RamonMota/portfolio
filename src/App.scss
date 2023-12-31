@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-  
+
 :root {
   // COLORS
   --color-black: #151A22;
@@ -45,21 +45,25 @@ body {
   background: var(--color-black);
   // overflow: hidden;
 }
+
 .no-scroll {
   overflow: unset !important;
 }
+
 .z-99 {
   z-index: 99;
 }
+
 .z-1 {
   z-index: 1;
 }
+
 .color-principal {
   color: var(--color-principal) !important;
 }
 
 .btn-principal {
-  font: 700 var(--font-md) 'Inter', sans-serif ;
+  font: 700 var(--font-md) 'Inter', sans-serif;
   background-color: var(--color-principal);
   border: 1px solid var(--color-principal);
   color: var(--color-white);
@@ -73,9 +77,25 @@ body {
   transition: 0.3s;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+
+.gap-sm {
+  gap: var(--space-sm);
+}
+
 .show {
   opacity: 1 !important;
 }
+
 .hidden {
   opacity: 0;
 }

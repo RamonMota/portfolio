@@ -1,9 +1,15 @@
 .content-position-svg {
     position: relative;
-    width: 400px;
-    height: 400px;
-    background: #fff;
-    border-radius: 8px;
+
+    min-width: unset;
+    min-height: 275px;
+
+    @media (min-width:600px) {
+        min-width: 275px;
+        height: auto;
+    }
+
+
 
     .content-astronaut,
     .content-star {
@@ -23,12 +29,15 @@
         #blink1 {
             animation: shine1 3s infinite alternate ease-in-out;
         }
+
         #blink2 {
             animation: shine1 2s infinite alternate ease-in-out;
         }
+
         #blink3 {
             animation: shine1 2.5s infinite alternate ease-in-out;
         }
+
         #blink4 {
             animation: shine1 4s infinite alternate ease-in-out;
         }
@@ -52,7 +61,7 @@
 
 @keyframes shine1 {
     40% {
-       
+
         opacity: 1;
     }
 
@@ -66,15 +75,15 @@
         transform: translateY(5px) rotate(4deg);
         scale: (1.0);
     }
-    
+
     40% {
         transform: translateY(0) rotate(2deg);
     }
-    
+
     60% {
         transform: translateY(3px) rotate(2deg);
     }
-    
+
     100% {
         scale: (1.03);
         transform: translateY(-2px) rotate(-2deg);
