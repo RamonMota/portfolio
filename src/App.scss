@@ -13,15 +13,15 @@
   --font-xs: 0.8rem;
   --font-sm: 0.9rem;
   --font-md: 1rem;
-  --font-lg: 1.8rem;
+  --font-lg: 1.6rem;
   --font-xl: 2.5rem;
 
   // SPACES
-  --space-xs: 16px;
-  --space-sm: 18px;
-  --space-md: 22px;
-  --space-lg: 4rem;
-  --space-xl: 5rem;
+  --space-xs: 8px;
+  --space-sm: 14px;
+  --space-md: 16px;
+  --space-lg: 18px;
+  --space-xl: 22px;
 }
 
 * {
@@ -80,20 +80,36 @@ body {
 .d-flex {
   display: flex;
 }
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .flex-column {
   flex-direction: column;
 }
+
 .space-between {
   justify-content: space-between;
+}
+
+.gap-md {
+  gap: var(--space-md);
 }
 
 .gap-sm {
   gap: var(--space-sm);
 }
 
+.gap-xs {
+  gap: var(--space-xs);
+}
+
 .show {
   opacity: 1 !important;
+}
+.bg-white {
+  background: var(--color-white);
 }
 
 .hidden {
