@@ -44,6 +44,20 @@ body {
   height: 100dvh;
   background: var(--color-black);
   // overflow: hidden;
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff18;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #ffffff18;
+  }
 }
 
 .no-scroll {
@@ -56,6 +70,10 @@ body {
 
 .z-1 {
   z-index: 1;
+}
+
+.z-under {
+  z-index: -1;
 }
 
 .color-principal {
@@ -80,6 +98,7 @@ body {
 .d-flex {
   display: flex;
 }
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -87,6 +106,10 @@ body {
 
 .flex-column {
   flex-direction: column;
+}
+
+.align-items-center {
+  align-items: center;
 }
 
 .space-between {
@@ -108,6 +131,7 @@ body {
 .show {
   opacity: 1 !important;
 }
+
 .bg-white {
   background: var(--color-white);
 }
