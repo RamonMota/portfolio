@@ -5,6 +5,12 @@
     gap: 3vw;
     transition: .5s ease-in-out;
 
+    &.hidden-home {
+        opacity: 0 !important;
+        transform: scale(0.98) !important;
+    }
+
+
     @media (min-width:600px) {
         max-width: 1024px;
         margin: auto;

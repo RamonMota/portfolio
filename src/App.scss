@@ -42,9 +42,8 @@ p {
 
 body {
   min-width: 380px;
-  height: 100dvh;
   background: var(--color-black);
-  // overflow: hidden;
+  transition: .3s ease-in-out;
 
   &::-webkit-scrollbar-track {
     border-radius: 10px;
@@ -69,6 +68,9 @@ body {
   z-index: 99;
 }
 
+.z-0 {
+  z-index: 0;
+}
 .z-1 {
   z-index: 1;
 }

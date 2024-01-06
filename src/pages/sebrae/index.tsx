@@ -21,11 +21,6 @@ export const Sebrae = () => {
   const [isOpenPage, setIsIpenPage] = useState<boolean>(false)
   const [scrollY, setScrollY] = useState(0);
 
-  /* eslint-disable no-console */
-  //  console.log('scrollHeight', scrollContainer.current?.getBoundingClientRect().top);
-  console.log('phoneContainerCurrentPosition', phoneContainerCurrentPosition);
-  console.log('windowSize', windowsSize);
-  console.log('startAnimationPhone', startAnimationPhone);
 
   // const handleScroll = () => {
   //   if (scrollContainer) {
@@ -56,7 +51,7 @@ export const Sebrae = () => {
     setIsIpenPage(false)
     setTimeout(() => {
       history.push(Paths.HOME)
-    }, 350)
+    }, 300)
   }
 
   return (

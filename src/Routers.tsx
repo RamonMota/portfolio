@@ -1,4 +1,4 @@
-import { Route, useLocation } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
 import { Paths, PathsModal } from "./config/paths/path";
 import { useEffect } from "react";
 import { Sebrae } from "./pages/sebrae";
@@ -12,7 +12,8 @@ export const Routers = () => {
 
     useEffect(() => {
         if (blockScroll) {
-            document.body.style.overflow = 'hidden';
+            document.body.style.background = 'var(--color-gray)'
+            window.scrollTo(0, 0);
         } else {
             setTimeout(() => {
                 document.body.removeAttribute('style');
@@ -23,7 +24,7 @@ export const Routers = () => {
     return (
         <>
             <Route path={PathsModal.SEBRAE} component={Sebrae} />
-            <Route path={Paths.HOME} component={Home} />
+            <Route path={[Paths.HOME, Paths.HOME_REDIRECT]} component={Home} />
         </>
     )
 }
