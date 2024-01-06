@@ -3,6 +3,7 @@
     inset: 0 .3rem;
     overflow-y: auto;
     z-index: 99;
+    background: var(--color-gray);
     transition: opacity .4s ease-in-out;
 
     .max-grid {
@@ -126,6 +127,7 @@
         margin: 0 auto;
         width: 100%;
         display: flex;
+        align-items: center;
         gap: var(--space-lg);
         flex-direction: column;
 
@@ -145,27 +147,6 @@
                 font-size: var(--font-md);
                 font-style: normal;
                 font-weight: 300;
-            }
-        }
-
-        svg {}
-    }
-
-    .content-bottom {
-        p {
-            font-family: 'inter', sans-serif;
-            color: var(--color-white);
-            text-align: center;
-
-            &:nth-of-type(1) {
-                font-size: 18px;
-                font-weight: 300;
-                text-transform: uppercase;
-            }
-
-            &:nth-of-type(2) {
-                font-size: 33px;
-                font-weight: 700;
             }
         }
     }

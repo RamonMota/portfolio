@@ -8,6 +8,7 @@ import { IconsLint } from './svg/icons';
 import { ContentIframe } from '../../components/page-sebrae/content-iframe/intex';
 import { CircleColor } from '../../components/page-sebrae/circle-color';
 import { ScrollContent } from '../../components/page-sebrae/scroll-content';
+import { GridIcon } from '../../components/page-sebrae/grid-icon';
 
 export const Sebrae = () => {
   const scrollContainer = useRef<HTMLDivElement>(null)
@@ -22,9 +23,9 @@ export const Sebrae = () => {
 
   /* eslint-disable no-console */
   //  console.log('scrollHeight', scrollContainer.current?.getBoundingClientRect().top);
-   console.log('phoneContainerCurrentPosition', phoneContainerCurrentPosition);
-   console.log('windowSize', windowsSize);
-   console.log('startAnimationPhone', startAnimationPhone);
+  console.log('phoneContainerCurrentPosition', phoneContainerCurrentPosition);
+  console.log('windowSize', windowsSize);
+  console.log('startAnimationPhone', startAnimationPhone);
 
   // const handleScroll = () => {
   //   if (scrollContainer) {
@@ -102,6 +103,7 @@ export const Sebrae = () => {
           </div>
         </div>
         <div className='content-icons'>
+          <GridIcon />
           <p>Iconografia vetorial</p>
           <p>
             Incorporate illustrations to enhance user communication, employing SVG format for web optimization without compromising performance. Notably, all icons showcased on this project have been personally designed, adding a distinct touch to the creative work presented

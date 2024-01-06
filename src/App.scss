@@ -26,7 +26,7 @@
 }
 
 * {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'inter', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -117,6 +117,9 @@ body {
   justify-content: space-between;
 }
 
+.mb-xl {
+  margin-bottom: var(--space-xl);
+}
 .gap-md {
   gap: var(--space-md);
 }
@@ -139,4 +142,22 @@ body {
 
 .hidden {
   opacity: 0;
+}
+.content-bottom {
+  p {
+      font-family: 'inter', sans-serif;
+      color: var(--color-white);
+      text-align: center;
+
+      &:nth-of-type(1) {
+          font-size: 18px;
+          font-weight: 300;
+          text-transform: uppercase;
+      }
+
+      &:nth-of-type(2) {
+          font-size: 33px;
+          font-weight: 700;
+      }
+  }
 }

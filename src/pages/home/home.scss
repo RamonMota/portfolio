@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     gap: 3vw;
-    height: 99vh;
 
     @media (min-width:600px) {
         max-width: 1024px;
@@ -11,14 +10,14 @@
     }
 
     .content-top {
-        height: 100vh;
         width: 100%;
     }
 
     .content-float-main {
-        height: fit-content;
+        height: 80vh;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: var(--space-md);
 
         @media (min-width:600px) {
@@ -56,8 +55,17 @@
             text-transform: uppercase
         }
     }
+
     .content-list-card {
         display: flex;
         gap: 18px;
+        flex-direction: column;
+
+        @media (min-width:600px) {
+            flex-direction: row;
+        }
+    }
+    .mb-footer {
+        margin-bottom: 5rem;
     }
 }

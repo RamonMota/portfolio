@@ -9,11 +9,11 @@
     border-radius: 8px;
     position: relative;
     width: 100%;
-    height: var(--start-height);
+    height: 300px;
 
 
     &.expend {
-        transform: translate(1rem, 0) scale(5)
+        transform: translate(1rem, 0) scale(6)
     }
 
 }

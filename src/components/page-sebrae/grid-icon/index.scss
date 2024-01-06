@@ -1,0 +1,26 @@
+.content-grid-icon {
+    position: relative;
+    height: 80px;
+    width: 80px;
+
+    .icon {
+        position: absolute;
+        width: 65px;
+        margin: auto;
+        inset: 0;
+        z-index: 3;
+    }
+
+    .grid-front {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+    }
+
+    .grid-back {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        opacity: .5;
+    }
+}

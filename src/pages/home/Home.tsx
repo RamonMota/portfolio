@@ -15,10 +15,10 @@ export const Home = () => {
     return (
         <div className='container-home' style={scaleHome ? { transform: 'scale(0.8)' } : undefined}>
             <div className='content-top'>
-                {screen.isMobile &&
-                    <HeaderMobile />
-                }
                 <div className='content-float-main'>
+                    {screen.isMobile &&
+                        <HeaderMobile />
+                    }
                     <div className='content-text-main'>
                         {!screen.isMobile &&
                             <div className='content-title'>
@@ -38,10 +38,13 @@ export const Home = () => {
                 </div>
             </div>
             <div className='content-list-card'>
-                <CardItem idName='sebrae'
-                    link={PathsModal.SEBRAE} />
+                <CardItem idName='sebrae' link={PathsModal.SEBRAE} />
+                <CardItem idName='sportBet' link={PathsModal.SPORT_BETTING_PLATAFORM} />
             </div>
-
+            <div className='content-bottom mb-footer'>
+                <p>need a creative mind?</p>
+                <p>Let’s work together</p>
+            </div>
         </div >
     )
 }
