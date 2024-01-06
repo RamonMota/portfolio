@@ -49,7 +49,7 @@ export const Sebrae = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsIpenPage(true)
-    }, 100)
+    }, 200)
   }, [])
 
   const handleClose = () => {

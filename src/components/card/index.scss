@@ -10,10 +10,10 @@
     position: relative;
     width: 100%;
     height: 300px;
-
+    transition: scale 0.5s ease-in-out;
 
     &.expend {
-        transform: translate(1rem, 0) scale(6)
+        scale: 6;
     }
 
 }

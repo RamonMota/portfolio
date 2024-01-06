@@ -4,6 +4,8 @@ import { HeaderMobile } from '../../components/header-mobile';
 import { PathsModal } from '../../config/paths/path';
 import './home.scss'
 import { useLocation } from 'react-router';
+import { useEffect, useState } from 'react';
+import useLoadPage from '../../hooks/load-page';
 
 export const Home = () => {
 
@@ -11,9 +13,10 @@ export const Home = () => {
     const location = useLocation()
     const currentPath = location.pathname;
     const scaleHome = Object.values(PathsModal).includes(currentPath as PathsModal)
+    const { isLoaded } = useLoadPage(100)
 
     return (
-        <div className='container-home' style={scaleHome ? { transform: 'scale(0.8)' } : undefined}>
+        <div className={`container-home ${isLoaded ? '' : 'hidden'}`} style={scaleHome ? { transform: 'scale(0.8)' } : undefined}>
             <div className='content-top'>
                 <div className='content-float-main'>
                     {screen.isMobile &&
