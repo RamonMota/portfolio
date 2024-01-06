@@ -3,6 +3,6 @@ export enum Paths {
     HOME_REDIRECT = '/portfolio',
 };
 export enum PathsModal {
-    SEBRAE = '/portfolio/sebrae',
-    SPORT_BETTING_PLATAFORM = '/portfolio/sports-betting-platform',
+    SEBRAE = '/sebrae',
+    SPORT_BETTING_PLATAFORM = '/sports-betting-platform',
 };

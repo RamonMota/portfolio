@@ -22,9 +22,9 @@ export const Routers = () => {
     }, [currentPath])
 
     return (
-        <>
+        <Switch>
             <Route path={PathsModal.SEBRAE} component={Sebrae} />
             <Route path={[Paths.HOME, Paths.HOME_REDIRECT]} component={Home} />
-        </>
+        </Switch>
     )
 }
