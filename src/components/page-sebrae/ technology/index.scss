@@ -1,0 +1,13 @@
+.content-tech {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    text-decoration: none;
+
+    p {
+        font-size: var(--font-xs);
+        color: var(--color-white);
+        opacity: .5;
+    }
+}

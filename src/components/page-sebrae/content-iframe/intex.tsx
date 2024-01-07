@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { IframeHTMLAttributes, useEffect, useRef, useState } from 'react'
 import './index.scss'
 
 export const ContentIframe = () => {
@@ -21,7 +21,8 @@ export const ContentIframe = () => {
             </div>
             <iframe
                 className='iframe-figma'
-                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FG5LP5npZCmW2gBvDFcVrec%2FE-commerce-Sebrae%3Ftype%3Ddesign%26node-id%3D1408%253A96%26mode%3Ddesign%26t%3DkgUDVQKdT4kZFEuC-1" allowFullScreen />
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FG5LP5npZCmW2gBvDFcVrec%2FE-commerce-Sebrae%3Ftype%3Ddesign%26node-id%3D1408%253A96%26mode%3Ddesign%26t%3DkgUDVQKdT4kZFEuC-1"
+                allowFullScreen />
         </div>
     )
 }

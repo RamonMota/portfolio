@@ -1,4 +1,4 @@
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Route, Switch, useLocation, HashRouter} from "react-router-dom";
 import { Paths, PathsModal } from "./config/paths/path";
 import { useEffect } from "react";
 import { Sebrae } from "./pages/sebrae";
@@ -7,13 +7,17 @@ import { Home } from "./pages/home/home";
 
 export const Routers = () => {
     const location = useLocation()
-    const currentPath = location.pathname;
+    const currentPath = location.hash.substring(1);
     const blockScroll = Object.values(PathsModal).includes(currentPath as PathsModal)
 
     useEffect(() => {
         if (blockScroll) {
             document.body.style.background = 'var(--color-gray)'
-            window.scrollTo(0, 0);
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+              })
         } else {
             setTimeout(() => {
                 document.body.removeAttribute('style');
@@ -22,9 +26,9 @@ export const Routers = () => {
     }, [currentPath])
 
     return (
-        <Switch>
+        <HashRouter >
             <Route path={PathsModal.SEBRAE} component={Sebrae} />
             <Route path={[Paths.HOME, Paths.HOME_REDIRECT]} component={Home} />
-        </Switch>
+        </HashRouter>
     )
 }

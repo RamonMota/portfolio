@@ -14,7 +14,7 @@ export const Home = () => {
     const location = useLocation()
     const currentPath = location.pathname;
     const isNotHome = Object.values(PathsModal).includes(currentPath as PathsModal)
-    const { isLoaded } = useLoadPage(300)
+    const { isLoaded } = useLoadPage(100)
     const [isHidden, setIsHidden] = useState(false)
     const [noContent, setNoContent] = useState(false)
 
@@ -68,10 +68,6 @@ export const Home = () => {
                             handleChangePath={() => setIsHidden(true)}
                             image='https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                             link={PathsModal.SEBRAE} />
-                        <CardItem
-                            name='Sport betting Plataform'
-                            image='https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                             />
                     </div>
                     <div className='content-bottom mb-footer'>
                         <p>need a creative mind?</p>

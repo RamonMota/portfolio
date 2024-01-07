@@ -11,7 +11,7 @@ export const CardItem = (props: {
 
   const history = useHistory()
   const location = useLocation()
-  const currentPath = location.pathname;
+  const currentPath = location.hash.substring(1);
   const isOpen = props.link === currentPath
 
   const handleInputChange = () => {
@@ -27,11 +27,11 @@ export const CardItem = (props: {
   };
 
   return (
-    <div onClick={handleInputChange} className='content-card-page'>
+    <a onClick={handleInputChange} className='content-card-page'>
       <div className='content-banner'>
         <h3>{props.name}</h3>
         <img src={props.image} alt="banner" />
       </div>
-    </div>
+    </a>
   )
 }

@@ -19,6 +19,10 @@
 
     .second {
         grid-area: unset;
+
+        .content-info {
+            height: 100%;
+        }
     }
 
     .third {
@@ -90,10 +94,17 @@
         background: var(--sebrae-color-successful);
     }
 
+    .top-modal {
+        position: absolute;
+        top: -2rem;
+        right: 0rem;
+    }
 
     .content-card {
         border-radius: 18px;
         padding: 18px;
+        overflow: hidden;
+        position: relative;
 
         &.large-card {
             // min-width: 600px;
@@ -105,13 +116,16 @@
 
         &.shurt-card {
             width: 100%;
-            // max-width: 320px;
-            height: fit-content;
+            height: 315px;
         }
 
 
 
         @media (min-width:600px) {
+            &.shurt-card {
+                height: fit-content;
+            }
+
             padding: 30px;
             flex-direction: row !important;
             height: 350px !important;
@@ -128,7 +142,7 @@
             width: 100%;
             object-fit: contain;
             margin: 18px auto -18px auto;
-            
+
             @media (min-width:600px) {
                 margin-bottom: - 30px;
             }
