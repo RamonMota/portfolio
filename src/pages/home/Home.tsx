@@ -6,7 +6,7 @@ import './home.scss'
 import { useLocation } from 'react-router';
 import { useEffect, useState } from 'react';
 import useLoadPage from '../../hooks/load-page';
-import bannerSebrae from '../sebrae/img/thumbnail.png'
+import bannerSebrae from '../../assets/img/thumb_sebrae.jpg'
 
 export const Home = () => {
 
@@ -66,7 +66,12 @@ export const Home = () => {
                         <CardItem
                             name='Sebrae events e-commerce'
                             handleChangePath={() => setIsHidden(true)}
-                            image='https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                            image={bannerSebrae}
+                            link={PathsModal.SEBRAE} />
+                        <CardItem
+                            name='Sebrae events e-commerce'
+                            handleChangePath={() => setIsHidden(true)}
+                            image={bannerSebrae}
                             link={PathsModal.SEBRAE} />
                     </div>
                     <div className='content-bottom mb-footer'>

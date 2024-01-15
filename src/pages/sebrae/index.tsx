@@ -11,6 +11,8 @@ import { ScrollContent } from '../../components/page-sebrae/scroll-content';
 import { GridIcon } from '../../components/page-sebrae/grid-icon';
 import { Technology } from '../../components/page-sebrae/ technology';
 
+import frame from './img/Frame.png'
+
 export const Sebrae = () => {
   const history = useHistory()
 
@@ -30,75 +32,86 @@ export const Sebrae = () => {
   }
 
   return (
-    <div className={`content-page-sebrae  ${isOpenPage ? 'show' : 'hidden'}`}>
-      <div className='max-grid'>
-        <button className='btn-principal btn-close-page' onClick={() => handleClose()}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11" fill="none">
-            <path d="M8.16172 0.765771C8.54832 0.379172 9.17512 0.379172 9.56172 0.765772V0.765772C9.94832 1.15237 9.94832 1.77917 9.56172 2.16577L6.66172 5.06577L9.55806 7.942C9.94628 8.32753 9.94738 8.95511 9.5605 9.34199V9.34199C9.17457 9.72792 8.54886 9.72792 8.16294 9.34199L5.26172 6.44077L2.38428 9.33834C1.99942 9.72588 1.37292 9.72698 0.986719 9.34077V9.34077C0.600514 8.95457 0.601606 8.32807 0.989153 7.94322L3.88672 5.06577L0.985498 2.16455C0.599572 1.77863 0.599572 1.15292 0.985498 0.766992V0.766992C1.37238 0.380114 1.99996 0.381208 2.38549 0.769431L5.26172 3.66577L8.16172 0.765771Z" />
-          </svg>
-        </button>
-        <div className='content-title'>
-          <p className='pre-title'>2018</p>
-          <h1 className='title-page'>Sebrae events <br />e-commerce</h1>
-        </div>
-        <div className='content-introduction'>
-          <h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada eros vitae neque scelerisque imperdiet volutpat quis nisl. Phasellus sed varius nunc
-          </h2>
-          <p>
-            Curabitur scelerisque dictum eleifend. Sed ut dolor bibendum ex vulputate vehicula eu vitae dui. Maecenas porttitor lorem velit, vitae varius dolor hendrerit a. Vivamus tincidunt elit eros, at convallis odio consectetur at. Sed non blandit nisi. Nam varius nulla tellus, volutpat elementum metus tempor non. Nulla tincidunt porta nisi eu fringilla. Nullam cursus vulputate urna ut posuere. Donec id laoreet felis. Nulla sed massa ut nisi tempor placerat eget sed tellus.
-          </p>
-        </div>
-        <div className='content-technology'>
-          <div className='d-flex gap-sm align-items-center'>
-            <Technology />
+    <>
+      <button className={`btn-principal btn-close-page ${isOpenPage ? '': 'hidden-close'}`} onClick={() => handleClose()}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11" fill="none">
+          <path d="M8.16172 0.765771C8.54832 0.379172 9.17512 0.379172 9.56172 0.765772V0.765772C9.94832 1.15237 9.94832 1.77917 9.56172 2.16577L6.66172 5.06577L9.55806 7.942C9.94628 8.32753 9.94738 8.95511 9.5605 9.34199V9.34199C9.17457 9.72792 8.54886 9.72792 8.16294 9.34199L5.26172 6.44077L2.38428 9.33834C1.99942 9.72588 1.37292 9.72698 0.986719 9.34077V9.34077C0.600514 8.95457 0.601606 8.32807 0.989153 7.94322L3.88672 5.06577L0.985498 2.16455C0.599572 1.77863 0.599572 1.15292 0.985498 0.766992V0.766992C1.37238 0.380114 1.99996 0.381208 2.38549 0.769431L5.26172 3.66577L8.16172 0.765771Z" />
+        </svg>
+      </button>
+      <div className={`content-page-sebrae  ${isOpenPage ? '' : 'hidden-page'}`}>
+        <div className='max-grid'>
+          <div className='content-title'>
+            <p className='pre-title'>2018</p>
+            <h1 className='title-page'>Sebrae events <br />e-commerce</h1>
           </div>
-        </div>
-        <GridCardSebrae />
-        <div className='content-brand'>
-          <p className='title'>Color scheme</p>
-          <p className='description'>
-            Color scheme developed based on the brand colors, along with a set of complementary colors, designed to be implemented into the system to maintain visual identity
-          </p>
-          <div className='grid-colors'>
-            <div className='d-flex gap-sm flex-column align-items-center'>
-              <p className='color-title'>Brand</p>
-              <div className='d-flex gap-sm'>
-                <CircleColor color={'295BAE'} />
-                <CircleColor color={'fff'} />
-              </div>
-            </div>
-            <div className='d-flex gap-sm flex-column align-items-center'>
-              <p className='color-title'>Complementary</p>
-              <div className='d-flex gap-sm'>
-                <CircleColor color={'2F4358'} />
-                <CircleColor color={'A7D2F6'} />
-                <CircleColor color={'D9D9D9'} />
-              </div>
-            </div>
-            <div className='d-flex gap-sm flex-column align-items-center'>
-              <p className='color-title'>Attention</p>
-              <div className='d-flex gap-sm'>
-                <CircleColor color={'6FAE1C'} />
-                <CircleColor color={'FD611F'} />
-              </div>
+          <div className='content-introduction'>
+            <h2>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada eros vitae neque scelerisque imperdiet volutpat quis nisl. Phasellus sed varius nunc
+            </h2>
+            <p>
+              Curabitur scelerisque dictum eleifend. Sed ut dolor bibendum ex vulputate vehicula eu vitae dui. Maecenas porttitor lorem velit, vitae varius dolor hendrerit a. Vivamus tincidunt elit eros, at convallis odio consectetur at. Sed non blandit nisi. Nam varius nulla tellus, volutpat elementum metus tempor non. Nulla tincidunt porta nisi eu fringilla. Nullam cursus vulputate urna ut posuere. Donec id laoreet felis. Nulla sed massa ut nisi tempor placerat eget sed tellus.
+            </p>
+          </div>
+          <div className='content-technology'>
+            <div className='d-flex gap-sm align-items-center'>
+              <Technology />
             </div>
           </div>
+          <GridCardSebrae />
+          <div className='content-brand'>
+            <p className='title'>Color scheme</p>
+            <p className='description'>
+              Color scheme developed based on the brand colors, along with a set of complementary colors, designed to be implemented into the system to maintain visual identity
+            </p>
+            <div className='grid-colors'>
+              <div className='d-flex gap-sm flex-column align-items-center'>
+                <p className='color-title'>Brand</p>
+                <div className='d-flex gap-sm'>
+                  <CircleColor color={'295BAE'} />
+                  <CircleColor color={'fff'} />
+                </div>
+              </div>
+              <div className='d-flex gap-sm flex-column align-items-center'>
+                <p className='color-title'>Complementary</p>
+                <div className='d-flex gap-sm'>
+                  <CircleColor color={'2F4358'} />
+                  <CircleColor color={'A7D2F6'} />
+                  <CircleColor color={'D9D9D9'} />
+                </div>
+              </div>
+              <div className='d-flex gap-sm flex-column align-items-center'>
+                <p className='color-title'>Attention</p>
+                <div className='d-flex gap-sm'>
+                  <CircleColor color={'6FAE1C'} />
+                  <CircleColor color={'FD611F'} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='content-icons'>
+            <GridIcon />
+            <p>Vector Iconography Development</p>
+            <p>
+              Incorporate illustrations to enhance user communication, employing SVG format for web optimization without compromising performance. Notably, all icons showcased on this project have been personally designed, adding a distinct touch to the creative work presented
+            </p>
+            <IconsLint />
+          </div>
+          <ContentIframe />
+          <div className='content-bottom'>
+            <p>need a creative mind?</p>
+            <p>Let’s work together</p>
+            <a className='btn-principal mx-auto d-flex mt-md'
+              href="mailto:ramonmotha@gmail.com"
+              target="_blank"
+            >Let's talk</a>
+          </div>
         </div>
-        <div className='content-icons'>
-          <GridIcon />
-          <p>Vector Iconography Development</p>
-          <p>
-            Incorporate illustrations to enhance user communication, employing SVG format for web optimization without compromising performance. Notably, all icons showcased on this project have been personally designed, adding a distinct touch to the creative work presented
-          </p>
-          <IconsLint />
+        {/* <div className='content-components'>
+        <div className='max-grid'>
+
         </div>
-        <ContentIframe />
-        <div className='content-bottom'>
-          <p>need a creative mind?</p>
-          <p>Let’s work together</p>
-        </div>
+      </div> */}
       </div>
-    </div>
+    </>
   )
 }

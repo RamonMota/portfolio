@@ -1,8 +1,11 @@
 .content-page-sebrae {
     width: 100%;
     transition: .3s ease-in-out;
-    transform: scale(0.98);
-    opacity: 0 !important;
+
+    &.hidden-page {
+        opacity: 0 !important;
+        translate: 0 8rem !important;
+    }
 
     .content-introduction {
         display: flex;
@@ -23,6 +26,14 @@
             font-style: normal;
             font-weight: 300;
         }
+    }
+
+    .content-components {
+        background: linear-gradient(180deg, #295BAE 0%, #1a3b70 100%);
+       
+        min-height: 500px;
+        border-radius: 16px;
+        margin: 0 1rem;
     }
 
     .max-grid {
@@ -49,12 +60,6 @@
         max-height: 600px;
         right: 15px;
         top: -32px;
-    }
-
-    &.show {
-        opacity: 1;
-        transform: scale(1);
-
     }
 
     .content-title {
@@ -165,17 +170,22 @@
     width: 50px !important;
     position: sticky;
     top: 1rem;
+    right: 1rem;
     margin: -50px 0 0 auto;
     z-index: 999;
     padding: unset !important;
 
     svg {
-        width: 18px;
-        transition: scale .3s ease-in-out;
+        max-width: 18px;
 
         path {
             fill: var(--color-white);
         }
+    }
+
+    &.hidden-close {
+        scale: 2;
+        opacity: 0;
     }
 }
 

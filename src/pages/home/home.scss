@@ -3,11 +3,11 @@
     display: flex;
     flex-direction: column;
     gap: 3vw;
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
 
     &.hidden-home {
         opacity: 0 !important;
-        transform: scale(0.98) !important;
+        translate: 0 -8rem !important;
     }
 
 

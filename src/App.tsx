@@ -12,7 +12,7 @@ function App() {
         <main>
           {/* <CustomCursor /> */}
           <Routers />
-          <FloatSidebar />
+          {/* <FloatSidebar /> */}
         </main>
       </BrowserRouter>
   );

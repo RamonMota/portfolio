@@ -1,7 +1,8 @@
 import { Tag } from '../../tag/tag'
 import { Astronaut } from '../../../pages/sebrae/svg/astronaut'
 import imgPhone from '../../../assets/img/mobile-usability-min.png'
-import boxModal from '../../../assets/img/box.png'
+import cardPayment from '../../../assets/img/card-payment-min.png'
+import imgHeatMap from '../../../assets/img/heat_map.png'
 
 import './index.scss'
 
@@ -19,9 +20,13 @@ export const GridCardSebrae = () => {
                         <p>Implementing a mobile-first approach, we are incorporating designated breathing spaces to enhance user comfort and streamline platform accessibility.</p>
                     </div>
                 </div>
-                <img className='top-screen' src={imgPhone} alt="screen" />
+                <div className='content-top-sreen'>
+                    <div className='finger-ux' />
+                    <img className='top-screen' src={imgPhone} alt="screen" />
+                </div>
             </div>
             <div className='content-card shurt-card bg-sebrae-successful second'>
+                <img className='top-modal' src={cardPayment} alt="screen" />
                 <div className='content-info'>
                     <div className='d-flex gap-xs'>
                         <Tag name='UI/UX' />
@@ -31,16 +36,16 @@ export const GridCardSebrae = () => {
                         <p>Implementing a mobile-first approach, we are incorporating designated.</p>
                     </div>
                 </div>
-                <img className='top-modal' src={boxModal} alt="screen" />
             </div>
             <div className='content-card shurt-card bg-sebrae-alert third'>
+                <img className='content-heat-map' src={imgHeatMap} alt="heat map" />
                 <div className='content-info'>
                     <div className='d-flex gap-xs'>
                         <Tag name='UI/UX' />
                         <Tag name='Front end' />
                     </div>
                     <div className='content-description'>
-                        <h3>Enhanced Mobile Usability</h3>
+                        <h3>Heat map</h3>
                         <p>Implementing a mobile-first approach, we are incorporating designated breathing spaces to enhance user comfort and streamline platform accessibility.</p>
                     </div>
                 </div>

@@ -12,11 +12,11 @@ export const Routers = () => {
 
     useEffect(() => {
         if (blockScroll) {
-            document.body.style.background = 'var(--color-gray)'
+            // document.body.style.background = 'var(--color-gray)'
             window.scrollTo({
                 top: 0,
                 left: 0,
-                behavior: 'smooth'
+                // behavior: 'smooth'
               })
         } else {
             setTimeout(() => {
