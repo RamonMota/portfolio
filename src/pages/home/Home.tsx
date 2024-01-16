@@ -6,7 +6,7 @@ import './home.scss'
 import { useLocation } from 'react-router';
 import { useEffect, useState } from 'react';
 import useLoadPage from '../../hooks/load-page';
-import bannerSebrae from '../../assets/img/thumb_sebrae.jpg'
+import logoSebrae from '../../assets/img/img-min.png'
 
 export const Home = () => {
 
@@ -50,6 +50,7 @@ export const Home = () => {
                                         <h1>RAMON <b>MOTA</b></h1>
                                     </div>
                                 }
+                                {/* <p>DIRTYING MY FINGERS SINCE 2015</p> */}
                                 <p className='color-principal'>DIRTYING</p>
                                 <p className='color-principal'>MY FINGERS</p>
                                 <p>SINCE</p>
@@ -66,13 +67,9 @@ export const Home = () => {
                         <CardItem
                             name='Sebrae events e-commerce'
                             handleChangePath={() => setIsHidden(true)}
-                            image={bannerSebrae}
+                            image={logoSebrae}
                             link={PathsModal.SEBRAE} />
-                        <CardItem
-                            name='Sebrae events e-commerce'
-                            handleChangePath={() => setIsHidden(true)}
-                            image={bannerSebrae}
-                            link={PathsModal.SEBRAE} />
+                        
                     </div>
                     <div className='content-bottom mb-footer'>
                         <p>need a creative mind?</p>

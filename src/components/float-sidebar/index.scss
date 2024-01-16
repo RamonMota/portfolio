@@ -23,6 +23,19 @@
         margin: auto;
     }
 
+    .btn-close-flout {
+        width: 50px;
+
+        svg {
+            max-width: 12px;
+            height: 100%;
+
+            path {
+                fill: var(--color-white);
+            }
+        }
+    }
+
     .vertical-line {
         width: 1px;
         height: 30px;

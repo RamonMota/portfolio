@@ -25,6 +25,13 @@
   --space-xl: 22px;
 }
 
+::selection {
+
+  background: var(--color-principal);
+  color: var(--color-black);
+  text-shadow: none;
+}
+
 * {
   font-family: 'inter', sans-serif;
   margin: 0;
@@ -85,6 +92,10 @@ body {
   color: var(--color-principal) !important;
 }
 
+.color-white {
+  color: var(--color-white) !important;
+}
+
 .btn-principal {
   font: 700 var(--font-md) 'Inter', sans-serif;
   background-color: var(--color-principal);
@@ -142,6 +153,7 @@ body {
 .mt-md {
   margin-top: var(--space-md);
 }
+
 .gap-md {
   gap: var(--space-md);
 }

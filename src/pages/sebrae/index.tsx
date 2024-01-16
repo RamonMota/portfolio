@@ -33,7 +33,7 @@ export const Sebrae = () => {
 
   return (
     <>
-      <button className={`btn-principal btn-close-page ${isOpenPage ? '': 'hidden-close'}`} onClick={() => handleClose()}>
+      <button className={`btn-principal btn-close-page ${isOpenPage ? '' : 'hidden-close'}`} onClick={() => handleClose()}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11" fill="none">
           <path d="M8.16172 0.765771C8.54832 0.379172 9.17512 0.379172 9.56172 0.765772V0.765772C9.94832 1.15237 9.94832 1.77917 9.56172 2.16577L6.66172 5.06577L9.55806 7.942C9.94628 8.32753 9.94738 8.95511 9.5605 9.34199V9.34199C9.17457 9.72792 8.54886 9.72792 8.16294 9.34199L5.26172 6.44077L2.38428 9.33834C1.99942 9.72588 1.37292 9.72698 0.986719 9.34077V9.34077C0.600514 8.95457 0.601606 8.32807 0.989153 7.94322L3.88672 5.06577L0.985498 2.16455C0.599572 1.77863 0.599572 1.15292 0.985498 0.766992V0.766992C1.37238 0.380114 1.99996 0.381208 2.38549 0.769431L5.26172 3.66577L8.16172 0.765771Z" />
         </svg>
@@ -46,10 +46,9 @@ export const Sebrae = () => {
           </div>
           <div className='content-introduction'>
             <h2>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada eros vitae neque scelerisque imperdiet volutpat quis nisl. Phasellus sed varius nunc
-            </h2>
+              The SEBRAE events e-commerce platform focuses on providing solutions for micro and small entrepreneurs in Brazil through courses, lectures, and various events.</h2>
             <p>
-              Curabitur scelerisque dictum eleifend. Sed ut dolor bibendum ex vulputate vehicula eu vitae dui. Maecenas porttitor lorem velit, vitae varius dolor hendrerit a. Vivamus tincidunt elit eros, at convallis odio consectetur at. Sed non blandit nisi. Nam varius nulla tellus, volutpat elementum metus tempor non. Nulla tincidunt porta nisi eu fringilla. Nullam cursus vulputate urna ut posuere. Donec id laoreet felis. Nulla sed massa ut nisi tempor placerat eget sed tellus.
+              The project's mission is to simplify the interaction between machine and user, aiming to understand user behavior in relation to the system to establish an intuitive balance. To achieve this goal, the platform employs a clean interface, filled with illustrations and icons that serve as visual support in communication with the user. In addition to advanced tools that analyze and interpret user behavior, providing a more refined and efficient experience.
             </p>
           </div>
           <div className='content-technology'>

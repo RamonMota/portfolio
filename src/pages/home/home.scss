@@ -38,13 +38,27 @@
 
         p {
             font-size: 15.5vw;
-            line-height: 13vw;
+            line-height: 15vw;
             font-weight: 800;
             color: var(--color-white);
 
+            &.color-principal {
+                &::selection {
+                    color: var(--color-white) !important;
+
+                }
+            }
+
+            &::selection {
+
+                background: var(--color-principal);
+                color: var(--color-black);
+                text-shadow: none;
+            }
+
             @media (min-width:600px) {
                 font-size: 80px;
-                line-height: 70px;
+                line-height: 80px;
 
             }
         }
@@ -72,6 +86,7 @@
             flex-direction: row;
         }
     }
+
     .mb-footer {
         margin-bottom: 5rem;
     }
