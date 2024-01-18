@@ -30,7 +30,7 @@
 
     .content-components {
         background: linear-gradient(180deg, #295BAE 0%, #1a3b70 100%);
-       
+
         min-height: 500px;
         border-radius: 16px;
         margin: 0 1rem;
@@ -164,6 +164,8 @@
             }
         }
     }
+
+
 }
 
 .btn-close-page {
@@ -175,6 +177,9 @@
     z-index: 999;
     padding: unset !important;
 
+    img {
+        width: 20px;
+    }
     svg {
         max-width: 18px;
 

@@ -12,9 +12,15 @@ import { GridIcon } from '../../components/page-sebrae/grid-icon';
 import { Technology } from '../../components/page-sebrae/ technology';
 
 import frame from './img/Frame.png'
+import closeIcon from '../../assets/svg/close.svg'
+import frameDevice from '../../assets/img/display-desktop.png'
+import screenDevice from '../../assets/img/home-sebrae.png'
+import { DeviceScreen } from '../../components/page-sebrae/device-screen';
+import { useScreenSize } from '../../hooks/size-screen';
 
 export const Sebrae = () => {
   const history = useHistory()
+  const screen = useScreenSize()
 
   const [isOpenPage, setIsIpenPage] = useState<boolean>(false)
 
@@ -34,9 +40,7 @@ export const Sebrae = () => {
   return (
     <>
       <button className={`btn-principal btn-close-page ${isOpenPage ? '' : 'hidden-close'}`} onClick={() => handleClose()}>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11" fill="none">
-          <path d="M8.16172 0.765771C8.54832 0.379172 9.17512 0.379172 9.56172 0.765772V0.765772C9.94832 1.15237 9.94832 1.77917 9.56172 2.16577L6.66172 5.06577L9.55806 7.942C9.94628 8.32753 9.94738 8.95511 9.5605 9.34199V9.34199C9.17457 9.72792 8.54886 9.72792 8.16294 9.34199L5.26172 6.44077L2.38428 9.33834C1.99942 9.72588 1.37292 9.72698 0.986719 9.34077V9.34077C0.600514 8.95457 0.601606 8.32807 0.989153 7.94322L3.88672 5.06577L0.985498 2.16455C0.599572 1.77863 0.599572 1.15292 0.985498 0.766992V0.766992C1.37238 0.380114 1.99996 0.381208 2.38549 0.769431L5.26172 3.66577L8.16172 0.765771Z" />
-        </svg>
+        <img src={closeIcon} alt="icon close" />
       </button>
       <div className={`content-page-sebrae  ${isOpenPage ? '' : 'hidden-page'}`}>
         <div className='max-grid'>
@@ -95,6 +99,13 @@ export const Sebrae = () => {
             </p>
             <IconsLint />
           </div>
+        </div>
+        {screen.isDesktop ?
+          <DeviceScreen />
+          :
+          <></>
+        }
+        <div className='max-grid'>
           <ContentIframe />
           <div className='content-bottom'>
             <p>need a creative mind?</p>
@@ -105,11 +116,6 @@ export const Sebrae = () => {
             >Let's talk</a>
           </div>
         </div>
-        {/* <div className='content-components'>
-        <div className='max-grid'>
-
-        </div>
-      </div> */}
       </div>
     </>
   )

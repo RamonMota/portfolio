@@ -2,7 +2,7 @@
     padding: var(--space-md);
     display: flex;
     flex-direction: column;
-    gap: 3vw;
+    gap: 3rem;
     transition: .3s ease-in-out;
 
     &.hidden-home {
