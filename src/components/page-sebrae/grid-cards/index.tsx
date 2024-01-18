@@ -32,8 +32,8 @@ export const GridCardSebrae = () => {
                         <Tag name='UI/UX' />
                     </div>
                     <div className='content-description'>
-                        <h3>Mobile Usability</h3>
-                        <p>Implementing a mobile-first approach, we are incorporating designated.</p>
+                        <h3>Guided Visual Navigation</h3>
+                        <p>Utilizing color patterns to guide the user and emphasize priority information during navigation.</p>
                     </div>
                 </div>
             </div>
@@ -42,11 +42,11 @@ export const GridCardSebrae = () => {
                 <div className='content-info'>
                     <div className='d-flex gap-xs'>
                         <Tag name='UI/UX' />
-                        <Tag name='Front end' />
                     </div>
                     <div className='content-description'>
                         <h3>Heat map</h3>
-                        <p>Implementing a mobile-first approach, we are incorporating designated breathing spaces to enhance user comfort and streamline platform accessibility.</p>
+                        <p>
+                            Learning from the user through tracking tools to enhance their experience on the platform</p>
                     </div>
                 </div>
 
