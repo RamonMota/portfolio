@@ -97,6 +97,16 @@
         display: flex;
         align-items: start;
 
+        h3,
+        p {
+            color: var(--color-white) !important
+        }
+        .container-tag {
+            color: var(--color-white) !important;
+            border-color: var(--color-white) !important
+
+        }
+
     }
 
     .bg-sebrae-successful {
