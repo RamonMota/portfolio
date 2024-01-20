@@ -99,13 +99,7 @@ export const Sebrae = () => {
             </p>
             <IconsLint />
           </div>
-        </div>
-        {screen.isDesktop ?
           <DeviceScreen />
-          :
-          <></>
-        }
-        <div className='max-grid'>
           <ContentIframe />
           <div className='content-bottom'>
             <p>need a creative mind?</p>

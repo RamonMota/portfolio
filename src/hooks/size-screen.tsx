@@ -21,7 +21,7 @@ function useMediaQuery(query: string, defaultMatches = window.matchMedia(query).
 export default useMediaQuery;
 
 export const useScreenSize = () => {
-    const isMobile = useMediaQuery("(max-width: 600px)")
+    const isMobile = useMediaQuery("(max-width: 480px)")
     const isDesktop = useMediaQuery("(min-width: 1024px)")
 
     return {

@@ -72,6 +72,10 @@ body {
   overflow: unset !important;
 }
 
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
 .z-99 {
   z-index: 99;
 }
