@@ -51,10 +51,7 @@ export const DeviceScreen = () => {
                 </div>
             </div>
             <div className='content-range'>
-                {/* <div className='content-animation-range'>
-                    <div className='circle'/>
-                    <div className='line'/>
-                </div> */}
+                <p>Scroll interface</p>
                 <input
                     type="range"
                     id="rangeSlider"

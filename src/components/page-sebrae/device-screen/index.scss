@@ -44,22 +44,11 @@
     margin: auto;
     justify-content: center;
 
-    .content-animation-range {
-        position: relative;
-
-        .circle {
-            width: 5px;
-            height: 20px;
-            background: var(--color-white);
-            border-radius: 10px;
-        }
-
-        .line {
-            width: 40px;
-            height: 4px;
-            background: var(--color-white);
-            border-radius: 10px;
-        }
+    p {
+        font-size: var(--font-xs);
+        opacity: .5;
+        text-align: center;
+        margin: 10px auto -15px;
     }
 
     input[type=range] {
