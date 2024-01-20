@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.7d5e5d0b.css",
+    "main.css": "/portfolio/static/css/main.eb50bfe7.css",
     "main.js": "/portfolio/static/js/main.e343fccd.js",
     "static/media/home-sebrae.png": "/portfolio/static/media/home-sebrae.f37fc942d934b976c9f6.png",
     "static/media/home-sebrae-tablet.png": "/portfolio/static/media/home-sebrae-tablet.e9f44a648e498a8f6007.png",
@@ -33,11 +33,11 @@
     "static/media/search.svg": "/portfolio/static/media/search.783bbc0dce6e4f18042427bb80259b89.svg",
     "static/media/time.svg": "/portfolio/static/media/time.02879a73fff4601a9f0516bb29dbe5a2.svg",
     "static/media/menu.svg": "/portfolio/static/media/menu.d2b640d88af9ff89d6bee3e852638be9.svg",
-    "main.7d5e5d0b.css.map": "/portfolio/static/css/main.7d5e5d0b.css.map",
+    "main.eb50bfe7.css.map": "/portfolio/static/css/main.eb50bfe7.css.map",
     "main.e343fccd.js.map": "/portfolio/static/js/main.e343fccd.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d5e5d0b.css",
+    "static/css/main.eb50bfe7.css",
     "static/js/main.e343fccd.js"
   ]
 }
