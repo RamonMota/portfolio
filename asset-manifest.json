@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.eb50bfe7.css",
+    "main.css": "/portfolio/static/css/main.c96cf51f.css",
     "main.js": "/portfolio/static/js/main.f5e0ffc7.js",
     "static/media/home-sebrae.png": "/portfolio/static/media/home-sebrae.f37fc942d934b976c9f6.png",
     "static/media/home-sebrae-tablet.png": "/portfolio/static/media/home-sebrae-tablet.e9f44a648e498a8f6007.png",
@@ -13,6 +13,7 @@
     "static/media/icomoon.eot?2p5r7d": "/portfolio/static/media/icomoon.2bb979da9c3040ff759a.eot",
     "static/media/icomoon.woff?2p5r7d": "/portfolio/static/media/icomoon.874edb6b8ac2df4daefc.woff",
     "static/media/icomoon.ttf?2p5r7d": "/portfolio/static/media/icomoon.857b4c6413526d7fcdfd.ttf",
+    "index.html": "/portfolio/index.html",
     "static/media/location.svg": "/portfolio/static/media/location.747459fa4fd3550bf5143290c8f8b327.svg",
     "static/media/certify.svg": "/portfolio/static/media/certify.f9325a9477dafc5de7744d7621e70a74.svg",
     "static/media/ticket.svg": "/portfolio/static/media/ticket.3d2ec15db4ae8103fb189a028c5e8cbf.svg",
@@ -24,7 +25,6 @@
     "static/media/multimedia.svg": "/portfolio/static/media/multimedia.f34f1384ecbaf244a2acf07e5a4d8dd1.svg",
     "static/media/calendar.svg": "/portfolio/static/media/calendar.ce8c81c0a6ac26941b1c32725c096a0b.svg",
     "static/media/notify.svg": "/portfolio/static/media/notify.230ef371284ed300d73332e2043b30b7.svg",
-    "index.html": "/portfolio/index.html",
     "static/media/close.svg": "/portfolio/static/media/close.716c83a77f92adc010533cf50e92528a.svg",
     "static/media/contact.svg": "/portfolio/static/media/contact.a0e046b11607c8fc28a5a81a4f40c1b4.svg",
     "static/media/document.svg": "/portfolio/static/media/document.074f9562043473ec0effb81d2a470d85.svg",
@@ -33,11 +33,11 @@
     "static/media/search.svg": "/portfolio/static/media/search.783bbc0dce6e4f18042427bb80259b89.svg",
     "static/media/time.svg": "/portfolio/static/media/time.02879a73fff4601a9f0516bb29dbe5a2.svg",
     "static/media/menu.svg": "/portfolio/static/media/menu.d2b640d88af9ff89d6bee3e852638be9.svg",
-    "main.eb50bfe7.css.map": "/portfolio/static/css/main.eb50bfe7.css.map",
+    "main.c96cf51f.css.map": "/portfolio/static/css/main.c96cf51f.css.map",
     "main.f5e0ffc7.js.map": "/portfolio/static/js/main.f5e0ffc7.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb50bfe7.css",
+    "static/css/main.c96cf51f.css",
     "static/js/main.f5e0ffc7.js"
   ]
 }
