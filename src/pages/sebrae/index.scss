@@ -1,4 +1,5 @@
 .content-page-sebrae {
+    margin-top: 3rem;
     width: 100%;
     transition: .3s ease-in-out;
 
@@ -14,9 +15,13 @@
 
         h2 {
             text-align: center;
-            font-size: 35px;
+            font-size: 22px;
             font-weight: 100;
             color: var(--color-white);
+
+            @media (min-width:600px) {
+                font-size: 37px;
+            }
         }
 
         p {
@@ -65,14 +70,9 @@
     .content-title {
         display: flex;
         flex-direction: column;
-        gap: 0;
+        gap: var(--space-sm);
         justify-content: center;
-
-        .pre-title {
-            font-size: var(--font-sm);
-            color: var(--color-white);
-            opacity: .5;
-        }
+        align-items: flex-start;
 
         .title-page {
             font-family: 'inter', sans-serif;
@@ -80,12 +80,24 @@
             line-height: 41px;
             text-align: center;
             font-weight: 800;
+            width: 100%;
             color: var(--color-white);
-
+            max-width: 300px;
+            margin: auto;
+            
             @media (min-width:600px) {
+                max-width: unset !important;
                 font-size: 60px;
                 line-height: 61px;
             }
+        }
+
+        .point-principal {
+            width: 10px;
+            height: 10px;
+            border-radius: 15px;
+            margin: 0 auto;
+            background: var(--color-principal);
         }
     }
 
@@ -170,23 +182,13 @@
 
 .btn-close-page {
     width: 50px !important;
-    position: sticky;
-    top: 1rem;
+    position: fixed;
+    top: 4rem;
     right: 1rem;
     margin: -50px 0 0 auto;
     z-index: 999;
     padding: unset !important;
-
-    img {
-        width: 20px;
-    }
-    svg {
-        max-width: 18px;
-
-        path {
-            fill: var(--color-white);
-        }
-    }
+    font-size: 25px !important;
 
     &.hidden-close {
         scale: 2;

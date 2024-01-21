@@ -16,7 +16,7 @@ export const ContentIframe = () => {
             ${isHiddend ? 'hidden' : ''}
             ${index ? 'z-under' : ''}
             `} >
-                <i className='icon-Dribble' />
+                <i className='icon-visibility' />
                 <p>Click to view some pages of the prototype</p>
             </div>
             <iframe

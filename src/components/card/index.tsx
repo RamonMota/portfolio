@@ -1,46 +1,43 @@
 import { useHistory, useLocation } from 'react-router-dom'
 import './index.scss'
 import { Tag } from '../tag/tag'
+import { useState } from 'react'
 
 
 export const CardItem = (props: {
   isLocked?: boolean | false
-  link?: string | null
   name?: string
   image?: string
   handleChangePath?: () => void
 }) => {
 
-  const history = useHistory()
-  const location = useLocation()
-  const currentPath = location.hash.substring(1);
-  const isOpen = props.link === currentPath
+  const [lockOpen, setLockOpen] = useState(false)
 
-  const handleInputChange = () => {
-    if (props.link) {
-      if (props.handleChangePath) {
-        props.handleChangePath();
-      }
-
-      if (!isOpen) {
-        setTimeout(() => props.link && history.push(props.link), 400)
-      }
+  const handleLockCard = () => {
+    if (!lockOpen) {
+      setLockOpen(true)
+      setTimeout(() => {
+        setLockOpen(false)
+      }, 2000)
     }
-  };
+  }
 
   return (
-    <a onClick={handleInputChange} className='content-card-page'>
+    <a onClick={
+      props.isLocked ? handleLockCard : props.handleChangePath} className='content-card-page'>
       <div className='content-banner z-1'>
-        <p className='color-white'>2018</p>
         <div className='d-flex gap-xs flex-column'>
-          <div className='d-flex gap-xs'>
-            <Tag name='UI/UX' />
-            <Tag name='Front end' />
-          </div>
           <h3>{props.name}</h3>
         </div>
+      {/* <img className={`img-bg`} src={props.image} alt="banner" /> */}
       </div>
-      <img src={props.image} alt="banner" />
+      {props.isLocked &&
+          <div className={`content-locked ${lockOpen ? '' : 'hidden'}`}>
+            <img src='https://em-content.zobj.net/source/microsoft-teams/363/call-me-hand_1f919.png' alt="banner" />
+            <p>In progress</p>
+          </div>
+      }
+      <img className={`img-bg ${lockOpen ? 'hidden' : ''}`} src={props.image} alt="banner" />
     </a>
   )
 }

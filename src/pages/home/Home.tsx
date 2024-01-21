@@ -1,83 +1,74 @@
 import { useScreenSize } from '../../hooks/size-screen';
 import { CardItem } from '../../components/card';
 import { HeaderMobile } from '../../components/header-mobile';
-import { PathsModal } from '../../config/paths/path';
-import './home.scss'
-import { useLocation } from 'react-router';
+import { Paths, PathsModal } from '../../config/paths/path';
+import { useHistory, useLocation } from 'react-router';
 import { useEffect, useState } from 'react';
-import useLoadPage from '../../hooks/load-page';
-import logoSebrae from '../../assets/img/img-min.png'
+import bannerVaidebet from '../../assets/img/banner-vaidebet.png'
+import bannerSebrae from '../../assets/img/banner-sebrae.png'
+import { Footer } from '../../components/footer';
+import './home.scss'
 
 export const Home = () => {
 
     const screen = useScreenSize()
+    const history = useHistory()
+    const [isOpenPage, setIsOpenPage] = useState<boolean>(false)
     const location = useLocation()
     const currentPath = location.pathname;
-    const isNotHome = Object.values(PathsModal).includes(currentPath as PathsModal)
-    const { isLoaded } = useLoadPage(100)
-    const [isHidden, setIsHidden] = useState(false)
-    const [noContent, setNoContent] = useState(false)
 
     useEffect(() => {
-        if (isNotHome) {
-            setIsHidden(true)
+        if (currentPath === Paths.HOME) {
             setTimeout(() => {
-                setNoContent(true)
-            }, 300)
-        } else {
-            setNoContent(false)
-            setTimeout(() => {
-                setIsHidden(false)
+                setIsOpenPage(true)
             }, 300)
         }
-    }, [isNotHome])
+    }, [currentPath])
+
+    const handleChangePage = (router: string) => {
+        setIsOpenPage(false)
+        setTimeout(() => {
+            history.push(router)
+        }, 300)
+    }
 
     return (
-        <>
-            {noContent ? null :
-                <div className={`container-home 
-                ${isLoaded ? '' : 'hidden-home'}
-                ${isHidden ? 'hidden-home' : ''}
-                `}>
-                    <div className='content-top'>
-                        <div className='content-float-main'>
-                            {screen.isMobile &&
-                                <HeaderMobile />
-                            }
-                            <div className='content-text-main'>
-                                {!screen.isMobile &&
-                                    <div className='content-title'>
-                                        <h1>RAMON <b>MOTA</b></h1>
-                                    </div>
-                                }
-                                {/* <p>DIRTYING MY FINGERS SINCE 2015</p> */}
-                                <p className='color-principal'>DIRTYING</p>
-                                <p className='color-principal'>MY FINGERS</p>
-                                <p>SINCE</p>
-                                <p>2015</p>
+
+        <div className={`container-home ${isOpenPage ? '' : 'hidden-home'} `}>
+            <div className='content-top'>
+                <div className='content-float-main'>
+                    {screen.isMobile &&
+                        <HeaderMobile />
+                    }
+                    <div className='content-text-main'>
+                        {!screen.isMobile &&
+                            <div className='content-title'>
+                                <h1>RAMON <b>MOTA</b></h1>
                             </div>
-                            <div className='content-skills'>
-                                <p>front end developer</p>
-                                <p>Illustrator</p>
-                                <p>UI/UX</p>
-                            </div>
-                        </div>
+                        }
+                        <p className='color-principal'>DIRTYING</p>
+                        <p className='color-principal'>MY FINGERS</p>
+                        <p>SINCE</p>
+                        <p>2015</p>
                     </div>
-                    <div className='content-list-card'>
-                        <CardItem
-                            name='Sebrae events e-commerce'
-                            handleChangePath={() => setIsHidden(true)}
-                            image={logoSebrae}
-                            link={PathsModal.SEBRAE} />
-                        
+                    <div className='content-skills'>
+                        <p>front end developer</p>
+                        <p>Illustrator</p>
+                        <p>UI/UX</p>
                     </div>
-                    <div className='content-bottom mb-footer'>
-                        <p>need a creative mind?</p>
-                        <p>Let’s work together</p>
-                    </div>
-                </div >
-            }
-        </>
+                </div>
+            </div>
+            <div className='d-flex flex-column gap-sm'>
+                <p className='title-project'>Project</p>
+                <div className='content-list-card'>
+                    <CardItem name='E-commerce Sebrae events'
+                        image={bannerSebrae}
+                        handleChangePath={() => handleChangePage(PathsModal.SEBRAE)} />
+                    <CardItem isLocked={true} image={bannerVaidebet} />
+                </div>
+            </div>
+            <Footer />
+        </div >
     )
 }
 

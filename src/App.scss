@@ -8,6 +8,7 @@
   --color-black-transparent: #151a2234;
   --color-principal: #A74EFF;
   --color-principal-shadow: #732cba;
+  --color-principal-transparent: #732cbac5;
   --color-white: #fff;
 
   // FONTS
@@ -47,10 +48,21 @@ p {
   margin-inline-end: 0;
 }
 
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 body {
-  min-width: 380px;
+  min-width: 375px;
+
   background: var(--color-black);
-  transition: .3s ease-in-out;
+  transition: all .3s ease-in-out;
   overflow-x: hidden;
 
   &::-webkit-scrollbar-track {
@@ -180,23 +192,4 @@ body {
 
 .hidden {
   opacity: 0;
-}
-
-.content-bottom {
-  p {
-    font-family: 'inter', sans-serif;
-    color: var(--color-white);
-    text-align: center;
-
-    &:nth-of-type(1) {
-      font-size: 18px;
-      font-weight: 300;
-      text-transform: uppercase;
-    }
-
-    &:nth-of-type(2) {
-      font-size: 33px;
-      font-weight: 700;
-    }
-  }
 }

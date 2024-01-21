@@ -1,13 +1,10 @@
 .container-tag {
-    font-size: 12px;
-    font-weight: 600;
+    font-size: var(--font-xs);
+    font-weight: 500;
     border-radius: 50px;
     border: 2px solid var(--color-white);
-    padding: 0.2rem 0.5rem;
+    padding: 0.1rem 0.5rem;
     color: var(--color-white);
     font-family: 'inter', sans-serif;
 
-    @media (min-width:600px) {
-        border: 2.3px solid var(--color-white);
-    }
 }

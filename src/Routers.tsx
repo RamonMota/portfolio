@@ -1,6 +1,6 @@
-import { Route, Switch, useLocation, HashRouter} from "react-router-dom";
+import { Route, Switch, useLocation, HashRouter } from "react-router-dom";
 import { Paths, PathsModal } from "./config/paths/path";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Sebrae } from "./pages/sebrae";
 import { Home } from "./pages/home/home";
 
@@ -8,27 +8,28 @@ import { Home } from "./pages/home/home";
 export const Routers = () => {
     const location = useLocation()
     const currentPath = location.hash.substring(1);
-    const blockScroll = Object.values(PathsModal).includes(currentPath as PathsModal)
+    const [isHome, setIsHome] = useState<boolean>()
+
 
     useEffect(() => {
-        if (blockScroll) {
-            // document.body.style.background = 'var(--color-gray)'
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                // behavior: 'smooth'
-              })
+        if (currentPath === Paths.HOME || currentPath === Paths.HOME_REDIRECT) {
+            setIsHome(true)
         } else {
-            setTimeout(() => {
-                document.body.removeAttribute('style');
-            }, 300)
+            setIsHome(false)
         }
+        window.scrollTo({
+            top: 0,
+            left: 0,
+        })
     }, [currentPath])
 
     return (
         <HashRouter >
-            <Route path={PathsModal.SEBRAE} component={Sebrae} />
-            <Route path={[Paths.HOME, Paths.HOME_REDIRECT]} component={Home} />
+            {isHome ?
+                <Route path={[Paths.HOME, Paths.HOME_REDIRECT]} component={Home} />
+                :
+                <Route path={PathsModal.SEBRAE} component={Sebrae} />
+            }
         </HashRouter>
     )
 }

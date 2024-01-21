@@ -20,19 +20,25 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 5px;
+        
         flex-direction: column;
+        cursor: pointer;
         color: var(--color-white);
-
+        transition:  .3s ease-in-out;
+        
         i {
-            font-size: 60px;
+            font-size: 40px;
         }
         p {
             font-size: 14px;
-            font-weight: 300;
+            font-weight: 500;
             max-width: 170px;
             text-align: center;
             line-height: 17px;
+        }
+        &:hover {
+            background: var(--color-principal-transparent);
+
         }
     }
 

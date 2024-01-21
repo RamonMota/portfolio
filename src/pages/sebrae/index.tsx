@@ -1,5 +1,5 @@
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './index.scss'
 import { useHistory } from 'react-router';
 import { Paths } from '../../config/paths/path';
@@ -7,31 +7,24 @@ import { GridCardSebrae } from '../../components/page-sebrae/grid-cards';
 import { IconsLint } from './svg/icons';
 import { ContentIframe } from '../../components/page-sebrae/content-iframe/intex';
 import { CircleColor } from '../../components/page-sebrae/circle-color';
-import { ScrollContent } from '../../components/page-sebrae/scroll-content';
 import { GridIcon } from '../../components/page-sebrae/grid-icon';
 import { Technology } from '../../components/page-sebrae/ technology';
-
-import frame from './img/Frame.png'
-import closeIcon from '../../assets/svg/close.svg'
-import frameDevice from '../../assets/img/display-desktop.png'
-import screenDevice from '../../assets/img/home-sebrae.png'
 import { DeviceScreen } from '../../components/page-sebrae/device-screen';
-import { useScreenSize } from '../../hooks/size-screen';
+import { Footer } from '../../components/footer';
 
 export const Sebrae = () => {
   const history = useHistory()
-  const screen = useScreenSize()
 
-  const [isOpenPage, setIsIpenPage] = useState<boolean>(false)
+  const [isOpenPage, setIsOpenPage] = useState<boolean>(false)
 
   useEffect(() => {
     setTimeout(() => {
-      setIsIpenPage(true)
+      setIsOpenPage(true)
     }, 200)
   }, [])
 
-  const handleClose = () => {
-    setIsIpenPage(false)
+  const handleChangePage = () => {
+    setIsOpenPage(false)
     setTimeout(() => {
       history.push(Paths.HOME)
     }, 300)
@@ -39,25 +32,18 @@ export const Sebrae = () => {
 
   return (
     <>
-      <button className={`btn-principal btn-close-page ${isOpenPage ? '' : 'hidden-close'}`} onClick={() => handleClose()}>
-        <img src={closeIcon} alt="icon close" />
+      <button className={`btn-principal btn-close-page ${isOpenPage ? '' : 'hidden-close'}`} onClick={handleChangePage}>
+        <i className='icon-close' />
       </button>
       <div className={`content-page-sebrae  ${isOpenPage ? '' : 'hidden-page'}`}>
         <div className='max-grid'>
           <div className='content-title'>
-            <p className='pre-title'>2018</p>
-            <h1 className='title-page'>Sebrae events <br />e-commerce</h1>
-          </div>
-          <div className='content-introduction'>
-            <h2>
-              The SEBRAE events e-commerce platform focuses on providing solutions for micro and small entrepreneurs in Brazil through courses, lectures, and various events.</h2>
-            <p>
-              The project's mission is to simplify the interaction between machine and user, aiming to understand user behavior in relation to the system to establish an intuitive balance. To achieve this goal, the platform employs a clean interface, filled with illustrations and icons that serve as visual support in communication with the user. In addition to advanced tools that analyze and interpret user behavior, providing a more refined and efficient experience.
-            </p>
-          </div>
-          <div className='content-technology'>
-            <div className='d-flex gap-sm align-items-center'>
-              <Technology />
+            <h1 className='title-page'>E-commerce Sebrae events</h1>
+            <div className='content-introduction'>
+              <h2>
+                Revamping with a mobile first approach, our UI enhancements were a game changer for mobile usability. Introducing strategic breathing spaces didn't just add comfort but streamlined platform accessibility. These key results signify a leap in user experience design, blending professionalism with personality
+              </h2>
+              <span className='point-principal'/>
             </div>
           </div>
           <GridCardSebrae />
@@ -101,14 +87,7 @@ export const Sebrae = () => {
           </div>
           <DeviceScreen />
           <ContentIframe />
-          <div className='content-bottom'>
-            <p>need a creative mind?</p>
-            <p>Let’s work together</p>
-            <a className='btn-principal mx-auto d-flex mt-md'
-              href="mailto:ramonmotha@gmail.com"
-              target="_blank"
-            >Let's talk</a>
-          </div>
+          <Footer />
         </div>
       </div>
     </>
