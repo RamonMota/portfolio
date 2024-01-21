@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.eb50bfe7.css",
-    "main.js": "/portfolio/static/js/main.5fcab560.js",
+    "main.js": "/portfolio/static/js/main.f5e0ffc7.js",
     "static/media/home-sebrae.png": "/portfolio/static/media/home-sebrae.f37fc942d934b976c9f6.png",
     "static/media/home-sebrae-tablet.png": "/portfolio/static/media/home-sebrae-tablet.e9f44a648e498a8f6007.png",
     "static/media/img-min.png": "/portfolio/static/media/img-min.e97ab97c4cbc7a0fa29c.png",
@@ -34,10 +34,10 @@
     "static/media/time.svg": "/portfolio/static/media/time.02879a73fff4601a9f0516bb29dbe5a2.svg",
     "static/media/menu.svg": "/portfolio/static/media/menu.d2b640d88af9ff89d6bee3e852638be9.svg",
     "main.eb50bfe7.css.map": "/portfolio/static/css/main.eb50bfe7.css.map",
-    "main.5fcab560.js.map": "/portfolio/static/js/main.5fcab560.js.map"
+    "main.f5e0ffc7.js.map": "/portfolio/static/js/main.f5e0ffc7.js.map"
   },
   "entrypoints": [
     "static/css/main.eb50bfe7.css",
-    "static/js/main.5fcab560.js"
+    "static/js/main.f5e0ffc7.js"
   ]
 }
