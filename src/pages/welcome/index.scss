@@ -1,0 +1,42 @@
+.content-welcome {
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'inter', sans-serif;
+    font-weight: 600;
+    color: var(--color-white);
+    font-size: 50px;
+    opacity: 0;
+    animation: welcomeAni 1.5s forwards;
+    overflow: hidden;
+
+    &:nth-child(1) {
+        animation-delay: .1s;
+    }
+
+}
+
+@keyframes welcomeAni {
+    0% {
+        transform: translateY(-2rem);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateY(-1.2rem);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0rem);
+        opacity: 0;
+    }
+}

@@ -131,6 +131,12 @@ body {
   align-items: center;
   justify-content: center;
 
+  &:active {
+    scale: 0.95;
+    box-shadow: unset;
+    background: var(--color-principal-shadow);
+
+  }
   @media (min-width:600px) {
     &:hover {
       scale: 0.95;
