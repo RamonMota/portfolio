@@ -26,6 +26,7 @@
         flex-direction: column;
         justify-content: center;
         gap: var(--space-md);
+        min-height: 460px;
 
         @media (min-width:600px) {
             margin-right: 100px;

@@ -67,7 +67,7 @@ export const Home = () => {
                     <CardItem isLocked={true} image={bannerVaidebet} />
                 </div>
             </div>
-            <Footer />
+            <Footer isHome={true}/>
         </div >
     )
 }

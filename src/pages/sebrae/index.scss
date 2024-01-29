@@ -44,7 +44,7 @@
     .max-grid {
         margin: auto;
         max-width: 1024px;
-        padding: 1rem 1rem 5rem;
+        padding: 1rem 1rem 6rem;
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -84,7 +84,7 @@
             color: var(--color-white);
             max-width: 300px;
             margin: auto;
-            
+
             @media (min-width:600px) {
                 max-width: unset !important;
                 font-size: 60px;

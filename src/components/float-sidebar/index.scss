@@ -19,6 +19,16 @@
     backdrop-filter: blur(6px);
     transition: .3s;
 
+    border: 2px solid #171c260f;
+
+    &.hidden-down {
+        animation: hiddenMenu .6s ease-in-out forwards;
+    }
+
+    &.show-up {
+        animation: showMenu .6s ease-in-out forwards;
+    }
+
 
     .btn-close-flout {
         width: 50px;
@@ -51,5 +61,31 @@
     p {
         color: var(--color-white);
         font: 700 var(--font-md) 'Inter', sans-serif;
+    }
+}
+
+@keyframes hiddenMenu {
+    0% {}
+
+    50% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translateY(8.3rem);
+    }
+}
+
+@keyframes showMenu {
+    0% {
+        transform: translateY(8.3rem);
+    }
+
+    80% {
+        transform: translateY(-.5rem);
+    }
+
+    100% {
+
     }
 }
