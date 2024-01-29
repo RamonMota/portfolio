@@ -14,9 +14,9 @@ export const FloatSidebar = (props: {
 
     useEffect(() => {
         if (!isHome && !isWelcome) {
-            setTimeout(() => setIsOpenSidebar(true), 0);
+            setTimeout(() => setIsOpenSidebar(true), 300);
         } else {
-            setTimeout(() => setIsOpenSidebar(false), 0);
+            setTimeout(() => setIsOpenSidebar(false), 100);
         }
     }, [isHome]);
 

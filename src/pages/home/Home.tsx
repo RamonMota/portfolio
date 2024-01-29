@@ -21,7 +21,7 @@ export const Home = () => {
         if (currentPath === Paths.HOME) {
             setTimeout(() => {
                 setIsOpenPage(true)
-            }, 300)
+            }, 500)
         }
     }, [currentPath])
 
@@ -29,7 +29,7 @@ export const Home = () => {
         setIsOpenPage(false)
         setTimeout(() => {
             history.push(router)
-        }, 300)
+        }, 500)
     }
 
     return (

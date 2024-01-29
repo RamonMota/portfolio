@@ -21,14 +21,10 @@
 
     border: 2px solid #171c260f;
     transform: translateY(8.3rem);
-    scale: 3;
     opacity: 0;
-    filter: blur(4px);
     
     
     &.show-up {
-        filter: blur(0px);
-        scale: 1;
         opacity: 1;
         transform: translateY(0);
     }
