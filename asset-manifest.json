@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.c9b9bd23.css",
-    "main.js": "/portfolio/static/js/main.8cc14722.js",
+    "main.css": "/portfolio/static/css/main.06ef96b6.css",
+    "main.js": "/portfolio/static/js/main.a72eefd2.js",
     "static/media/home-sebrae.png": "/portfolio/static/media/home-sebrae.f37fc942d934b976c9f6.png",
     "static/media/home-sebrae-tablet.png": "/portfolio/static/media/home-sebrae-tablet.e9f44a648e498a8f6007.png",
     "static/media/heat_map.png": "/portfolio/static/media/heat_map.edce778712670149221e.png",
@@ -32,11 +32,11 @@
     "static/media/time.svg": "/portfolio/static/media/time.02879a73fff4601a9f0516bb29dbe5a2.svg",
     "static/media/menu.svg": "/portfolio/static/media/menu.d2b640d88af9ff89d6bee3e852638be9.svg",
     "static/media/close.svg": "/portfolio/static/media/close.716c83a77f92adc010533cf50e92528a.svg",
-    "main.c9b9bd23.css.map": "/portfolio/static/css/main.c9b9bd23.css.map",
-    "main.8cc14722.js.map": "/portfolio/static/js/main.8cc14722.js.map"
+    "main.06ef96b6.css.map": "/portfolio/static/css/main.06ef96b6.css.map",
+    "main.a72eefd2.js.map": "/portfolio/static/js/main.a72eefd2.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9b9bd23.css",
-    "static/js/main.8cc14722.js"
+    "static/css/main.06ef96b6.css",
+    "static/js/main.a72eefd2.js"
   ]
 }
