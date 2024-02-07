@@ -1,12 +1,10 @@
 .content-page-sebrae {
-    margin-top: 1rem;
-    width: 100%;
-    transition: .5s ease-in-out;
-
-    &.hidden-page {
-        opacity: 0 !important;
-        translate: 0 8rem !important;
-    }
+    margin: auto;
+    max-width: 1024px;
+    padding: 1rem 1rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 
     .content-introduction {
         display: flex;
@@ -39,16 +37,6 @@
         min-height: 500px;
         border-radius: 16px;
         margin: 0 1rem;
-    }
-
-    .max-grid {
-        margin: auto;
-        max-width: 1024px;
-        padding: 1rem 1rem 6rem;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-
     }
 
     .content-technology {

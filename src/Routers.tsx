@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
-import { HashRouter, Redirect, Route, useLocation } from "react-router-dom";
-import { Paths, PathsModal } from "./config/paths/path";
-import { FloatSidebar } from "./components/float-sidebar";
+import { HashRouter, Route, useLocation } from "react-router-dom";
+import { Paths, PathsPages } from "./config/paths/path";
 import { Home } from "./pages/home/home";
 import { Sebrae } from "./pages/sebrae";
-import { Welcome } from "./pages/welcome";
+import { ContentPage } from "./components/content-page";
+import { LoginCase } from "./pages/login-case";
 
 export const Routers = () => {
     const location = useLocation();
     const currentPath = location.hash.substring(1);
-    const [isBackHome, setIsBackHome] = useState<boolean>(false);
 
     useEffect(() => {
         window.scrollTo({
@@ -18,31 +17,21 @@ export const Routers = () => {
         });
     }, [currentPath]);
 
-    useEffect(() => {
-        const hasVisitedBefore = localStorage.getItem('visitedBefore');
-        if (!hasVisitedBefore) {
-            localStorage.setItem('visitedBefore', 'true');
-        }
-    }, []);
-
-    const handleChangeRouter = () => {
-        setIsBackHome(true);
-        setTimeout(() => setIsBackHome(false), 1000);
-    };
-
     return (
         <>
             <HashRouter>
-                {localStorage.getItem('visitedBefore') === null &&
-                    <Redirect to={Paths.WELCOME} />
-                }
                 <Route exact path={[Paths.HOME, Paths.HOME_REDIRECT]} component={Home} />
-                <Route path={Paths.WELCOME} component={Welcome} />
-                <Route path={PathsModal.SEBRAE}>
-                    <Sebrae backHome={isBackHome} />
+                <Route path={PathsPages.SEBRAE}>
+                    <ContentPage>
+                        <Sebrae />
+                    </ContentPage>
+                </Route>
+                <Route path={PathsPages.LOGIN_CASE}>
+                    <ContentPage>
+                        <LoginCase />
+                    </ContentPage>
                 </Route>
             </HashRouter>
-            <FloatSidebar setHome={handleChangeRouter} />
         </>
     );
 };

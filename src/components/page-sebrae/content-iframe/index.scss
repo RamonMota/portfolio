@@ -16,7 +16,6 @@
         inset: 0;
         background: #2d364487;
         backdrop-filter: blur(6px);
-        transition: opacity 0.3s ease-in-out;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -24,7 +23,6 @@
         flex-direction: column;
         cursor: pointer;
         color: var(--color-white);
-        transition:  .3s ease-in-out;
         
         i {
             font-size: 40px;

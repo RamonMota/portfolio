@@ -1,7 +1,7 @@
 import { useScreenSize } from '../../hooks/size-screen';
 import { CardItem } from '../../components/card';
 import { HeaderMobile } from '../../components/header-mobile';
-import { Paths, PathsModal } from '../../config/paths/path';
+import { Paths, PathsPages } from '../../config/paths/path';
 import { useHistory, useLocation } from 'react-router';
 import { useEffect, useState } from 'react';
 import bannerVaidebet from '../../assets/img/banner-vaidebet.png'
@@ -21,7 +21,7 @@ export const Home = () => {
         if (currentPath === Paths.HOME) {
             setTimeout(() => {
                 setIsOpenPage(true)
-            }, 500)
+            }, 600)
         }
     }, [currentPath])
 
@@ -29,7 +29,7 @@ export const Home = () => {
         setIsOpenPage(false)
         setTimeout(() => {
             history.push(router)
-        }, 500)
+        }, 400)
     }
 
     return (
@@ -37,15 +37,8 @@ export const Home = () => {
         <div className={`container-home ${isOpenPage ? '' : 'hidden-home'} `}>
             <div className='content-top'>
                 <div className='content-float-main'>
-                    {screen.isMobile &&
-                        <HeaderMobile />
-                    }
+                    <HeaderMobile />
                     <div className='content-text-main'>
-                        {!screen.isMobile &&
-                            <div className='content-title'>
-                                <h1>RAMON <b>MOTA</b></h1>
-                            </div>
-                        }
                         <p className='color-principal'>DIRTYING</p>
                         <p className='color-principal'>MY FINGERS</p>
                         <p>SINCE</p>
@@ -63,8 +56,10 @@ export const Home = () => {
                 <div className='content-list-card'>
                     <CardItem name='E-commerce Sebrae events'
                         image={bannerSebrae}
-                        handleChangePath={() => handleChangePage(PathsModal.SEBRAE)} />
+                        handleChangePath={() => handleChangePage(PathsPages.SEBRAE)} />
                     <CardItem isLocked={true} image={bannerVaidebet} />
+                    <CardItem name='Case login UX'
+                        handleChangePath={() => handleChangePage(PathsPages.LOGIN_CASE)} />
                 </div>
             </div>
             <Footer isHome={true}/>

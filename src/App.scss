@@ -38,7 +38,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: transform 0.3s ease-in-out;
+  transition: 0.5s cubic-bezier(.6, -.5, .4, 1.5);
 }
 
 p {
@@ -62,7 +62,6 @@ body {
   min-width: 375px;
 
   background: var(--color-black);
-  transition: all .3s ease-in-out;
   overflow-x: hidden;
 
   &::-webkit-scrollbar-track {
@@ -125,7 +124,6 @@ body {
   text-decoration: none;
   user-select: none;
   cursor: pointer;
-  transition: .3s ease-in-out;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
@@ -137,6 +135,7 @@ body {
     background: var(--color-principal-shadow);
 
   }
+
   @media (min-width:600px) {
     &:hover {
       scale: 0.95;

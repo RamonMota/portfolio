@@ -3,7 +3,8 @@ export enum Paths {
     HOME_REDIRECT = '/portfolio',
     WELCOME = '/welcome',
 };
-export enum PathsModal {
+export enum PathsPages {
     SEBRAE = '/sebrae',
     SPORT_BETTING_PLATAFORM = '/sports-betting-platform',
+    LOGIN_CASE = '/login-case',
 };

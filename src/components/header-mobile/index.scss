@@ -17,7 +17,9 @@
 
 .content-header {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    left: 1rem;
+    top: 0;
+    right: 0;
+    left: 0;
+    max-width: 1024px;
+    margin: auto;
 }

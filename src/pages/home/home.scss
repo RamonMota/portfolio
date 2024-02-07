@@ -3,11 +3,11 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    transition: .5s ease-in-out;
+    transition: .7s  cubic-bezier(.6, -.5, .4, 1.5);
 
     &.hidden-home {
         opacity: 0 !important;
-        translate: 0 -8rem !important;
+        transform: translatey(-8rem);
     }
 
 
@@ -21,16 +21,13 @@
     }
 
     .content-float-main {
-        height: 80vh;
+        height: 70vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: var(--space-md);
         min-height: 460px;
-
-        @media (min-width:600px) {
-            margin-right: 100px;
-        }
+        position: relative;
     }
 
     .content-text-main {
@@ -100,6 +97,13 @@
                 &:nth-child(2) {
                     grid-row-start: 1;
                     grid-column-start: 3;
+
+                    grid-row-end: 2;
+                    grid-column-end: 4;
+                }
+                &:nth-child(3) {
+                    grid-row-start: 2;
+                    grid-column-start: 1;
 
                     grid-row-end: 2;
                     grid-column-end: 4;

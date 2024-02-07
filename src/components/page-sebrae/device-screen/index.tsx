@@ -1,10 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import './index.scss';
-import frameHorizontalDevice from '../../../assets/img/bezel-horizontal-min.png'
-import frameVerticalDevice from '../../../assets/img/bezel-vertical-min.png'
 import screenDevice from '../../../assets/img/home-sebrae.png'
 import screenDeviceMobile from '../../../assets/img/home-sebrae-tablet.png'
-import { useWindowSize } from '../../../hooks/size-window';
 import { useScreenSize } from '../../../hooks/size-screen';
 
 export const DeviceScreen = () => {
@@ -18,9 +15,9 @@ export const DeviceScreen = () => {
         <div>
             <div className='content-frame-device'>
                 {screen.isMobile ?
-                    <img className={`device-scroll`} src={frameVerticalDevice} alt="frame device" />
+                    <svg width="358" height="499" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style={{ height: 'fit-content' }} />
                     :
-                    <img className={`device-scroll`} src={frameHorizontalDevice} alt="frame device" />
+                    <svg width="992" height="580" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style={{ height: 'fit-content' }} />
                 }
                 <div className='screen-scroll'>
                     {screen.isMobile ?
@@ -42,7 +39,6 @@ export const DeviceScreen = () => {
                     value={sliderValue}
                     onChange={handleSliderChange}
                 />
-
             </div>
         </div>
     );

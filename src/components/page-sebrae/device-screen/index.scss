@@ -3,10 +3,10 @@
     display: flex;
     align-items: center;
     position: relative;
-    overflow: hidden;
     height: -webkit-fill-available;
 
     .device-scroll {
+        opacity: 0 !important;
         z-index: 1;
         width: 100%;
         height: fit-content;
@@ -24,13 +24,16 @@
     margin: auto;
     height: 1px;
     overflow-y: hidden;
-    padding: 0px 16px 139.5%;
-
+    padding: 0px 0 139.5%;
+    border-radius: 18px;
+    background: white;
+    
     @media (min-width:480px) {
-        padding: 0 5px 61.5%;
+        padding: 0 0 61.5%;
     }
-
+    
     img {
+        border-radius: 18px;
         width: 100%;
         object-fit: contain;
         transition: traslate 0.3s ease-in-out;
@@ -40,12 +43,16 @@
 .content-range {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    margin: auto;
+    gap: 15px;
+    margin: 0 auto;
     justify-content: center;
+    
+    @media (min-width:480px) {
+        margin: .8rem auto 0;
+    }
 
     p {
-        font-size: var(--font-xs);
+        font-size: var(--font-xs) !important;
         opacity: .5;
         text-align: center;
         margin: 10px auto -15px;
@@ -54,7 +61,7 @@
     input[type=range] {
         height: 31px;
         -webkit-appearance: none;
-        margin: 10px 0;
+        // margin: 10px 0;
         width: 100%;
         background: none;
     }
