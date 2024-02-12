@@ -1,0 +1,78 @@
+.content-illustrator-bet {
+    position: relative;
+    transform: translate(-30px, 30px);
+    opacity: 0;
+    animation: startContent .5s cubic-bezier(0.54, 0.01, 0.21, 1.56) forwards .55s;
+
+    .ball-bet {
+        width: 30vw;
+        right: 18vw;
+        top: 5vw;
+
+        @media (min-width:480px) {
+            top: 4vh;
+            left: 16vh;
+            width: 21vh;
+        }
+
+        height: auto;
+        // right: 11.9vh;
+        position: absolute;
+        animation: rotate 40s linear infinite;
+    }
+
+    .effect-bal-bet {
+        @media (min-width:480px) {
+            width: 50vh;
+        }
+        width: 70vw;
+
+        height: auto;
+
+        path {
+            &:nth-child(1) {
+                animation: shineStars 2s infinite alternate ease-in-out 1.3s;
+                opacity: 0;
+            }
+
+            &:nth-child(7) {
+                animation: shineStars 3s infinite alternate ease-in-out 1.4s;
+                opacity: 0;
+            }
+
+            &:nth-child(10) {
+                animation: shineStars 3s infinite alternate ease-in-out 1.4s;
+                opacity: 0;
+            }
+
+            &:nth-child(11) {
+                animation: shineStars 2s infinite alternate ease-in-out 1.3s;
+                opacity: 0;
+            }
+
+            &:nth-child(12) {
+                opacity: 0;
+
+                animation: shineStars 2.5s infinite alternate ease-in-out 1.2s;
+            }
+
+            &:nth-child(13) {
+                opacity: 0;
+                animation: shineStars 4s infinite alternate ease-in-out 1.1s;
+            }
+        }
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes startContent {
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}

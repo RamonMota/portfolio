@@ -27,47 +27,22 @@
         max-width: 275px;
 
         #blink1 {
-            animation: shine1 3s infinite alternate ease-in-out;
+            animation: shineStars 3s infinite alternate ease-in-out;
         }
 
         #blink2 {
-            animation: shine1 2s infinite alternate ease-in-out;
+            animation: shineStars 2s infinite alternate ease-in-out;
         }
 
         #blink3 {
-            animation: shine1 2.5s infinite alternate ease-in-out;
+            animation: shineStars 2.5s infinite alternate ease-in-out;
         }
 
         #blink4 {
-            animation: shine1 4s infinite alternate ease-in-out;
+            animation: shineStars 4s infinite alternate ease-in-out;
         }
     }
 
-}
-
-
-@keyframes shine1 {
-    0% {
-        scale: (1);
-        opacity: 1;
-    }
-
-    100% {
-        scale: (1.02);
-        opacity: 0.2;
-    }
-}
-
-
-@keyframes shine1 {
-    40% {
-
-        opacity: 1;
-    }
-
-    60% {
-        opacity: 0.4;
-    }
 }
 
 @keyframes floatAnimation {

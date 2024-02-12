@@ -2,7 +2,16 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    margin-bottom: 6rem;
+    overflow: hidden;
+
+    .img-template {
+        margin: 0 1rem;
+        border-radius: 18px;
+        transform: scale(1.5);
+        transform-origin: top;
+        transition: none;
+    }
 
     .content-top {
         width: 100%;
@@ -11,10 +20,9 @@
         justify-content: center;
         position: relative;
         padding: 1rem;
-        
+
         @media (min-width:769px) {
             height: 100vh;
-
         }
 
         .center-content {
@@ -30,7 +38,7 @@
             gap: 5vw;
             height: fit-content;
 
-            @media (min-width:769px) {
+            @media (min-width:960px) {
                 position: absolute;
                 inset: 1rem;
                 height: auto;
@@ -38,7 +46,7 @@
                 flex-direction: row;
             }
 
-            svg {
+            .content-illustrator-bet {
                 width: 100%;
                 height: auto;
                 max-width: 70vw;
@@ -49,7 +57,6 @@
                     max-width: unset;
                     width: 53vh;
                     height: auto;
-
                 }
             }
 
@@ -74,7 +81,7 @@
                 }
 
                 h2 {
-                    @media (min-width:769px) {
+                    @media (min-width:960px) {
                         font-size: 1.5vw;
                         line-height: 2vw;
                         max-width: 40vw;

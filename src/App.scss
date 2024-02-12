@@ -7,7 +7,8 @@
   --color-gray: #2d3645;
   --color-black-transparent: #151a2234;
   --color-principal: #A74EFF;
-  --color-principal-shadow: #732cba;
+  --color-principal-shadow: #561894;
+  --color-principal-light: #c692f9;
   --color-principal-transparent: #732cbac5;
   --color-white: #fff;
 
@@ -113,7 +114,8 @@ body {
 
 .btn-principal {
   font: 700 var(--font-md) 'Inter', sans-serif;
-  background-color: var(--color-principal);
+  background: linear-gradient(180deg, var(--color-principal), var(--color-principal-shadow), var(--color-principal-light));
+  background-size: 200% 200%;
   border: none;
   color: var(--color-white);
   text-align: center;
@@ -128,19 +130,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   &:active {
     scale: 0.95;
     box-shadow: unset;
     background: var(--color-principal-shadow);
-
+    
   }
-
+  
   @media (min-width:600px) {
     &:hover {
+      background-size: 100% 190%;
       scale: 0.95;
       box-shadow: unset;
-      background: var(--color-principal-shadow);
 
     }
   }
@@ -197,4 +199,28 @@ body {
 
 .hidden {
   opacity: 0;
+}
+
+@keyframes shineStars {
+  0% {
+      scale: (1);
+      opacity: 1;
+  }
+
+  100% {
+      scale: (1.02);
+      opacity: 0.2;
+  }
+}
+
+
+@keyframes shineStars {
+  40% {
+
+      opacity: 1;
+  }
+
+  60% {
+      opacity: 0.4;
+  }
 }
