@@ -25,6 +25,11 @@
   --space-md: 16px;
   --space-lg: 18px;
   --space-xl: 22px;
+
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1440px;
 }
 
 ::selection {
@@ -130,14 +135,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   &:active {
     scale: 0.95;
     box-shadow: unset;
     background: var(--color-principal-shadow);
-    
+
   }
-  
+
   @media (min-width:600px) {
     &:hover {
       background-size: 100% 190%;
@@ -166,7 +171,7 @@ body {
 }
 
 .space-between {
-  justify-content: space-between ;
+  justify-content: space-between;
 }
 
 .mb-xl {
@@ -175,6 +180,11 @@ body {
 
 .mt-md {
   margin-top: var(--space-md);
+}
+
+.px-md {
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
 }
 
 .gap-md {
@@ -203,13 +213,13 @@ body {
 
 @keyframes shineStars {
   0% {
-      scale: (1);
-      opacity: 1;
+    scale: (1);
+    opacity: 1;
   }
 
   100% {
-      scale: (1.02);
-      opacity: 0.2;
+    scale: (1.02);
+    opacity: 0.2;
   }
 }
 
@@ -217,10 +227,10 @@ body {
 @keyframes shineStars {
   40% {
 
-      opacity: 1;
+    opacity: 1;
   }
 
   60% {
-      opacity: 0.4;
+    opacity: 0.4;
   }
 }

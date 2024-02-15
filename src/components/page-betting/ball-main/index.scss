@@ -9,20 +9,19 @@
         right: 18vw;
         top: 5vw;
 
-        @media (min-width:480px) {
+        @media (min-width: 480px) {
             top: 4vh;
             left: 16vh;
             width: 21vh;
         }
 
         height: auto;
-        // right: 11.9vh;
         position: absolute;
         animation: rotate 40s linear infinite;
     }
 
     .effect-bal-bet {
-        @media (min-width:480px) {
+        @media (min-width: 480px) {
             width: 50vh;
         }
         width: 70vw;

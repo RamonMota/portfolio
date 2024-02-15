@@ -46,6 +46,7 @@
 
     @media (min-width:600px) {
         height: 300px;
+        
 
         &:hover {
             background-color: var(--color-principal-shadow);
@@ -81,6 +82,7 @@
         position: absolute;
         inset: 0;
         object-fit: cover;
+        transition: 0.5s cubic-bezier(.8, 0, .2, 1);
     }
 
 }
