@@ -83,11 +83,6 @@
 
     .content-list-card {
         gap: var(--space-xs);
-
-        // display: flex;
-        // flex-direction: column;
-        // @media (min-width:600px) {
-        // }
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;

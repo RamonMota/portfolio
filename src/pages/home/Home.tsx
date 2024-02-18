@@ -10,8 +10,6 @@ import { Footer } from '../../components/footer';
 import './home.scss'
 
 export const Home = () => {
-
-    const screen = useScreenSize()
     const history = useHistory()
     const [isOpenPage, setIsOpenPage] = useState<boolean>(false)
     const location = useLocation()
@@ -54,15 +52,12 @@ export const Home = () => {
             <div className='d-flex flex-column gap-sm'>
                 <p className='title-project'>Project</p>
                 <div className='content-list-card'>
-                    <CardItem name='E-commerce Sebrae events'
-                        image={bannerSebrae}
-                        handleChangePath={() => handleChangePage(PathsPages.SEBRAE)} />
-                    <CardItem isLocked={true} image={bannerVaidebet} />
-                    <CardItem name='Case login UX'
-                        handleChangePath={() => handleChangePage(PathsPages.LOGIN_CASE)} />
+                    <CardItem name='E-commerce Sebrae events' image={bannerSebrae} handleChangePath={() => handleChangePage(PathsPages.SEBRAE)} />
+                    <CardItem name='Betting Sport Template' image={bannerVaidebet} handleChangePath={() => handleChangePage(PathsPages.SPORT_BETTING_PLATAFORM)} />
+                    <CardItem name='Case login UX' isLocked={true} />
                 </div>
             </div>
-            <Footer isHome={true}/>
+            <Footer isHome={true} />
         </div >
     )
 }

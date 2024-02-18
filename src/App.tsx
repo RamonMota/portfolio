@@ -6,6 +6,7 @@ import './assets/img/iconmoon/style.css'
 import { CustomCursor } from "./components/custom-mouse";
 
 function App() {
+  console.log('👀')
   return (
       <BrowserRouter>
         <main>

@@ -4,7 +4,7 @@ import { Paths, PathsPages } from "./config/paths/path";
 import { Home } from "./pages/home/home";
 import { Sebrae } from "./pages/sebrae";
 import { ContentPage } from "./components/content-page";
-import { LoginCase } from "./pages/login-case";
+import { BetTemplate } from "./pages/bet-template";
 
 export const Routers = () => {
     const location = useLocation();
@@ -26,9 +26,9 @@ export const Routers = () => {
                         <Sebrae />
                     </ContentPage>
                 </Route>
-                <Route path={PathsPages.LOGIN_CASE}>
+                <Route path={PathsPages.SPORT_BETTING_PLATAFORM}>
                     <ContentPage>
-                        <LoginCase />
+                        <BetTemplate />
                     </ContentPage>
                 </Route>
             </HashRouter>

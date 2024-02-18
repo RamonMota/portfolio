@@ -1,7 +1,6 @@
-import { useHistory, useLocation } from 'react-router-dom'
-import './index.scss'
-import { Tag } from '../tag/tag'
+import './index.scss' 
 import { useState } from 'react'
+import handWait from '../../assets/img/call-me-hand.png'
 
 
 export const CardItem = (props: {
@@ -31,7 +30,7 @@ export const CardItem = (props: {
       </div>
       {props.isLocked &&
         <div className={`content-locked ${lockOpen ? '' : 'hidden'}`}>
-          <img src='https://em-content.zobj.net/source/microsoft-teams/363/call-me-hand_1f919.png' alt="banner" />
+          <img src={handWait} alt="banner" />
           <p>In progress</p>
         </div>
       }
