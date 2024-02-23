@@ -1,0 +1,180 @@
+.card-bet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  min-width: 320px;
+  background: #2a3038;
+    backdrop-filter: blur(17px);
+  width: fit-content;
+  border-radius: 16px;
+  border: 1.5px solid rgba(242, 242, 242, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  margin: auto;
+
+  .dot-absolute {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+
+    .dot-fixed {
+      width: 10px;
+      height: 10px;
+      background: #db3c3c;
+      border-radius: 50px;
+      position: absolute;
+    }
+    .dot-live {
+      width: 10px;
+      height: 10px;
+      background: #db3c3c;
+      border-radius: 50px;
+      animation: dotShine 1s linear infinite;
+    }
+  }
+  .content-odd-list {
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .gap-xxs {
+    gap: 5px;
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      color: var(--color-white);
+      font-size: var(--font-xs);
+    }
+  }
+
+  .tag {
+    color: var(--color-white);
+    font-size: var(--font-xs);
+    font-size: 12px;
+    border-radius: 4px;
+    background: #ffffff47;
+    padding: 2px 4px;
+  }
+
+  .content-competitor {
+    display: flex;
+    gap: var(--space-xs);
+    align-items: center;
+    img {
+      width: 25px;
+    }
+    p {
+      font-size: 14.5px;
+      color: var(--color-white);
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      overflow: hidden;
+    }
+  }
+  .content-list-odd {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: stretch;
+  }
+
+  .content-odd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border-radius: 6px;
+    background: #191818;
+    border: 1px solid #ffffff1b;
+    padding: 7px 0;
+    width: 100%;
+    height: 49px;
+    justify-content: center;
+    position: relative;
+    &.border-down {
+      border-color: #eb5757;
+    }
+    &.border-up {
+      border-color: #47cf65;
+    }
+
+    .up {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      opacity: 0;
+    }
+    .down {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      opacity: 0;
+    }
+
+    &.selected {
+      background: #f2ad2f !important;
+      border: 1px solid #f2ad2f !important;
+      .odd-value {
+        color: #191818 !important;
+      }
+      .odd-name {
+        color: #00000068;
+      }
+    }
+    .odd-value {
+      color: #f2ad2f;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .odd-name {
+      color: #ffffff47;
+      font-size: 0.75rem;
+    }
+  }
+}
+
+@keyframes dotShine {
+  0% {
+    filter: blur(0);
+  }
+  50% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
+.blink182 {
+  animation-fill-mode: forwards;
+  animation: blink 1s linear 5;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// name: "VAIDEBET",
+// principal: "#2A3038",
+// principalDark: "#191818",
+// secondary: "#F2AD2F",

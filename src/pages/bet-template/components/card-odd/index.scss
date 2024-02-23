@@ -1,0 +1,45 @@
+.screen-content-dinamic {
+  position: relative;
+  max-width: 450px;
+  margin-bottom: 4rem;
+
+  img {
+    width: 100%;
+  }
+
+  .card-bet {
+    position: absolute;
+    bottom: 5%;
+    left: -1rem;
+    right: -1rem;
+    width: -webkit-fill-available;
+  }
+
+  .flout-bar {
+    position: absolute;
+    bottom: -4%;
+    left: 0.5rem;
+    right: 0.5rem;
+    width: -webkit-fill-available;
+  }
+}
+.grid-card-odd {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+
+  .title-card-odd {
+    color: var(--color-white);
+    font-size: 35px;
+    font-weight: 600;
+    text-align: start;
+    width: 100%;
+  }
+  .description-card-odd {
+    color: var(--color-white);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    opacity: 0.7;
+  }
+}

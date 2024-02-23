@@ -1,0 +1,31 @@
+.content-circle-color {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  svg, path {
+    transition: none !important;
+  }
+}
+.animated-line {
+  stroke: #f2ad2f;
+  stroke-width: 20px;
+  fill: transparent;
+  width: 20px !important;
+  height: 20px !important;
+  overflow: visible;
+}
+
+.circle-color {
+  width: 10px !important;
+  height: 10px !important;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}

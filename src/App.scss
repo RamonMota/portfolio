@@ -45,6 +45,7 @@
   padding: 0;
   box-sizing: border-box;
   transition: 0.5s cubic-bezier(.6, -.5, .4, 1.5);
+
 }
 
 p {
@@ -66,7 +67,7 @@ a {
 
 body {
   min-width: 375px;
-
+  scroll-behavior: smooth !important;
   background: var(--color-black);
   overflow-x: hidden;
 
@@ -155,6 +156,13 @@ body {
 
 .d-flex {
   display: flex;
+}
+
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+.justify-content-between {
+  justify-content:space-between
 }
 
 .mx-auto {
