@@ -1,18 +1,22 @@
 .screen-content-dinamic {
   position: relative;
   max-width: 450px;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
-  img {
+  .screen-odd {
     width: 100%;
   }
 
   .card-bet {
     position: absolute;
-    bottom: 5%;
+    bottom: 18%;
     left: -1rem;
     right: -1rem;
     width: -webkit-fill-available;
+
+    &.clone {
+      bottom: -2%;
+    }
   }
 
   .flout-bar {
@@ -21,6 +25,7 @@
     left: 0.5rem;
     right: 0.5rem;
     width: -webkit-fill-available;
+    z-index: 1;
   }
 }
 .grid-card-odd {

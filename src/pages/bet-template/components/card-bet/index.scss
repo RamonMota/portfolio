@@ -5,12 +5,13 @@
   padding: var(--space-sm);
   min-width: 320px;
   background: #2a3038;
-    backdrop-filter: blur(17px);
+  backdrop-filter: blur(17px);
   width: fit-content;
   border-radius: 16px;
   border: 1.5px solid rgba(242, 242, 242, 0.1);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   margin: auto;
+  z-index: 1;
 
   .dot-absolute {
     position: relative;
@@ -46,11 +47,17 @@
 
   .card-top {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: .5rem;
     p {
+      opacity: .5;
       color: var(--color-white);
       font-size: var(--font-xs);
+      &:nth-child(1) {
+        opacity: 1;
+        color: #47cf65 !important;
+        font-weight: 600;
+      }
     }
   }
 
@@ -132,7 +139,6 @@
       }
     }
     .odd-value {
-      color: #f2ad2f;
       font-size: 0.75rem;
       font-weight: 600;
     }

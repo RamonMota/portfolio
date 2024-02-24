@@ -136,6 +136,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   &:active {
     scale: 0.95;

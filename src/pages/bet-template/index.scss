@@ -11,7 +11,11 @@
     transform: scale(1.5);
     transform-origin: top;
     transition: none;
-    padding: 0 3rem;
+    padding: 0 1rem;
+
+    @media (min-width: 960px) {
+      padding: 0 3rem;
+    }
   }
 
   .content-top {
@@ -195,9 +199,13 @@
         grid-area: second-box;
         display: flex;
         flex-direction: column;
-        padding: 3rem;
+        padding: 0 1rem 1rem;
         align-items: center;
         justify-content: space-between;
+
+        @media (min-width: 480px) {
+          padding: 3rem;
+        }
       }
 
       &:nth-child(3) {
@@ -208,9 +216,9 @@
         justify-content: space-between;
         gap: 1rem;
         flex-direction: column-reverse;
-        
+
         @media (min-width: 480px) {
-            padding: 3rem;
+          padding: 3rem;
           flex-direction: row;
         }
 
@@ -226,7 +234,7 @@
 
             &:nth-of-type(2) {
               color: var(--color-white);
-              font-size:22px;
+              font-size: 22px;
               font-style: normal;
               font-weight: 300;
               opacity: 0.7;
