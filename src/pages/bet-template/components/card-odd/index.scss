@@ -1,21 +1,31 @@
 .screen-content-dinamic {
+  width: 100%;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  max-width: 450px;
-  margin-bottom: 2rem;
-
+  
+  @media (min-width: 1024px) {
+    margin-bottom: 2rem;
+    max-width: 450px;
+  }
   .screen-odd {
     width: 100%;
   }
 
   .card-bet {
-    position: absolute;
-    bottom: 18%;
-    left: -1rem;
-    right: -1rem;
-    width: -webkit-fill-available;
-
-    &.clone {
-      bottom: -2%;
+    width: 100%;
+    border-radius: 14px;
+    @media (min-width: 1024px) {
+      position: absolute;
+      bottom: 18%;
+      left: -1rem;
+      right: -1rem;
+      width: 110%;
+      // width: -webkit-fill-available;
+      &.clone {
+        bottom: -2%;
+      }
     }
   }
 

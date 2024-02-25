@@ -11,11 +11,9 @@ export const CardOdd = () => {
       <div className="screen-content-dinamic">
         <CardBet />
         <CardBetClone />
-        <img
-          className="screen-odd"
-          src={ScreenPhoneCut}
-          alt="screen"
-        />
+        {screen.isDesktop && (
+          <img className="screen-odd" src={ScreenPhoneCut} alt="screen" />
+        )}
       </div>
       <div className="grid-card-odd">
         <h2 className="title-card-odd">

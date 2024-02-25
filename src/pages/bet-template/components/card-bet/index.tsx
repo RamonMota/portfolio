@@ -258,10 +258,6 @@ export const CardBetClone = () => {
             </div>
           </div>
           <div className="d-flex gap-xs">
-            <div className="content-odd selected">
-              <p className="odd-value">1.25</p>
-              <p className="odd-name">1</p>
-            </div>
             <div
               className={`content-odd
             ${secondOddChange === 1 ? "border-up" : ""}
@@ -292,7 +288,7 @@ export const CardBetClone = () => {
               >
                 {secondOdd.toString().substring(0, 4)}
               </p>
-              <p className="odd-name">X</p>
+              <p className="odd-name">1</p>
               <svg
                 className={`down ${secondOddChange === 2 ? "blink182" : ""}`}
                 xmlns="http://www.w3.org/2000/svg"
@@ -306,6 +302,10 @@ export const CardBetClone = () => {
                   fill="#EB5757"
                 />
               </svg>
+            </div>
+            <div className="content-odd selected">
+              <p className="odd-value">2.27</p>
+              <p className="odd-name">X</p>
             </div>
             <div
               className={`content-odd
