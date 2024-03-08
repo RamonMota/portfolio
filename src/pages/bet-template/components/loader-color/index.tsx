@@ -24,7 +24,7 @@ export const LoadingColor = (props: {
   }, [strock, props.startTime]);
 
   return (
-    <div className="content-circle-color">
+    <div className="content-circle-change-color">
       {props.startTime && (
         <svg
           className="animated-line"
