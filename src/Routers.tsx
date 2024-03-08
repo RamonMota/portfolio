@@ -15,23 +15,24 @@ export const Routers = () => {
             top: 0,
             left: 0,
         });
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 100)
     }, [currentPath]);
 
     return (
-        <>
-            <HashRouter>
-                <Route exact path={[Paths.HOME, Paths.HOME_REDIRECT]} component={Home} />
-                <Route path={PathsPages.SEBRAE}>
-                    <ContentPage>
-                        <Sebrae />
-                    </ContentPage>
-                </Route>
-                <Route path={PathsPages.SPORT_BETTING_PLATAFORM}>
-                    <ContentPage>
-                        <BetTemplate />
-                    </ContentPage>
-                </Route>
-            </HashRouter>
-        </>
+        <HashRouter>
+            <Route exact path={[Paths.HOME, Paths.HOME_REDIRECT]} component={Home} />
+            <Route path={PathsPages.SEBRAE}>
+                <ContentPage>
+                    <Sebrae />
+                </ContentPage>
+            </Route>
+            <Route path={PathsPages.SPORT_BETTING_PLATAFORM}>
+                <ContentPage>
+                    <BetTemplate />
+                </ContentPage>
+            </Route>
+        </HashRouter>
     );
 };

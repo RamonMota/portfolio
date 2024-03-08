@@ -162,8 +162,9 @@ body {
 .justify-content-end {
   justify-content: flex-end !important;
 }
+
 .justify-content-between {
-  justify-content:space-between
+  justify-content: space-between
 }
 
 .mx-auto {
@@ -241,5 +242,15 @@ body {
 
   60% {
     opacity: 0.4;
+  }
+}
+
+@keyframes loadingSkeleton {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
   }
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Footer } from "../../components/footer";
 import { BallMain } from "../../components/page-betting/ball-main";
 import { ContentIframe } from "../../components/page-sebrae/content-iframe/intex";
@@ -9,15 +9,19 @@ import vaidebet from "../../assets/img/vaidebet.svg";
 import obabet from "../../assets/img/obabet.svg";
 import betpix from "../../assets/img/betpix.svg";
 import FigmaBetting from "../../assets/img/figma-betting.png";
+import ScreensHorizontal from "../../assets/img/screensHorizontal.jpg";
 import { CardCrown } from "./components/card-crown";
 
 import "./index.scss";
 import { CardBet } from "./components/card-bet";
 import { CardOdd } from "./components/card-odd";
+import { CardSkeleton } from "./components/card-skeleton";
 
 export const BetTemplate = () => {
+  const HorizontalScreen = useRef<HTMLImageElement>(null);
   const [scale, setScale] = useState(1.5);
   const [deviceType, setDeviceType] = useState<string>(screenDesk);
+  const [transition, setTransition] = useState(1);
 
   useEffect(() => {
     const detectDeviceType = () => {
@@ -49,6 +53,27 @@ export const BetTemplate = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleHorizontalScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const positionimage = HorizontalScreen.current?.offsetTop
+      const startScroll = positionimage && positionimage - windowHeight
+
+
+      if (startScroll && positionimage) {
+        if (scrollPosition > startScroll)
+          setTransition(startScroll - scrollPosition);
+      }
+    };
+
+    window.addEventListener("scroll", handleHorizontalScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleHorizontalScroll);
     };
   }, []);
 
@@ -87,8 +112,8 @@ export const BetTemplate = () => {
           </p>
         </div>
         <div className="content-grid-template">
-          <div className="content-card-template"></div>
-          <CardOdd/>
+          <CardSkeleton />
+          <CardOdd />
           <CardCrown />
         </div>
         <div className="content-card-template"></div>
@@ -112,6 +137,15 @@ export const BetTemplate = () => {
             </a>
           </div>
         </div>
+      </div>
+      <img
+        ref={HorizontalScreen}
+        className="img-horizontal"
+        src={ScreensHorizontal}
+        alt="screens"
+        style={{ transform: `translateX(${transition}px)` }}
+      />
+      <div className="content-main">
         <ContentIframe
           img={FigmaBetting}
           src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F4SMcNumfgCs0zxg4IvNjkB%2FOrion-Ramon-_-Twinfo%3Ftype%3Ddesign%26node-id%3D2943%253A348%26mode%3Ddesign%26t%3DgV3RBnUBUTPzRWUO-1"

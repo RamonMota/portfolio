@@ -1,0 +1,23 @@
+.content-card-skeleton {
+
+    .content-skeleton {
+        background: linear-gradient(90deg, var(--color-black) 25%, var(--color-gray) 50%, var(--color-black) 75%);
+        background-size: 200% 100%;
+        animation: loadingSkeleton 2s infinite ease-in-out;
+        width: 120px;
+        height: 120px;
+        border-radius: 16px;
+
+    }
+
+    .card-template-description {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .grid-skeleton {
+        display: flex;
+        gap: 1rem;
+    }
+}
