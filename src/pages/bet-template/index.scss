@@ -148,12 +148,16 @@
     .brand-bets {
       display: flex;
       align-items: center;
-      gap: 4rem;
       margin: auto;
-
-      flex-wrap: wrap;
       justify-content: center;
-
+      flex-direction: column;
+      gap: 2rem;
+      
+      @media (min-width: 960px) {
+        flex-direction: row;
+        gap: 4rem;
+      }
+      
       a {
         &:nth-child(1) img {
           height: 20px;

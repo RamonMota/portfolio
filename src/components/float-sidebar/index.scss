@@ -14,16 +14,15 @@
     bottom: var(--space-sm);
 
     border-radius: 50px;
-    background: #f2f2f20d;
+    background: #151a228c;
     box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
-    backdrop-filter: blur(17px);
-
+    backdrop-filter: blur(6px);
     border: 1.5px solid rgba(242, 242, 242, .1);
     transform: translateY(8.3rem);
     opacity: 0;
-    
-    
-    
+
+
+
     &.show-up {
         opacity: 1;
         transform: translateY(0);

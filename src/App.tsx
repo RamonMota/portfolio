@@ -8,12 +8,12 @@ import { CustomCursor } from "./components/custom-mouse";
 function App() {
   console.log('👀')
   return (
-      <BrowserRouter>
-        <main>
-          {/* <CustomCursor /> */}
-          <Routers />
-        </main>
-      </BrowserRouter>
+    <BrowserRouter>
+      <main>
+        {/*<CustomCursor />*/}
+        <Routers />
+      </main>
+    </BrowserRouter>
   );
 }
 
