@@ -17,7 +17,7 @@ export const CardOdd = () => {
       </div>
       <div className="grid-card-odd">
         <h2 className="title-card-odd">
-          The Crucial Role of Redux in State Management
+          The Crucial Role of Redux and firebase in State Management and real time date base
         </h2>
         <p className="description-card-odd">
           Redux is essential for managing state in React apps, offering a

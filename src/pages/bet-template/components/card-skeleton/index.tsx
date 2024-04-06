@@ -12,7 +12,7 @@ export const CardSkeleton = () => {
         <div className={`content-skeleton`} />
       </div>
       <div className="card-template-description" >
-        <p>Loading Skeleton</p>
+        <p>Loading Skeleton and otimization webp img</p>
         <p>
           Enhancing User Experience on the Platform through Visual Feedback in API Requests.
         </p>
