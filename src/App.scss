@@ -132,20 +132,18 @@ body {
   text-decoration: none;
   user-select: none;
   cursor: pointer;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px -2px 1px 1px rgb(0 0 0 / 13%);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 
-  &:active {
-    scale: 0.95;
-    box-shadow: unset;
-    background: var(--color-principal-shadow);
-
-  }
 
   @media (min-width:600px) {
+    &:active {
+      scale: 0.95;
+    }
+
     &:hover {
       background-size: 100% 190%;
       scale: 0.95;

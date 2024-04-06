@@ -13,7 +13,7 @@ export const ContentIframe = (props: { src: string; img?: string }) => {
   };
 
   return (
-    <div className={`content-iframe ${isHiddend ? "" : "skeleton"}`}>
+    <div className={`content-iframe ${isHiddend ? "skeleton" : ""}`}>
       <div
         onClick={handleShowIframe}
         className={`glass 
@@ -25,7 +25,7 @@ export const ContentIframe = (props: { src: string; img?: string }) => {
         <p>Click to view some pages of the prototype</p>
       </div>
       {isHiddend ? (
-        <iframe className="iframe-figma" src={props.src} allowFullScreen />
+        <iframe title="iframe-figma" className="iframe-figma" src={props.src} allowFullScreen />
       ) : (
         <img src={props.img} alt="banner" />
       )}

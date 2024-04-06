@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { HashRouter, Route, useLocation } from "react-router-dom";
 import { Paths, PathsPages } from "./config/paths/path";
-import { Home } from "./pages/home/home";
 import { Sebrae } from "./pages/sebrae";
 import { ContentPage } from "./components/content-page";
 import { BetTemplate } from "./pages/bet-template";
+import { Home } from "./pages/home/Home";
 
 export const Routers = () => {
     const location = useLocation();
