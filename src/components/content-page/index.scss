@@ -7,3 +7,12 @@
         transform: translatey(8rem);
     }
 }
+.load-title {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -9,7 +9,7 @@ import vaidebet from "../../assets/img/vaidebet.svg";
 import obabet from "../../assets/img/obabet.svg";
 import betpix from "../../assets/img/betpix.svg";
 import FigmaBetting from "../../assets/img/figma-betting.png";
-import ScreensHorizontal from "../../assets/img/screensHorizontal.jpg";
+import ScreensHorizontal from "../../assets/img/screensHorizontal.png";
 import { CardCrown } from "./components/card-crown";
 
 import "./index.scss";
