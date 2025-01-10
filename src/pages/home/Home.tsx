@@ -8,31 +8,31 @@ import bannerVaidebet from '../../assets/img/banner-vaidebet.png'
 import bannerSebrae from '../../assets/img/banner-sebrae.png'
 import { Footer } from '../../components/footer';
 import './home.scss'
+import { useRoute } from '../../context/RouteContext';
 
 export const Home = () => {
     const history = useHistory()
-    const [isOpenPage, setIsOpenPage] = useState<boolean>(false)
-    const location = useLocation()
-    const currentPath = location.pathname;
+    const [renderHome, setIsRenderHome] = useState<boolean>(false)
+    const { actualRoute, setRoute, interval } = useRoute();
 
     useEffect(() => {
-        if (currentPath === Paths.HOME) {
+        if (actualRoute === Paths.HOME) {
             setTimeout(() => {
-                setIsOpenPage(true)
-            }, 600)
+                setIsRenderHome(true)
+            }, interval / 2)
         }
-    }, [currentPath])
+    }, [actualRoute])
 
     const handleChangePage = (router: string) => {
-        setIsOpenPage(false)
+        setIsRenderHome(false)
+        setRoute(router)
         setTimeout(() => {
             history.push(router)
-        }, 400)
+        }, interval / 2)
     }
 
     return (
-
-        <div className={`container-home ${isOpenPage ? '' : 'hidden-home'} `}>
+        <div className={`${renderHome ? '' : 'hidden-home'} container-home`}>
             <div className='content-top'>
                 <div className='content-float-main'>
                     <HeaderMobile />

@@ -2,15 +2,12 @@ import { SocialMedia } from "../social-media";
 import "./index.scss";
 
 export const FloatSidebar = (props: {
-  isOpen?: boolean | false;
+  isOpen?: boolean;
   setIsOpen?: () => void;
 }) => {
+
   return (
-    <div
-      className={`content-float-sidebar ${
-        props.isOpen ? "show-up" : "hidden-down"
-      }`}
-    >
+    <div className={`content-float-sidebar ${props.isOpen ? "show-up" : "hidden-down"}`}>
       <a onClick={props.setIsOpen} className="btn-principal btn-close-flout">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 10" fill="none">
           <path
@@ -21,11 +18,7 @@ export const FloatSidebar = (props: {
       </a>
       <i className="vertical-line" />
       <SocialMedia />
-      <a
-        className="btn-principal"
-        href="mailto:ramonmotha@gmail.com"
-        target="_blank"
-      >
+      <a className="btn-principal" href="mailto:ramonmotha@gmail.com" target="_blank" >
         Let's talk
       </a>
     </div>
