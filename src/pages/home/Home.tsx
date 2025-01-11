@@ -16,11 +16,9 @@ export const Home = () => {
     const [renderHome, setIsRenderHome] = useState<boolean>(false)
 
     useEffect(() => {
-        if (actualRoute === Paths.HOME) {
             setTimeout(() => {
                 setIsRenderHome(true)
             }, interval / 2)
-        }
     }, [actualRoute])
 
     const handleSelectContent = (path: string) => {
