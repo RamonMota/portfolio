@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.e1e57c74.css",
-    "main.js": "/portfolio/static/js/main.fe2a5d12.js",
+    "main.js": "/portfolio/static/js/main.e8a72fd2.js",
     "static/media/home-sebrae.png": "/portfolio/static/media/home-sebrae.f37fc942d934b976c9f6.png",
     "static/media/home-sebrae-tablet.png": "/portfolio/static/media/home-sebrae-tablet.e9f44a648e498a8f6007.png",
     "static/media/call-me-hand.png": "/portfolio/static/media/call-me-hand.8b8f348e41ae37179d28.png",
@@ -41,10 +41,10 @@
     "static/media/menu.svg": "/portfolio/static/media/menu.d2b640d88af9ff89d6bee3e852638be9.svg",
     "static/media/close.svg": "/portfolio/static/media/close.716c83a77f92adc010533cf50e92528a.svg",
     "main.e1e57c74.css.map": "/portfolio/static/css/main.e1e57c74.css.map",
-    "main.fe2a5d12.js.map": "/portfolio/static/js/main.fe2a5d12.js.map"
+    "main.e8a72fd2.js.map": "/portfolio/static/js/main.e8a72fd2.js.map"
   },
   "entrypoints": [
     "static/css/main.e1e57c74.css",
-    "static/js/main.fe2a5d12.js"
+    "static/js/main.e8a72fd2.js"
   ]
 }
