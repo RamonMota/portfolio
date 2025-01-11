@@ -1,9 +1,14 @@
 .content-page {
     width: 100%;
-    transition: .7s cubic-bezier(.6, -.5, .4, 1.5);
+    transition: .6s cubic-bezier(.6, -.5, .4, 1.5);
 
     &.hidden-page {
         opacity: 0 !important;
         transform: translatey(8rem);
+    }
+
+    &.hidden-home {
+        opacity: 0 !important;
+        transform: translatey(-8rem);
     }
 }

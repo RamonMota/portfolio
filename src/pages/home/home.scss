@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    transition: .7s cubic-bezier(.6, -.5, .4, 1.5);
+    transition: .6s cubic-bezier(.6, -.5, .4, 1.5);
 
     &.hidden-home {
         opacity: 0 !important;

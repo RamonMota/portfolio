@@ -17,7 +17,7 @@ export const RouteProvider: React.FC<RouteProviderProps> = ({ children }) => {
   const location = useLocation();
   const currentPath = location.hash.substring(1);
   const [actualRoute, setRoute] = useState<string>(currentPath);
-  const interval = 1000
+  const interval = 800
 
   return (
     <RouteContext.Provider value={{ actualRoute, setRoute, interval }}>

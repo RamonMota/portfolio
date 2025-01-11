@@ -1,19 +1,19 @@
-import { useScreenSize } from '../../hooks/size-screen';
 import { CardItem } from '../../components/card';
 import { HeaderMobile } from '../../components/header-mobile';
 import { Paths, PathsPages } from '../../config/paths/path';
-import { useHistory, useLocation } from 'react-router';
-import { useEffect, useState } from 'react';
 import bannerVaidebet from '../../assets/img/banner-vaidebet.png'
 import bannerSebrae from '../../assets/img/banner-sebrae.png'
 import { Footer } from '../../components/footer';
 import './home.scss'
+import { useHandleChangePage } from '../../config/usehandleChangePage';
+import { useEffect, useState } from 'react';
 import { useRoute } from '../../context/RouteContext';
 
 export const Home = () => {
-    const history = useHistory()
-    const [renderHome, setIsRenderHome] = useState<boolean>(false)
+
+    const handleChangePage = useHandleChangePage()
     const { actualRoute, setRoute, interval } = useRoute();
+    const [renderHome, setIsRenderHome] = useState<boolean>(false)
 
     useEffect(() => {
         if (actualRoute === Paths.HOME) {
@@ -23,12 +23,9 @@ export const Home = () => {
         }
     }, [actualRoute])
 
-    const handleChangePage = (router: string) => {
+    const handleSelectContent = (path: string) => {
         setIsRenderHome(false)
-        setRoute(router)
-        setTimeout(() => {
-            history.push(router)
-        }, interval / 2)
+        handleChangePage(path)
     }
 
     return (
@@ -52,8 +49,8 @@ export const Home = () => {
             <div className='d-flex flex-column gap-sm'>
                 <p className='title-project'>Project</p>
                 <div className='content-list-card'>
-                    <CardItem name='E-commerce Sebrae events' image={bannerSebrae} handleChangePath={() => handleChangePage(PathsPages.SEBRAE)} />
-                    <CardItem name='Betting Sport Template' image={bannerVaidebet} handleChangePath={() => handleChangePage(PathsPages.SPORT_BETTING_PLATAFORM)} />
+                    <CardItem name='E-commerce Sebrae events' image={bannerSebrae} handleChangePath={() => handleSelectContent(PathsPages.SEBRAE)} />
+                    <CardItem name='Betting Sport Template' image={bannerVaidebet} handleChangePath={() => handleSelectContent(PathsPages.SPORT_BETTING_PLATAFORM)} />
                     <CardItem name='Case login UX' isLocked={true} />
                 </div>
             </div>
