@@ -11,7 +11,7 @@
     position: fixed;
     left: var(--space-sm);
     right: var(--space-sm);
-    bottom: var(--space-sm);
+    bottom: calc(var(--space-sm) + 3px);
 
     border-radius: 50px;
     background: #151a228c;

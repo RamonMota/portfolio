@@ -8,6 +8,10 @@ import './home.scss'
 import { useHandleChangePage } from '../../config/usehandleChangePage';
 import { useEffect, useState } from 'react';
 import { useRoute } from '../../context/RouteContext';
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import localAnimation from './MainScene.json'
+
+
 
 export const Home = () => {
 
@@ -16,9 +20,9 @@ export const Home = () => {
     const [renderHome, setIsRenderHome] = useState<boolean>(false)
 
     useEffect(() => {
-            setTimeout(() => {
-                setIsRenderHome(true)
-            }, interval / 2)
+        setTimeout(() => {
+            setIsRenderHome(true)
+        }, interval / 2)
     }, [actualRoute])
 
     const handleSelectContent = (path: string) => {
