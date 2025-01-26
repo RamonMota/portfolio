@@ -8,8 +8,9 @@ import screenWide from "../../assets/img/screen-wide-vaidebet.webp";
 import vaidebet from "../../assets/img/vaidebet.svg";
 import obabet from "../../assets/img/obabet.svg";
 import betpix from "../../assets/img/betpix.svg";
+import betpix365 from "../../assets/img/betpix365.svg";
 import FigmaBetting from "../../assets/img/figma-betting.png";
-import ScreensHorizontal from "../../assets/img/screensHorizontal.png";
+import ScreensHorizontal from "../../assets/img/screensHorizontal.webp";
 import { CardCrown } from "./components/card-crown";
 
 import "./index.scss";
@@ -134,6 +135,9 @@ export const BetTemplate = () => {
             </a>
             <a href="https://betpix.com/" target="blank">
               <img src={betpix} alt="logo betpix" />
+            </a>
+            <a href="https://betpix365.rio/" target="blank">
+              <img src={betpix365} alt="logo betpix365" />
             </a>
           </div>
         </div>
