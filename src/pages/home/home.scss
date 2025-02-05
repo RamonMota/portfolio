@@ -10,6 +10,11 @@
         transform: translatey(-8rem);
     }
 
+    .hidden-cards {
+        opacity: 0 !important;
+        transform: translatey(8rem);
+    }
+
 
     @media (min-width:600px) {
         max-width: 1024px;

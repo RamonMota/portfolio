@@ -7,11 +7,10 @@ import { CustomCursor } from "./components/custom-mouse";
 import { RouteProvider } from "./context/RouteContext";
 
 function App() {
-  console.log('👀')
+  console.log('What are you looking for ? 👀')
   return (
     <BrowserRouter>
       <RouteProvider>
-
         <main>
           {/*<CustomCursor />*/}
           <Routers />

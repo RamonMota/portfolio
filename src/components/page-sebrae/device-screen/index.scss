@@ -4,6 +4,8 @@
     align-items: center;
     position: relative;
     height: -webkit-fill-available;
+    max-width: 1024px;
+    margin: auto;
 
     .device-scroll {
         opacity: 0 !important;

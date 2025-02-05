@@ -11,6 +11,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: var(--space-md);
+    max-width: 1024px;
+    margin: auto;
 
     .first {
         grid-area: unset;

@@ -1,15 +1,34 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './index.scss'
 import { useHistory } from 'react-router-dom'
 import { Paths } from '../../config/paths/path'
 
-export const Welcome = () => {
-  const history = useHistory()
+export const Welcome = (props: {
+  isOpen: boolean;
+  setIsOpen: () => void
+}) => {
+
+  const [isShow, setIsShow] = useState(false)
 
   useEffect(() => {
-    setTimeout(() => { history.push(Paths.HOME) }, 1800)
-  }, [])
+    if (props.isOpen) {
+      setIsShow(true)
+      if (props.isOpen) {
+        setTimeout(() => {
+          props.setIsOpen()
+          setTimeout(() => {
+            setIsShow(false)
+          }, 1800)
+        }, 1800)
+      }
+    }
+  }, [props.isOpen])
   return (
-    <p className='content-welcome'>Hi there!</p>
+    <>
+      {
+        props.isOpen &&
+        <p className={`${isShow ? '' : 'hidden-home'} container-home content-welcome`} >Hi there!</p>
+      }
+    </>
   )
 }
