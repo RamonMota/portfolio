@@ -1,10 +1,15 @@
+import { useLanguageContext } from "../../context/LanguageContext";
 import { SocialMedia } from "../social-media";
+import pt from '../../config/locales/pt.json'
+import en from '../../config/locales/en.json'
 import "./index.scss";
 
 export const FloatSidebar = (props: {
   isOpen?: boolean;
   setIsOpen?: () => void;
 }) => {
+  const { language } = useLanguageContext();
+  const languegeRender = language === 'en' ? en : pt;
 
   return (
     <div className={`content-float-sidebar ${props.isOpen ? "show-up" : "hidden-down"}`}>
@@ -19,7 +24,7 @@ export const FloatSidebar = (props: {
       <i className="vertical-line" />
       <SocialMedia />
       <a className="btn-principal" href="mailto:ramonmotha@gmail.com" target="_blank" >
-        Let's talk
+        {languegeRender.footer.button}
       </a>
     </div>
   );

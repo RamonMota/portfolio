@@ -8,17 +8,17 @@ export const Welcome = (props: {
   setIsOpen: () => void
 }) => {
 
-  const [isShow, setIsShow] = useState(false)
+  const [isShow, setIsShow] = useState(true)
 
   useEffect(() => {
     if (props.isOpen) {
       setIsShow(true)
       if (props.isOpen) {
         setTimeout(() => {
+          // setIsShow(false)
           props.setIsOpen()
-          setTimeout(() => {
-            setIsShow(false)
-          }, 1800)
+          // setTimeout(() => {
+          // }, 1800)
         }, 1800)
       }
     }
@@ -27,7 +27,7 @@ export const Welcome = (props: {
     <>
       {
         props.isOpen &&
-        <p className={`${isShow ? '' : 'hidden-home'} container-home content-welcome`} >Hi there!</p>
+        <p className={`${isShow ? '' : 'hidden-home'} container-home content-welcome`} >Let’s create!</p>
       }
     </>
   )

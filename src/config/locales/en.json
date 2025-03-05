@@ -1,0 +1,37 @@
+{
+    "home": {
+        "titleFirst": "DIRTYING",
+        "titleSecond": "MY FINGERS",
+        "titleThird": "SINCE",
+        "titleSince": "2015",
+        "knologyFirst": "front end developer",
+        "knologySecond": "Illustrator",
+        "knologyThird": "UI/UX",
+        "labelProject": "Project"
+    },
+    "footer": {
+        "title": "Up for some Creativity?",
+        "subtitle": "Drop a Message",
+        "button": "Let's talk"
+    },
+
+    "figmaBox": "Click to view some pages of the prototype",
+    
+    "bettingSportTemplate": {
+        "title": "Betting Sport Template",
+        "subtitle": "Prototyping and implementation of the first version of a sports betting system",
+        
+        "sectionTitleEmphasis": "Innovation & Performance for a Better User Experience",
+        "sectionSubtitleEmphasis": "Optimized technologies for speed, adaptability, and seamless interactions.",
+        "titleFirstBox": "Loading Skeleton and otimization webp img",
+        "subtitleFirstBox": "Enhancing User Experience on the Platform through Visual Feedback in API Requests.",
+        "titleSecondBox": "Scalable & Adaptive",
+        "subtitleSecondBox": "Incorporate illustrations to enhance user communication, employing the SVG format for web customization and optimization.",
+        "titleThirdBox": "The Crucial Role of Redux and firebase in State Management and real time date base",
+        "subtitleThirdBox": "Redux is essential for managing state in React apps, offering a centralized store for predictable data flow. Its structured architecture simplifies state updates across components, enhancing maintainability and scalability. By enforcing separation of concerns, Redux promotes code organization and facilitates debugging, boosting developer efficiency.",
+        
+        "sectionTitleBrands": "Who’s using it?",
+        "sectionSubtitleBrands": "Real-world solutions"
+    },
+    "ecommerceSebrae": {}
+}

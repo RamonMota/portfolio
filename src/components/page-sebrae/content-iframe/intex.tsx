@@ -1,9 +1,14 @@
 import { useState } from "react";
+import { useLanguageContext } from "../../../context/LanguageContext";
+import pt from '../../../config/locales/pt.json'
+import en from '../../../config/locales/en.json'
 import "./index.scss";
 
 export const ContentIframe = (props: { src: string; img?: string }) => {
   const [isHiddend, setIsHiddend] = useState<boolean>(false);
   const [index, setIdex] = useState<boolean>(false);
+  const { language } = useLanguageContext();
+  const languegeRender = language === 'en' ? en : pt;
 
   const handleShowIframe = () => {
     setIsHiddend(true);
@@ -22,7 +27,7 @@ export const ContentIframe = (props: { src: string; img?: string }) => {
             `}
       >
         <i className="icon-visibility" />
-        <p>Click to view some pages of the prototype</p>
+        <p>{languegeRender.figmaBox}</p>
       </div>
       {isHiddend ? (
         <iframe title="iframe-figma" className="iframe-figma" src={props.src} allowFullScreen />

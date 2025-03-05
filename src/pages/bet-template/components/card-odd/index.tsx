@@ -1,11 +1,17 @@
 import { CardBet, CardBetClone } from "../card-bet";
 import "./index.scss";
 import ScreenPhoneCut from "../../img/odd-vaidebet-mobile.png";
-import ScreenPhone from "../../../../assets/img/odd-vaidebet.png";
 import { useScreenSize } from "../../../../hooks/size-screen";
+import { useLanguageContext } from "../../../../context/LanguageContext";
+import pt from '../../../../config/locales/pt.json'
+import en from '../../../../config/locales/en.json'
 
 export const CardOdd = () => {
+
   const screen = useScreenSize();
+  const { language } = useLanguageContext();
+  const languegeRender = language === 'en' ? en : pt;
+
   return (
     <div className="content-card-template justify-content-end">
       <div className="screen-content-dinamic">
@@ -16,17 +22,8 @@ export const CardOdd = () => {
         )}
       </div>
       <div className="grid-card-odd">
-        <h2 className="title-card-odd">
-          The Crucial Role of Redux and firebase in State Management and real time date base
-        </h2>
-        <p className="description-card-odd">
-          Redux is essential for managing state in React apps, offering a
-          centralized store for predictable data flow. Its structured
-          architecture simplifies state updates across components, enhancing
-          maintainability and scalability. By enforcing separation of concerns,
-          Redux promotes code organization and facilitates debugging, boosting
-          developer efficiency.
-        </p>
+        <h2 className="title-card-odd">{languegeRender.bettingSportTemplate.titleThirdBox}</h2>
+        <p className="description-card-odd">{languegeRender.bettingSportTemplate.subtitleThirdBox}</p>
       </div>
     </div>
   );

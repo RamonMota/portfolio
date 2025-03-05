@@ -17,8 +17,14 @@ import "./index.scss";
 import { CardBet } from "./components/card-bet";
 import { CardOdd } from "./components/card-odd";
 import { CardSkeleton } from "./components/card-skeleton";
+import { ScrollTopContent } from "../../components/scroll-top-content";
+import pt from '../../config/locales/pt.json'
+import en from '../../config/locales/en.json'
+import { useLanguageContext } from "../../context/LanguageContext";
 
 export const BetTemplate = () => {
+  const { language } = useLanguageContext();
+  const languegeRender = language === 'en' ? en : pt;
   const HorizontalScreen = useRef<HTMLImageElement>(null);
   const [scale, setScale] = useState(1.5);
   const [deviceType, setDeviceType] = useState<string>(screenDesk);
@@ -81,17 +87,16 @@ export const BetTemplate = () => {
   return (
     <div className="content-page-betting-template">
       <div className="content-top">
-        <div className="center-content">
+        <ScrollTopContent className="center-content">
           <div className="content-text">
-            <h1>Betting Sport Template</h1>
-            <h2>
-              Prototyping and implementation of the first version of a sports
-              betting system
-            </h2>
-            <span className="point-principal" />
+            <h1>{languegeRender.bettingSportTemplate.title}</h1>
+            <h2>{languegeRender.bettingSportTemplate.subtitle}</h2>
+            {/* <span className="point-principal" /> */}
           </div>
-          <BallMain />
-        </div>
+          <div className='content-illustrator'>
+            <BallMain />
+          </div>
+        </ScrollTopContent>
       </div>
       <img
         className="img-template"
@@ -104,13 +109,8 @@ export const BetTemplate = () => {
       />
       <div className="content-main">
         <div className="content-template-description">
-          <p>Vector Iconography Development</p>
-          <p>
-            Incorporate illustrations to enhance user communication, employing
-            SVG format for web optimization without compromising performance.
-            Notably, all icons showcased on this project have been personally
-            designed, adding a distinct touch to the creative work presented
-          </p>
+          <p>{languegeRender.bettingSportTemplate.sectionTitleEmphasis}</p>
+          <p>{languegeRender.bettingSportTemplate.sectionSubtitleEmphasis}</p>
         </div>
         <div className="content-grid-template">
           <CardSkeleton />
@@ -119,13 +119,8 @@ export const BetTemplate = () => {
         </div>
         <div className="content-card-template"></div>
         <div className="content-template-description">
-          <p>Vector Iconography Development</p>
-          <p>
-            Incorporate illustrations to enhance user communication, employing
-            SVG format for web optimization without compromising performance.
-            Notably, all icons showcased on this project have been personally
-            designed, adding a distinct touch to the creative work presented
-          </p>
+          <p>{languegeRender.bettingSportTemplate.sectionTitleBrands}</p>
+          <p>{languegeRender.bettingSportTemplate.sectionSubtitleBrands}</p>
           <div className="brand-bets">
             <a href="https://obabet.com/" target="blank">
               <img src={obabet} alt="logo obabet" />
@@ -159,3 +154,4 @@ export const BetTemplate = () => {
     </div>
   );
 };
+

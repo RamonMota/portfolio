@@ -32,9 +32,10 @@
     justify-content: center;
     position: relative;
     padding: 1rem;
-    height: 100svh;
+    height: 100dvh;
     max-width: 1440px;
     margin: auto;
+    transition: none !important;
 
     .center-content {
       background: var(--color-gray);
@@ -50,25 +51,39 @@
       position: absolute;
       height: auto;
       inset: 1rem;
+      overflow: hidden;
+      transition: none !important;
 
       @media (min-width: 960px) {
         inset: 3rem;
         align-items: center;
         flex-direction: row;
-        padding: 3rem;
       }
 
-      .content-illustrator-bet {
+      .content-illustrator {
         width: 100%;
-        height: auto;
-        max-width: 70vw;
-        margin-top: 1rem;
+        height: 100%;
 
-        @media (min-width: 769px) {
-          margin-top: unset;
-          max-width: unset;
-          width: 53vh;
-          height: auto;
+        @media (min-width: 960px) {
+          margin-bottom: unset;
+          max-width: calc(50% - 3rem - 5vw);
+          flex: 1;
+        }
+
+        .content-illustrator-bet {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: flex-end;
+
+          @media (min-width: 960px) {
+            align-items: center;
+          }
+
+          .effect-bal-bet {
+            width: 100%;
+          }
+
         }
       }
 
@@ -77,9 +92,14 @@
         flex-direction: column;
         justify-content: center;
         gap: 18px;
+        width: 100%;
+        transition: none !important;
+        padding-bottom: 1rem;
 
         @media (min-width: 960px) {
-          max-width: 36vw;
+          padding-bottom: unset;
+          flex: 1;
+          max-width: calc(50% - 3rem - 5vw);
         }
 
         h1 {
@@ -89,8 +109,8 @@
           color: white;
 
           @media (min-width: 960px) {
-            font-size: 8.5vh;
-            line-height: 9.5vh;
+            font-size: min(4.5vmax, 60px);
+            line-height: min(4.7vmax, 70px);
           }
         }
 
@@ -225,7 +245,7 @@
         gap: 1rem;
 
         @media (min-width: 960px) {
-          padding: 3rem;
+          padding: 2rem;
         }
       }
 
@@ -239,7 +259,7 @@
         gap: 1rem;
 
         @media (min-width: 960px) {
-          padding: 3rem;
+          padding: 2rem;
         }
       }
 
@@ -255,7 +275,7 @@
 
         @media (min-width: 960px) {
           height: auto;
-          padding: 3rem;
+          padding: 2rem;
           flex-direction: row;
         }
 
@@ -265,7 +285,7 @@
           p {
             &:nth-of-type(1) {
               color: var(--color-white);
-              font-size: 35px;
+              font-size: 25px;
               font-weight: 600;
             }
 

@@ -12,7 +12,8 @@
     left: var(--space-sm);
     right: var(--space-sm);
     bottom: calc(var(--space-sm) + 3px);
-
+    height: var(--height-flouting-navegation);
+    
     border-radius: 50px;
     background: #151a228c;
     box-shadow: 0 10px 25px rgba(0, 0, 0, .15);

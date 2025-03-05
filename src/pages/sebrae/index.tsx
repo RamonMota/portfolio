@@ -8,8 +8,28 @@ import { IconsLint } from './svg/icons';
 
 import './index.scss'
 import { Astronaut } from './svg/astronaut';
+import { useEffect, useState } from 'react';
+import { ScrollTopContent } from '../../components/scroll-top-content';
 
 export const Sebrae = () => {
+
+  const [padding, setPadding] = useState(68);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight / 2;
+      let newPadding = 68 * (1 - Math.min(scrollY / windowHeight, 1));
+
+      setPadding(newPadding);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className='content-page-sebrae'>
@@ -17,17 +37,23 @@ export const Sebrae = () => {
 
 
       <div className="content-top">
-        <div className="center-content">
-          <div className="content-text">
-            <h1>E-commerce <br/>Sebrae events</h1>
+        <ScrollTopContent className="center-content">
+          <div className="content-text" >
+            <h1>
+              E-commerce
+              <br />
+              Sebrae events
+            </h1>
             <h2>
               Prototyping and implementation of the first version of a sports
               betting system
             </h2>
-            <span className="point-principal" />
+            {/* <span className="point-principal" /> */}
           </div>
-          <Astronaut />
-        </div>
+          <div className='content-illustrator'>
+            <Astronaut />
+          </div>
+        </ScrollTopContent>
       </div>
 
 

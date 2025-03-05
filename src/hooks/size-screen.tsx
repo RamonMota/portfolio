@@ -22,10 +22,12 @@ export default useMediaQuery;
 
 export const useScreenSize = () => {
     const isMobile = useMediaQuery("(max-width:  480px)")
+    const isTablet = useMediaQuery("(max-width:  959px)")
     const isDesktop = useMediaQuery("(min-width: 1025px)")
 
     return {
         isMobile,
+        isTablet,
         isDesktop
     }
 }

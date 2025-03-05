@@ -1,39 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="theme-color" content="#a74eff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, user-scalable=no">
-  <meta name="theme-color" content="#a74eff" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="Crafting digital vibes with my touch! Explore my realm of UI/UX finesse and Front-End wizardry for an enchanting online journey. 🚀✨"
+    />
+    <meta
+      name="keywords"
+      content="Digital Illustration, Vector Graphics, SVG Artistry, UI Design, UX Experience, Front-End Development, Web Design Wizardry, Visual Storytelling, Interactive Interfaces, Creative Coding, User-Centric Design, Responsive Web, Graphic Design Fusion, Illustrative UI/UX, Modern Web Aesthetics, Scalable Vector Graphics, Web Animation, Intuitive User Interfaces, Digital Creativity, Front-End Magic"
+    />
+    <meta name="author" content="Ramon Mota" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta
+      name="og:title"
+      property="og:title"
+      content="Dirtying my fingers on front-end, UI/UX, and vectorial illustration"
+    />
+    <meta
+      name="og:description"
+      property="og:description"
+      content="Crafting digital vibes with my touch! Explore my realm of UI/UX finesse and Front-End wizardry for an enchanting online journey. 🚀✨"
+    />
+    <meta
+      name="og:image"
+      property="og:image"
+      content="%PUBLIC_URL%/thumbnail.png"
+    />
+    <meta
+      name="og:url"
+      property="og:url"
+      content="https://ramonmota.github.io/portfolio/"
+    />
+    <meta name="og:site_name" property="og:site_name" content="Ramon Mota" />
+    <meta name="og:type" property="og:type" content="website" />
+    <title>Ramon Mota</title>
+    <link rel="canonical" href="https://ramonmota.github.io/portfolio/#/" />
+  </head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Crafting digital vibes with my touch! Explore my realm of UI/UX finesse and Front-End wizardry for an enchanting online journey. 🚀✨">
-  <meta name="keywords"
-    content="Digital Illustration, Vector Graphics, SVG Artistry, UI Design, UX Experience, Front-End Development, Web Design Wizardry, Visual Storytelling, Interactive Interfaces, Creative Coding, User-Centric Design, Responsive Web, Graphic Design Fusion, Illustrative UI/UX, Modern Web Aesthetics, Scalable Vector Graphics, Web Animation, Intuitive User Interfaces, Digital Creativity, Front-End Magic">
-  <meta name="author" content="Ramon Mota">
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow">
-  <meta name="og:title" property="og:title"
-    content="Dirtying my fingers on front-end, UI/UX, and vectorial illustration">
-  <meta name="og:description" property="og:description"
-    content="Crafting digital vibes with my touch! Explore my realm of UI/UX finesse and Front-End wizardry for an enchanting online journey. 🚀✨">
-  <meta name="og:image" property="og:image" content="%PUBLIC_URL%/thumbnail.png">
-  <meta name="og:url" property="og:url" content="https://ramonmota.github.io/portfolio/">
-  <meta name="og:site_name" property="og:site_name" content="Ramon Mota">
-  <meta name="og:type" property="og:type" content="website">
-  <title>Ramon Mota</title>
-  <link rel="canonical" href="https://ramonmota.github.io/portfolio/#/">
-</head>
+  <script>
+    document.addEventListener(
+      "wheel",
+      function (event) {
+        if (event.ctrlKey) {
+          event.preventDefault();
+        }
+      },
+      { passive: false }
+    );
 
-<body>
-  <div id="root"></div>
-</body>
+    document.addEventListener("gesturestart", function (event) {
+      event.preventDefault();
+    });
+  </script>
 
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

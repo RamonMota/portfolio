@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { LoadingColor } from "../loader-color";
 import { SvgCrown } from "../svg-crown";
 import "./index.scss";
+import { useLanguageContext } from "../../../../context/LanguageContext";
+import pt from '../../../../config/locales/pt.json'
+import en from '../../../../config/locales/en.json'
 
 const BrandColor = [
   {
@@ -32,6 +35,8 @@ const BrandColor = [
 export const CardCrown = () => {
   const interationInterval = 5;
   const [brand, setBrand] = useState(BrandColor[0]);
+  const { language } = useLanguageContext();
+  const languegeRender = language === 'en' ? en : pt;
 
   const handleBrand = (index: number) => {
     setBrand(BrandColor[index]);
@@ -82,11 +87,10 @@ export const CardCrown = () => {
             />
           </div>
         </div>
-        <p>Title</p>
-        <p>
-          Incorporate illustrations to enhance user communication, employing SVG
-          format for web optimization
-        </p>
+       <div className="d-flex gap-md flex-column">
+          <p>{languegeRender.bettingSportTemplate.titleSecondBox}</p>
+          <p>{languegeRender.bettingSportTemplate.subtitleSecondBox}</p>
+       </div>
         <div className="d-flex gap-md"></div>
       </div>
       <SvgCrown

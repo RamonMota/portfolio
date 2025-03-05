@@ -1,0 +1,37 @@
+{
+    "home": {
+        "titleFirst": "Sujando",
+        "titleSecond": "As Mãos",
+        "titleThird": "Desde",
+        "titleSince": "2015",
+        "knologyFirst": "Desenvolvimento Front-end",
+        "knologySecond": "Ilustrator Vetorial",
+        "knologyThird": "UI/UX",
+        "labelProject": "Projetos"
+    },
+    "footer": {
+        "title": "Procurando alguém criativo?",
+        "subtitle": "Mande uma mensagem",
+        "button": "Let's talk"
+    },
+
+    "figmaBox": "Clique para ver algumas páginas do protótipo",
+
+    "bettingSportTemplate": {
+        "title": "Sistema de apostas esportivas",
+        "subtitle": "Prototyping and implementation of the first version of a sports betting system",
+        
+        "sectionTitleEmphasis": "teste & Performance for a Better User Experience",
+        "sectionSubtitleEmphasis": "TESTE technologies for speed, adaptability, and seamless interactions.",
+        "titleFirstBox": "TESTE Skeleton and otimization webp img",
+        "subtitleFirstBox": "TESTE User Experience on the Platform through Visual Feedback in API Requests.",
+        "titleSecondBox": "teste & Adaptive",
+        "subtitleSecondBox": "teste illustrations to enhance user communication, employing the SVG format for web customization and optimization.",
+        "titleThirdBox": "teste Crucial Role of Redux and firebase in State Management and real time date base",
+        "subtitleThirdBox": "teste is essential for managing state in React apps, offering a centralized store for predictable data flow. Its structured architecture simplifies state updates across components, enhancing maintainability and scalability. By enforcing separation of concerns, Redux promotes code organization and facilitates debugging, boosting developer efficiency.",
+
+        "sectionTitleBrands": "Mas quem já usa o sistema?",
+        "sectionSubtitleBrands": "Real-world solutions"
+    },
+    "ecommerceSebrae": {}
+}

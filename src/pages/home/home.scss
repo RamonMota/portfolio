@@ -45,6 +45,11 @@
             font-weight: 800;
             color: var(--color-white);
 
+            &.pt-text {
+                padding-top: 9px;
+                margin-top: -9px;
+            }
+
             &.color-principal {
                 background-image: linear-gradient(180deg, var(--color-principal), var(--color-principal-shadow), var(--color-principal-light));
                 background-size: 200% 200%;
