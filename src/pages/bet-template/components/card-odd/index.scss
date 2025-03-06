@@ -4,18 +4,28 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  max-width: 500px;
 
-  @media (min-width: 1134px) {
-    margin-bottom: 2rem;
-    max-width: 450px;
+  @media (max-width: 960px) {
+    max-width: unset;
   }
 
   .screen-odd {
     width: 100%;
-    display: none;
+    position: absolute;
+    bottom: 8%;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: auto;
 
-    @media (min-width: 1134px) {
-      display: unset;
+    @media (min-width: 960px) and (max-width: 1200px) {
+      bottom: 4.5vw;
+      width: 100%;
+    }
+
+    @media (max-width: 960px) {
+      display: none !important;
     }
   }
 
@@ -23,17 +33,6 @@
     width: 100%;
     border-radius: 14px;
 
-    @media (min-width: 1134px) {
-      position: absolute;
-      bottom: 18%;
-      left: -1rem;
-      right: -1rem;
-      width: 110%;
-
-      &.clone {
-        bottom: -2%;
-      }
-    }
   }
 
   .flout-bar {
@@ -49,11 +48,11 @@
 .grid-card-odd {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: var(--space-sm);
 
   .title-card-odd {
     color: var(--color-white);
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
     text-align: start;
     width: 100%;

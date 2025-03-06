@@ -103,8 +103,8 @@
         }
 
         h1 {
-          font-size: 7.5vh;
-          line-height: 8vh;
+          font-size: 6.5vh;
+          line-height: 7vh;
           font-weight: 800;
           color: white;
 
@@ -217,11 +217,10 @@
     grid-auto-flow: row dense;
     grid-template-areas:
       "first-box"
-      "second-box"
-      "theerd-box ";
+      "theerd-box"
+      "second-box";
 
     @media (min-width: 960px) {
-      height: 80vh;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       grid-template-areas:
@@ -310,9 +309,8 @@
         }
 
         svg {
-          width: 100%;
+          width: 80%;
           height: auto;
-          max-height: 23vh;
         }
       }
     }

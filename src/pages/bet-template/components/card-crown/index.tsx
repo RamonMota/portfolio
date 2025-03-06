@@ -57,7 +57,7 @@ export const CardCrown = () => {
       style={{ background: brand.principalDark }}
     >
       <div className="card-template-description">
-        <div className="d-flex gap-sm">
+        <div className="d-flex gap-sm pb-xs">
           <div onClick={() => handleBrand(0)}>
             <LoadingColor
               timer={interationInterval}
@@ -87,7 +87,7 @@ export const CardCrown = () => {
             />
           </div>
         </div>
-       <div className="d-flex gap-md flex-column">
+       <div className="d-flex gap-sm flex-column">
           <p>{languegeRender.bettingSportTemplate.titleSecondBox}</p>
           <p>{languegeRender.bettingSportTemplate.subtitleSecondBox}</p>
        </div>

@@ -1,6 +1,6 @@
 import { CardBet, CardBetClone } from "../card-bet";
 import "./index.scss";
-import ScreenPhoneCut from "../../img/odd-vaidebet-mobile.png";
+import ScreenPhoneCut from "../../img/odd-vaidebet-mobile.webp";
 import { useScreenSize } from "../../../../hooks/size-screen";
 import { useLanguageContext } from "../../../../context/LanguageContext";
 import pt from '../../../../config/locales/pt.json'
@@ -17,9 +17,7 @@ export const CardOdd = () => {
       <div className="screen-content-dinamic">
         <CardBet />
         <CardBetClone />
-        {screen.isDesktop && (
-          <img className="screen-odd" src={ScreenPhoneCut} alt="screen" />
-        )}
+        <img className="screen-odd" src={ScreenPhoneCut} alt="screen" />
       </div>
       <div className="grid-card-odd">
         <h2 className="title-card-odd">{languegeRender.bettingSportTemplate.titleThirdBox}</h2>

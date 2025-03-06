@@ -14,23 +14,19 @@
         "subtitle": "Mande uma mensagem",
         "button": "Let's talk"
     },
-
-    "figmaBox": "Clique para ver algumas páginas do protótipo",
-
+    "figmaBox": "Clique para ver alguns componentes do protótipo",
     "bettingSportTemplate": {
-        "title": "Sistema de apostas esportivas",
-        "subtitle": "Criação da interface e implementação do front-end da primeira versão da aplicação.",
-        
+        "title": "Sistema de Apostas Esportivas",
+        "subtitle": "Desenvolvimento da interface e implementação do front-end na primeira versão da aplicação.",
         "sectionTitleEmphasis": "Customização e performance para uma experiência mais fluida.",
-        "sectionSubtitleEmphasis": "technologies for speed, adaptability, and seamless interactions.",
-        "titleFirstBox": "Skeleton e compressão bitmap",
-        "subtitleFirstBox": "Uso de imagens WEBP otimizadas e carregamento para aprimorar o desempenho e a percepção de velocidade do sistema.",
-        "titleSecondBox": "Escalável e adaptável",
-        "subtitleSecondBox": "Ilustrações SVG garante escalabilidade sem perda de qualidade, além da flexibilidade para adaptar as cores conforme o brand.",
-        "titleThirdBox": "O Papel Crucial do Redux e Firebase na Gerenciamento de Estado e Banco de Dados em Tempo Real",
-        "subtitleThirdBox": "O Redux é usado para gerenciar o estado em tempo real dos dados do Firebase, garantindo que as informações de eventos ao vivo sejam constantemente atualizadas de forma eficiente e sincronizada entre os diversos componentes da aplicação.",
-
-        "sectionTitleBrands": "Mas quem já usa o sistema?",
+        "sectionSubtitleEmphasis": "Soluções que equilibram identidade visual e alta performance para um sistema de apostas mais dinâmico e envolvente.",
+        "titleFirstBox": "Skeleton Loading e Otimização de Imagens",
+        "subtitleFirstBox": "Implementação de skeleton loading para melhorar a percepção de carregamento, aliado ao uso de imagens WEBP otimizadas para garantir leveza e alto desempenho.",
+        "titleSecondBox": "Escalabilidade e Adaptação Visual",
+        "subtitleSecondBox": "Ilustrações em SVG asseguram qualidade independente do tamanho da tela, permitindo personalização de cores para se adequar à identidade visual de cada marca.",
+        "titleThirdBox": "Gerenciamento de Estado em Tempo Real",
+        "subtitleThirdBox": "Integração de Redux e Firebase para sincronização eficiente dos dados, garantindo atualizações instantâneas de eventos ao vivo e proporcionando uma experiência contínua para os usuários.",
+        "sectionTitleBrands": "Quem já utiliza esse sistema?",
         "sectionSubtitleBrands": "Casos reais de plataformas de apostas que utilizam o sistema, mantendo sua identidade visual única e diferenciada das demais."
     },
     "ecommerceSebrae": {}
