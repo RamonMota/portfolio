@@ -144,9 +144,12 @@
   .content-template-description {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--space-lg);
 
     p {
+      max-width: 800px;
+
       &:nth-of-type(1) {
         color: var(--color-white);
         font-size: 35px;

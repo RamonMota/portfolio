@@ -87,7 +87,11 @@
             font-size: var(--font-lg);
             font-weight: 300;
             color: var(--color-white);
-            text-transform: uppercase
+            text-transform: uppercase;
+
+            @media (max-width:480px) {
+                font-size: 6vw;
+            }
         }
     }
 

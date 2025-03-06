@@ -4,8 +4,8 @@
         "titleSecond": "As Mãos",
         "titleThird": "Desde",
         "titleSince": "2015",
-        "knologyFirst": "Desenvolvimento Front-end",
-        "knologySecond": "Ilustrator Vetorial",
+        "knologyFirst": "Desenvolvedor front-end",
+        "knologySecond": "Ilustrador Vetorial",
         "knologyThird": "UI/UX",
         "labelProject": "Projetos"
     },
@@ -19,19 +19,19 @@
 
     "bettingSportTemplate": {
         "title": "Sistema de apostas esportivas",
-        "subtitle": "Prototyping and implementation of the first version of a sports betting system",
+        "subtitle": "Criação da interface e implementação do front-end da primeira versão da aplicação.",
         
-        "sectionTitleEmphasis": "teste & Performance for a Better User Experience",
-        "sectionSubtitleEmphasis": "TESTE technologies for speed, adaptability, and seamless interactions.",
-        "titleFirstBox": "TESTE Skeleton and otimization webp img",
-        "subtitleFirstBox": "TESTE User Experience on the Platform through Visual Feedback in API Requests.",
-        "titleSecondBox": "teste & Adaptive",
-        "subtitleSecondBox": "teste illustrations to enhance user communication, employing the SVG format for web customization and optimization.",
-        "titleThirdBox": "teste Crucial Role of Redux and firebase in State Management and real time date base",
-        "subtitleThirdBox": "teste is essential for managing state in React apps, offering a centralized store for predictable data flow. Its structured architecture simplifies state updates across components, enhancing maintainability and scalability. By enforcing separation of concerns, Redux promotes code organization and facilitates debugging, boosting developer efficiency.",
+        "sectionTitleEmphasis": "Customização e performance para uma experiência mais fluida.",
+        "sectionSubtitleEmphasis": "technologies for speed, adaptability, and seamless interactions.",
+        "titleFirstBox": "Skeleton e compressão bitmap",
+        "subtitleFirstBox": "Uso de imagens WEBP otimizadas e carregamento para aprimorar o desempenho e a percepção de velocidade do sistema.",
+        "titleSecondBox": "Escalável e adaptável",
+        "subtitleSecondBox": "Ilustrações SVG garante escalabilidade sem perda de qualidade, além da flexibilidade para adaptar as cores conforme o brand.",
+        "titleThirdBox": "O Papel Crucial do Redux e Firebase na Gerenciamento de Estado e Banco de Dados em Tempo Real",
+        "subtitleThirdBox": "O Redux é usado para gerenciar o estado em tempo real dos dados do Firebase, garantindo que as informações de eventos ao vivo sejam constantemente atualizadas de forma eficiente e sincronizada entre os diversos componentes da aplicação.",
 
         "sectionTitleBrands": "Mas quem já usa o sistema?",
-        "sectionSubtitleBrands": "Real-world solutions"
+        "sectionSubtitleBrands": "Casos reais de plataformas de apostas que utilizam o sistema, mantendo sua identidade visual única e diferenciada das demais."
     },
     "ecommerceSebrae": {}
 }

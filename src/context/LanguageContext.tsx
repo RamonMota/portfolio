@@ -17,7 +17,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   const getInitialLanguage = (): Language => {
     const storedLang = localStorage.getItem("language") as Language | null;
     if (storedLang) return storedLang;
-    return navigator.language.startsWith("pt") ? "pt" : "en";
+    return navigator.language.startsWith("pt") ? "pt" : "pt";
+    // return navigator.language.startsWith("pt") ? "pt" : "en";
   };
 
   const [language, setLanguage] = useState<Language>(getInitialLanguage);
