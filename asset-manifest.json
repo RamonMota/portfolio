@@ -1,25 +1,28 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.f46e261a.css",
-    "main.js": "/portfolio/static/js/main.5ae0dc85.js",
+    "main.css": "/portfolio/static/css/main.52434b57.css",
+    "main.js": "/portfolio/static/js/main.fea78438.js",
     "static/media/home-sebrae.png": "/portfolio/static/media/home-sebrae.f37fc942d934b976c9f6.png",
     "static/media/home-sebrae-tablet.png": "/portfolio/static/media/home-sebrae-tablet.e9f44a648e498a8f6007.png",
     "static/media/call-me-hand.png": "/portfolio/static/media/call-me-hand.8b8f348e41ae37179d28.png",
     "static/media/screensHorizontal.webp": "/portfolio/static/media/screensHorizontal.f4c2be5eee79f5b078c7.webp",
-    "static/media/figma-betting.png": "/portfolio/static/media/figma-betting.9bf3d7867b721837b952.png",
     "static/media/screen-wide-vaidebet.webp": "/portfolio/static/media/screen-wide-vaidebet.821c9b100dfc6138ad51.webp",
     "static/media/screen-desk-vaidebet.webp": "/portfolio/static/media/screen-desk-vaidebet.4955014c71a0d9310d9a.webp",
+    "static/media/odd-vaidebet-mobile.webp": "/portfolio/static/media/odd-vaidebet-mobile.7f3651be0e8658662a42.webp",
+    "static/media/figma-betting.webp": "/portfolio/static/media/figma-betting.df5de5d2062f5eb291b4.webp",
     "static/media/screen-mobile-vaidebet.webp": "/portfolio/static/media/screen-mobile-vaidebet.0dc3f5f6e326fb70cb45.webp",
-    "static/media/odd-vaidebet-mobile.png": "/portfolio/static/media/odd-vaidebet-mobile.ffac5545363848fad6ba.png",
     "static/media/heat_map.png": "/portfolio/static/media/heat_map.edce778712670149221e.png",
     "static/media/mobile-usability-min.png": "/portfolio/static/media/mobile-usability-min.0fe4fbd224ffa4f395e3.png",
-    "static/media/palmeiras.png": "/portfolio/static/media/palmeiras.c7f56da5b75a3bb96d94.png",
+    "static/media/palmeiras.webp": "/portfolio/static/media/palmeiras.13f587f1e2a22795835b.webp",
     "static/media/icomoon.svg?55wuhk": "/portfolio/static/media/icomoon.d9e903771388f63fe119.svg",
     "static/media/obabet.svg": "/portfolio/static/media/obabet.25014d8a4ec6558086a7103ea3469676.svg",
+    "static/media/barcelona.webp": "/portfolio/static/media/barcelona.a5c42e0cf1327faf89e5.webp",
+    "static/media/santos.webp": "/portfolio/static/media/santos.b7c6ae019f1b2a9b7eb4.webp",
     "static/media/icomoon.eot?55wuhk": "/portfolio/static/media/icomoon.9dda19c87d12c9160d4c.eot",
     "static/media/betpix365.svg": "/portfolio/static/media/betpix365.dd312258797eb38414c4242ebc2e7a7b.svg",
     "static/media/icomoon.woff?55wuhk": "/portfolio/static/media/icomoon.1049848b7924c45f1a9f.woff",
     "static/media/icomoon.ttf?55wuhk": "/portfolio/static/media/icomoon.cb8be5e988484a1b1c01.ttf",
+    "static/media/realmadrid.webp": "/portfolio/static/media/realmadrid.b1c4b858a0612e450176.webp",
     "index.html": "/portfolio/index.html",
     "static/media/vaidebet.svg": "/portfolio/static/media/vaidebet.3acdf193e7401ae0956c175261c60e24.svg",
     "static/media/betpix.svg": "/portfolio/static/media/betpix.b9071e7efeaa916795085ce3ee3611d8.svg",
@@ -42,11 +45,11 @@
     "static/media/time.svg": "/portfolio/static/media/time.02879a73fff4601a9f0516bb29dbe5a2.svg",
     "static/media/menu.svg": "/portfolio/static/media/menu.d2b640d88af9ff89d6bee3e852638be9.svg",
     "static/media/close.svg": "/portfolio/static/media/close.716c83a77f92adc010533cf50e92528a.svg",
-    "main.f46e261a.css.map": "/portfolio/static/css/main.f46e261a.css.map",
-    "main.5ae0dc85.js.map": "/portfolio/static/js/main.5ae0dc85.js.map"
+    "main.52434b57.css.map": "/portfolio/static/css/main.52434b57.css.map",
+    "main.fea78438.js.map": "/portfolio/static/js/main.fea78438.js.map"
   },
   "entrypoints": [
-    "static/css/main.f46e261a.css",
-    "static/js/main.5ae0dc85.js"
+    "static/css/main.52434b57.css",
+    "static/js/main.fea78438.js"
   ]
 }
