@@ -1,14 +1,11 @@
 import { CardBet, CardBetClone } from "../card-bet";
 import "./index.scss";
 import ScreenPhoneCut from "../../img/odd-vaidebet-mobile.webp";
-import { useScreenSize } from "../../../../hooks/size-screen";
 import { useLanguageContext } from "../../../../context/LanguageContext";
 import pt from '../../../../config/locales/pt.json'
 import en from '../../../../config/locales/en.json'
 
 export const CardOdd = () => {
-
-  const screen = useScreenSize();
   const { language } = useLanguageContext();
   const languegeRender = language === 'en' ? en : pt;
 

@@ -35,7 +35,7 @@ export const DeviceScreen = () => {
                     type="range"
                     id="rangeSlider"
                     min="0"
-                    max={`${screen.isMobile ? '63' : '73'}`}
+                    max={`${screen.isMobile ? '63' : '78'}`}
                     value={sliderValue}
                     onChange={handleSliderChange}
                 />

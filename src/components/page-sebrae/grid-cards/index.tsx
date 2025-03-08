@@ -3,10 +3,16 @@ import { Astronaut } from '../../../pages/sebrae/svg/astronaut'
 import imgPhone from '../../../assets/img/mobile-usability-min.png'
 import cardPayment from '../../../assets/img/card-payment-min.png'
 import imgHeatMap from '../../../assets/img/heat_map.png'
+import pt from '../../../config/locales/pt.json'
+import en from '../../../config/locales/en.json'
+import { useLanguageContext } from "../../../context/LanguageContext";
 
 import './index.scss'
 
 export const GridCardSebrae = () => {
+    const { language } = useLanguageContext();
+    const languegeRender = language === 'en' ? en : pt;
+
     return (
         <div className='grid-cards-sebrae'>
             <div className='content-card large-card bg-sebrae-secondary first'>
@@ -16,8 +22,8 @@ export const GridCardSebrae = () => {
                         <Tag name='Front end' />
                     </div>
                     <div className='content-description'>
-                        <h3>Enhanced Mobile Usability</h3>
-                        <p>Implementing a mobile-first approach, we are incorporating designated breathing spaces to enhance user comfort and streamline platform accessibility.</p>
+                        <h3>{languegeRender.ecommerceSebrae.titleFirstBox}</h3>
+                        <p>{languegeRender.ecommerceSebrae.subtitleFirstBox}</p>
                     </div>
                 </div>
                 <div className='content-top-sreen'>
@@ -32,8 +38,8 @@ export const GridCardSebrae = () => {
                         <Tag name='UI/UX' />
                     </div>
                     <div className='content-description'>
-                        <h3>Guided Visual Navigation</h3>
-                        <p>Utilizing color patterns to guide the user and emphasize priority information during navigation.</p>
+                    <h3>{languegeRender.ecommerceSebrae.titleSecondBox}</h3>
+                    <p>{languegeRender.ecommerceSebrae.subtitleSecondBox}</p>
                     </div>
                 </div>
             </div>
@@ -44,9 +50,8 @@ export const GridCardSebrae = () => {
                         <Tag name='UI/UX' />
                     </div>
                     <div className='content-description'>
-                        <h3>Heat map</h3>
-                        <p>
-                            Learning from the user through tracking tools to enhance their experience on the platform</p>
+                    <h3>{languegeRender.ecommerceSebrae.titleThirdBox}</h3>
+                    <p>{languegeRender.ecommerceSebrae.subtitleThirdBox}</p>
                     </div>
                 </div>
 
@@ -58,8 +63,8 @@ export const GridCardSebrae = () => {
                         <Tag name='Front end' />
                     </div>
                     <div className='content-description'>
-                        <h3>Optimizing Web Performance for Visual Accessibility</h3>
-                        <p>Illustrations Enhancing User Communication: Leveraging SVG Format for Web Optimization without Compromising Performance</p>
+                    <h3>{languegeRender.ecommerceSebrae.titleFourthBox}</h3>
+                    <p>{languegeRender.ecommerceSebrae.subtitleFourthBox}</p>
                     </div>
                 </div>
                 <Astronaut />

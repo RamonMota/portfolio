@@ -29,5 +29,25 @@
         "sectionTitleBrands": "Quem já utiliza esse sistema?",
         "sectionSubtitleBrands": "Casos reais de plataformas de apostas que utilizam o sistema, mantendo sua identidade visual única e diferenciada das demais."
     },
-    "ecommerceSebrae": {}
+    "ecommerceSebrae": {
+        "titleFirst": "E-commerce",
+        "titleSecond": "Eventos Sebrae",
+        "subtitle": "Transformação digital para eventos online eficientes e acessíveis.",
+        "introduction": "Liderei UX/UI e Front-end para criar plataforma de e-commerce durante a pandemia. Aprimoramos a infraestrutura existente, facilitando transações online e a experiência digital para empreendedores.",
+        "titleFirstBox": "Usabilidade Mobile Aprimorada",
+        "subtitleFirstBox": "Implementamos abordagem mobile-first para navegação intuitiva. Espaços estratégicos melhoram leitura e interação, aumentando o conforto e acessibilidade do usuário.",
+        "titleSecondBox": "Navegação Visual Guiada",
+        "subtitleSecondBox": "Identidade visual direciona o usuário com cores que destacam informações prioritárias, garantindo experiência fluida e intuitiva.",
+        "titleThirdBox": "Heatmap",
+        "subtitleThirdBox": "Otimizamos a experiência com dados do comportamento do usuário.",
+        "titleFourthBox": "Otimização de Performance e Acessibilidade",
+        "subtitleFourthBox": "Usamos ilustrações SVG para comunicação visual clara e impactante, sem comprometer a performance e melhorando a acessibilidade visual.",
+        "sectionTitleColor": "Esquema de Cores",
+        "sectionSubtitleColor": "Esquema de cores consistente com a marca, com tons que auxiliam na navegação e hierarquia da informação.",
+        "colorBrand": "Marca",
+        "colorComplementary": "Complementar",
+        "colorAttention": "Destaque",
+        "sectionTitleIcon": "Iconografia Vetorial",
+        "sectionSubtitleIcon": "Ilustrações personalizadas em SVG para otimização web. Todos os ícones foram desenhados manualmente, diferenciando a experiência visual."
+    }
 }

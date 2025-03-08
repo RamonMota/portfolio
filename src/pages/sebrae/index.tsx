@@ -5,14 +5,18 @@ import { GridIcon } from '../../components/page-sebrae/grid-icon';
 import { DeviceScreen } from '../../components/page-sebrae/device-screen';
 import { Footer } from '../../components/footer';
 import { IconsLint } from './svg/icons';
-
-import './index.scss'
 import { Astronaut } from './svg/astronaut';
 import { useEffect, useState } from 'react';
 import { ScrollTopContent } from '../../components/scroll-top-content';
+import './index.scss'
+import pt from '../../config/locales/pt.json'
+import en from '../../config/locales/en.json'
+import { useLanguageContext } from "../../context/LanguageContext";
 
 export const Sebrae = () => {
 
+  const { language } = useLanguageContext();
+  const languegeRender = language === 'en' ? en : pt;
   const [padding, setPadding] = useState(68);
 
   useEffect(() => {
@@ -40,15 +44,11 @@ export const Sebrae = () => {
         <ScrollTopContent className="center-content">
           <div className="content-text" >
             <h1>
-              E-commerce
+              {languegeRender.ecommerceSebrae.titleFirst}
               <br />
-              Sebrae events
+              {languegeRender.ecommerceSebrae.titleSecond}
             </h1>
-            <h2>
-              Prototyping and implementation of the first version of a sports
-              betting system
-            </h2>
-            {/* <span className="point-principal" /> */}
+            <h2>{languegeRender.ecommerceSebrae.subtitle}</h2>
           </div>
           <div className='content-illustrator'>
             <Astronaut />
@@ -61,27 +61,24 @@ export const Sebrae = () => {
       <div className='content-page-sebrae-padding'>
         <div className='content-title'>
           <div className='content-introduction'>
-            <h2>
-              Led UX/UI and Front-end development to transform in-person events to a robust e-commerce platform amid the pandemic. Streamlined existing infrastructure for a user-friendly digital hub, enhancing online transactions and overall digital experience for entrepreneurs</h2>
+            <h2>{languegeRender.ecommerceSebrae.introduction}</h2>
             <span className='point-principal' />
           </div>
         </div>
         <GridCardSebrae />
         <div className='content-brand'>
-          <p className='title'>Color scheme</p>
-          <p className='description'>
-            Color scheme developed based on the brand colors, along with a set of complementary colors, designed to be implemented into the system to maintain visual identity
-          </p>
+          <p className='title'>{languegeRender.ecommerceSebrae.sectionTitleColor}</p>
+          <p className='description'>{languegeRender.ecommerceSebrae.sectionSubtitleColor}</p>
           <div className='grid-colors'>
             <div className='d-flex gap-sm flex-column align-items-center'>
-              <p className='color-title'>Brand</p>
+              <p className='color-title'>{languegeRender.ecommerceSebrae.colorBrand}</p>
               <div className='d-flex gap-sm'>
                 <CircleColor color={'295BAE'} />
                 <CircleColor color={'fff'} />
               </div>
             </div>
             <div className='d-flex gap-sm flex-column align-items-center'>
-              <p className='color-title'>Complementary</p>
+              <p className='color-title'>{languegeRender.ecommerceSebrae.colorComplementary}</p>
               <div className='d-flex gap-sm'>
                 <CircleColor color={'2F4358'} />
                 <CircleColor color={'A7D2F6'} />
@@ -89,7 +86,7 @@ export const Sebrae = () => {
               </div>
             </div>
             <div className='d-flex gap-sm flex-column align-items-center'>
-              <p className='color-title'>Attention</p>
+              <p className='color-title'>{languegeRender.ecommerceSebrae.colorAttention}</p>
               <div className='d-flex gap-sm'>
                 <CircleColor color={'6FAE1C'} />
                 <CircleColor color={'FD611F'} />
@@ -99,10 +96,8 @@ export const Sebrae = () => {
         </div>
         <div className='content-icons'>
           <GridIcon />
-          <p>Vector Iconography Development</p>
-          <p>
-            Incorporate illustrations to enhance user communication, employing SVG format for web optimization without compromising performance. Notably, all icons showcased on this project have been personally designed, adding a distinct touch to the creative work presented
-          </p>
+          <p>{languegeRender.ecommerceSebrae.sectionTitleIcon}</p>
+          <p>{languegeRender.ecommerceSebrae.sectionSubtitleIcon}</p>
           <IconsLint />
         </div>
         <DeviceScreen />
