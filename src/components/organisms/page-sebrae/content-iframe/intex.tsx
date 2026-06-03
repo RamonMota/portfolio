@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useLanguageContext } from "../../../context/LanguageContext";
-import pt from '../../../config/locales/pt.json'
-import en from '../../../config/locales/en.json'
+import { useLanguageContext } from "../../../../context/LanguageContext";
+import pt from '../../../../config/locales/pt.json'
+import en from '../../../../config/locales/en.json'
 import "./index.scss";
 
 export const ContentIframe = (props: { src: string; img?: string }) => {

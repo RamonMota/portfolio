@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { Footer } from "../../components/footer";
-import { BallMain } from "../../components/page-betting/ball-main";
-import { ContentIframe } from "../../components/page-sebrae/content-iframe/intex";
+import { Footer } from "../../components/organisms/footer";
+import { BallMain } from "../../components/organisms/page-betting/ball-main";
+import { ContentIframe } from "../../components/organisms/page-sebrae/content-iframe/intex";
 import screenMobile from "../../assets/img/screen-mobile-vaidebet.webp";
 import screenDesk from "../../assets/img/screen-desk-vaidebet.webp";
 import screenWide from "../../assets/img/screen-wide-vaidebet.webp";
@@ -11,13 +11,12 @@ import betpix from "../../assets/img/betpix.svg";
 import betpix365 from "../../assets/img/betpix365.svg";
 import FigmaBetting from "../../assets/img/figma-betting.webp";
 import ScreensHorizontal from "../../assets/img/screensHorizontal.webp";
-import { CardCrown } from "./components/card-crown";
+import { CardCrown } from "../../components/templates/bet-template/card-crown";
 
 import "./index.scss";
-import { CardBet } from "./components/card-bet";
-import { CardOdd } from "./components/card-odd";
-import { CardSkeleton } from "./components/card-skeleton";
-import { ScrollTopContent } from "../../components/scroll-top-content";
+import { CardOdd } from "../../components/templates/bet-template/card-odd";
+import { CardSkeleton } from "../../components/templates/bet-template/card-skeleton";
+import { ScrollTopContent } from "../../components/atoms/scroll-top-content";
 import pt from '../../config/locales/pt.json'
 import en from '../../config/locales/en.json'
 import { useLanguageContext } from "../../context/LanguageContext";
@@ -154,4 +153,3 @@ export const BetTemplate = () => {
     </div>
   );
 };
-

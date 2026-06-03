@@ -1,13 +1,13 @@
-import { GridCardSebrae } from '../../components/page-sebrae/grid-cards';
-import { ContentIframe } from '../../components/page-sebrae/content-iframe/intex';
-import { CircleColor } from '../../components/page-sebrae/circle-color';
-import { GridIcon } from '../../components/page-sebrae/grid-icon';
-import { DeviceScreen } from '../../components/page-sebrae/device-screen';
-import { Footer } from '../../components/footer';
+import { GridCardSebrae } from '../../components/organisms/page-sebrae/grid-cards';
+import { ContentIframe } from '../../components/organisms/page-sebrae/content-iframe/intex';
+import { CircleColor } from '../../components/atoms/circle-color';
+import { GridIcon } from '../../components/organisms/page-sebrae/grid-icon';
+import { DeviceScreen } from '../../components/organisms/page-sebrae/device-screen';
+import { Footer } from '../../components/organisms/footer';
 import { IconsLint } from './svg/icons';
 import { Astronaut } from './svg/astronaut';
 import { useEffect, useState } from 'react';
-import { ScrollTopContent } from '../../components/scroll-top-content';
+import { ScrollTopContent } from '../../components/atoms/scroll-top-content';
 import './index.scss'
 import pt from '../../config/locales/pt.json'
 import en from '../../config/locales/en.json'

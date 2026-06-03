@@ -1,8 +1,8 @@
-import figma from '../../../pages/sebrae/img/FM.png'
-import Photoshop from '../../../pages/sebrae/img/PS.png'
-import Illustrator from '../../../pages/sebrae/img/AI.png'
-import JavaScript from '../../../pages/sebrae/img/JS.png'
-import Bootstrap from '../../../pages/sebrae/img/BT.png'
+import figma from '../../../../pages/sebrae/img/FM.png'
+import Photoshop from '../../../../pages/sebrae/img/PS.png'
+import Illustrator from '../../../../pages/sebrae/img/AI.png'
+import JavaScript from '../../../../pages/sebrae/img/JS.png'
+import Bootstrap from '../../../../pages/sebrae/img/BT.png'
 
 import './index.scss'
 

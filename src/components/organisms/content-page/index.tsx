@@ -1,10 +1,10 @@
 
 import { Fragment, useEffect, useState } from 'react';
 import './index.scss'
-import { Paths, PathsPages } from '../../config/paths/path';
-import { FloatSidebar } from '../../components/float-sidebar';
-import { useRoute } from '../../context/RouteContext';
-import { useHandleChangePage } from '../../config/usehandleChangePage';
+import { Paths, PathsPages } from '../../../config/paths/path';
+import { FloatSidebar } from '../float-sidebar';
+import { useRoute } from '../../../context/RouteContext';
+import { useHandleChangePage } from '../../../config/usehandleChangePage';
 
 export const ContentPage = (props: { children?: any | null }) => {
   const handleChangePage = useHandleChangePage()

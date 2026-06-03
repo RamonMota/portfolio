@@ -1,6 +1,6 @@
 import { CardBet, CardBetClone } from "../card-bet";
 import "./index.scss";
-import ScreenPhoneCut from "../../img/odd-vaidebet-mobile.webp";
+import ScreenPhoneCut from "../../../../pages/bet-template/img/odd-vaidebet-mobile.webp";
 import { useLanguageContext } from "../../../../context/LanguageContext";
 import pt from '../../../../config/locales/pt.json'
 import en from '../../../../config/locales/en.json'

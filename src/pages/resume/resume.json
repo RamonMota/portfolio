@@ -1,0 +1,226 @@
+{
+  "candidate": {
+    "name": "Ramon Mota",
+    "headline": "Front-end & UI/UX",
+    "summary": "Front-End Engineer e UI/UX Designer com mais de 9 anos de experiência, transformando conceitos complexos em interfaces intuitivas e eficientes. Especialista em criar experiências digitais que equilibram design, código e performance, com foco em usabilidade, acessibilidade, inovação e alto desempenho. Domínio de JavaScript, React, Vue e Angular, além de experiência com outras tecnologias e integrações para desenvolvimento escalável e otimização de aplicações."
+  },
+  "contact": {
+    "email": "ramonmotha@gmail.com",
+    "phone": "+55 83 98709 5331",
+    "linkedin": "linkedin.com/in/ramon-motha",
+    "portfolio": "ramonmota.github.io/portfolio/"
+  },
+  "languages": [
+    {
+      "name": "Inglês",
+      "level": "Avançado"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Pós-graduação em Front-end Engineering",
+      "institution": "FIAP",
+      "expected_completion": "2025-10"
+    },
+    {
+      "degree": "Graduação em Design Gráfico",
+      "institution": "IFPB",
+      "year": "2016"
+    }
+  ],
+  "skills": {
+    "languages": [
+      "JavaScript",
+      "TypeScript",
+      "SQL"
+    ],
+    "frameworks": [
+      "React",
+      "Next.js",
+      "Vue",
+      "Nuxt.js",
+      "Angular",
+      "React Native"
+    ],
+    "styling": [
+      "CSS",
+      "SCSS",
+      "Sass",
+      "Tailwind CSS",
+      "Styled Components"
+    ],
+    "state_management": [
+      "Redux"
+    ],
+    "testing": [
+      "Jest",
+      "Teste Unitário"
+    ],
+    "tools": [
+      "Git",
+      "Figma",
+      "Illustrator",
+      "Photoshop"
+    ],
+    "knowledge": [
+      "Acessibilidade Web",
+      "API REST",
+      "SEO",
+      "Design System",
+      "Ilustração Vetorial"
+    ]
+  },
+  "experience": [
+    {
+      "company": "GarantiaBR",
+      "period": {
+        "start": "2025",
+        "end": "Atual"
+      },
+      "role": "Front-end e Lead UI/UX",
+      "industry": "Sistema de apostas esportivas e cassino",
+      "responsibilities": [
+        "Integração de fluxos de verificação de identidade no front-end.",
+        "Desenvolvimento de processos de verificação e registro de biometria facial (KYC).",
+        "Garantia de conformidade com LGPD, GDPR e regulamentações de privacidade.",
+        "Participação ativa na estruturação do front-end.",
+        "Definição de arquitetura e padrões do projeto.",
+        "Desenvolvimento utilizando React, Redux e TypeScript.",
+        "Gerenciamento de estado com Redux.",
+        "Manipulação eficiente de dados em tempo real provenientes do Firebase.",
+        "Redução de re-renderizações desnecessárias.",
+        "Melhoria de performance.",
+        "Refatoração e manutenção de código.",
+        "Aplicação de Clean Architecture.",
+        "Liderança técnica.",
+        "Mentoria de desenvolvedores juniores e plenos.",
+        "Code reviews em colaboração com QA.",
+        "Garantia de qualidade, escalabilidade e manutenção da base de código."
+      ],
+      "technologies": [
+        "React",
+        "Redux",
+        "TypeScript",
+        "Firebase"
+      ]
+    },
+    {
+      "company": "Lifters Technology",
+      "period": {
+        "start": "2022",
+        "end": "2025"
+      },
+      "role": "Front-end e UI/UX",
+      "industry": "Jogos digitais web",
+      "responsibilities": [
+        "Desenvolvimento e manutenção de funcionalidades para sistemas de jogos digitais web.",
+        "Foco em performance e experiência do usuário.",
+        "Uso de Nuxt.js e TypeScript.",
+        "Adaptação de plataforma de eventos presenciais para vídeos e transmissões ao vivo.",
+        "Adequação da plataforma para demandas surgidas durante a pandemia.",
+        "Desenvolvimento de funcionalidades de interatividade em tempo real.",
+        "Implementação de comentários ao vivo, votações e feedback instantâneo.",
+        "Uso de JavaScript e WebSockets.",
+        "Manutenção e otimização de aplicações React Native.",
+        "Melhoria de renderização de componentes.",
+        "Otimização de transições de tela."
+      ],
+      "technologies": [
+        "Nuxt.js",
+        "TypeScript",
+        "JavaScript",
+        "WebSockets",
+        "React Native"
+      ]
+    },
+    {
+      "company": "Smile & Go",
+      "period": {
+        "start": "2022",
+        "end": "2022"
+      },
+      "duration": "5 meses",
+      "role": "Front-end e UI/UX",
+      "industry": "Sistema legado de operadora de cartão",
+      "responsibilities": [
+        "Redesenho da arquitetura visual.",
+        "Implementação de nova arquitetura em Angular.",
+        "Integração de funcionalidades ao sistema legado.",
+        "Criação de componentes reutilizáveis.",
+        "Uso de serviços Angular.",
+        "Otimização com lazy loading.",
+        "Implementação de routing dinâmico."
+      ],
+      "technologies": [
+        "Angular"
+      ]
+    },
+    {
+      "company": "BeHoH",
+      "period": {
+        "start": "2016",
+        "end": "2022"
+      },
+      "role": "Front-end e UI/UX",
+      "industry": "Sistema de e-commerce",
+      "responsibilities": [
+        "Liderança da equipe de UI/UX.",
+        "Levantamento de demandas.",
+        "Implementação de melhorias de usabilidade.",
+        "Pesquisas com usuários.",
+        "Benchmarks.",
+        "Análise de mapas de calor utilizando Hotjar.",
+        "Otimização da experiência do usuário."
+      ],
+      "technologies": [
+        "Angular",
+        "Hotjar"
+      ]
+    },
+    {
+      "company": "Octus Hub",
+      "period": {
+        "start": "2025",
+        "end": "Atual"
+      },
+      "role": "Front-end e UI/UX",
+      "industry": "Jogos digitais web",
+      "responsibilities": [
+        "Desenvolvimento e manutenção de funcionalidades para sistemas de jogos digitais web.",
+        "Foco em performance e experiência do usuário.",
+        "Utilização de Nuxt.js e TypeScript."
+      ],
+      "technologies": [
+        "Nuxt.js",
+        "TypeScript"
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "name": "Formação React JS"
+    },
+    {
+      "name": "Angular - The Complete Guide"
+    },
+    {
+      "name": "Progressive Web Apps (PWA) - The Complete Guide"
+    }
+  ],
+  "freelance_projects": [
+    {
+      "client": "Natura Nordeste",
+      "year": "2023",
+      "description": "Criação de aplicações web interativas com dashboards de dados e gráficos em tempo real."
+    },
+    {
+      "client": "Personal Trainer",
+      "year": "2024",
+      "description": "Desenvolvimento de aplicação PWA para monitoramento e registro de atividades físicas em academias, incluindo captura de imagens para documentação e acompanhamento da evolução dos usuários."
+    },
+    {
+      "client": "Eventos e Shows",
+      "description": "Desenvolvimento de landing pages para divulgação de shows, eventos e promoções, com foco em captação de usuários e otimização de conversão."
+    }
+  ]
+}

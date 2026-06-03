@@ -1,7 +1,7 @@
-import Realmadrid from "../../img/realmadrid.webp";
-import Barcelona from "../../img/barcelona.webp";
-import Palmeiras from "../../img/palmeiras.webp";
-import Santos from "../../img/santos.webp";
+import Realmadrid from "../../../../pages/bet-template/img/realmadrid.webp";
+import Barcelona from "../../../../pages/bet-template/img/barcelona.webp";
+import Palmeiras from "../../../../pages/bet-template/img/palmeiras.webp";
+import Santos from "../../../../pages/bet-template/img/santos.webp";
 import "./index.scss";
 import { useEffect, useState } from "react";
 

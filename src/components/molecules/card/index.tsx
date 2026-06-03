@@ -1,6 +1,6 @@
 import './index.scss' 
 import { useState } from 'react'
-import handWait from '../../assets/img/call-me-hand.png'
+import handWait from '../../../assets/img/call-me-hand.png'
 
 
 export const CardItem = (props: {

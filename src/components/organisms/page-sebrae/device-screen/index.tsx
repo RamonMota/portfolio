@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './index.scss';
-import screenDevice from '../../../assets/img/home-sebrae.png'
-import screenDeviceMobile from '../../../assets/img/home-sebrae-tablet.png'
-import { useScreenSize } from '../../../hooks/size-screen';
+import screenDevice from '../../../../assets/img/home-sebrae.png'
+import screenDeviceMobile from '../../../../assets/img/home-sebrae-tablet.png'
+import { useScreenSize } from '../../../../hooks/size-screen';
 
 export const DeviceScreen = () => {
     const screen = useScreenSize()

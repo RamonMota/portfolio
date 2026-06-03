@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useScreenSize } from '../../hooks/size-screen';
+import { useScreenSize } from '../../../hooks/size-screen';
 
 export const ScrollTopContent = (props: { children?: any | null, className?: string }) => {
     const screen = useScreenSize();

@@ -1,6 +1,6 @@
-import pt from '../../config/locales/pt.json'
-import en from '../../config/locales/en.json'
-import { useLanguageContext } from '../../context/LanguageContext';
+import pt from '../../../config/locales/pt.json'
+import en from '../../../config/locales/en.json'
+import { useLanguageContext } from '../../../context/LanguageContext';
 import './index.scss'
 
 export const Footer = (props: { isHome?: boolean | false }) => {

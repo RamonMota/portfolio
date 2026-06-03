@@ -1,11 +1,11 @@
-import { Tag } from '../../tag/tag'
-import { Astronaut } from '../../../pages/sebrae/svg/astronaut'
-import imgPhone from '../../../assets/img/mobile-usability-min.png'
-import cardPayment from '../../../assets/img/card-payment-min.png'
-import imgHeatMap from '../../../assets/img/heat_map.png'
-import pt from '../../../config/locales/pt.json'
-import en from '../../../config/locales/en.json'
-import { useLanguageContext } from "../../../context/LanguageContext";
+import { Tag } from '../../../atoms/tag/tag'
+import { Astronaut } from '../../../../pages/sebrae/svg/astronaut'
+import imgPhone from '../../../../assets/img/mobile-usability-min.png'
+import cardPayment from '../../../../assets/img/card-payment-min.png'
+import imgHeatMap from '../../../../assets/img/heat_map.png'
+import pt from '../../../../config/locales/pt.json'
+import en from '../../../../config/locales/en.json'
+import { useLanguageContext } from "../../../../context/LanguageContext";
 
 import './index.scss'
 

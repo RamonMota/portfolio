@@ -1,7 +1,7 @@
-import { useLanguageContext } from "../../context/LanguageContext";
-import { SocialMedia } from "../social-media";
-import pt from '../../config/locales/pt.json'
-import en from '../../config/locales/en.json'
+import { useLanguageContext } from "../../../context/LanguageContext";
+import { SocialMedia } from "../../molecules/social-media";
+import pt from '../../../config/locales/pt.json'
+import en from '../../../config/locales/en.json'
 import "./index.scss";
 
 export const FloatSidebar = (props: {
