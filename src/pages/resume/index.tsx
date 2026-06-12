@@ -191,7 +191,7 @@ const SectionContent = ({ section }: { section: ResumeSection }) => {
           {section.items.map((item, itemIndex) => (
             <article key={`${item.title}-${itemIndex}`}>
               <h4>{item.title}</h4>
-              <div className="flex gap-xs">
+              <div className="d-flex gap-xs">
                 {item.lines.map((line, lineIndex) => (
                   <p key={`${line}-${lineIndex}`}>{line}</p>
                 ))}

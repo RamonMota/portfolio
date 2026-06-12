@@ -366,12 +366,8 @@
     padding-left: 0.8mm;
     font-size: var(--resume-font-size-base);
     line-height: 1.45;
+    list-style: none;
     position: relative;
-
-    &::marker {
-      color: var(--resume-color-secondary);
-      font-size: var(--resume-font-size-base);
-    }
   }
 }
 
