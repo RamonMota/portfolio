@@ -13,10 +13,6 @@ export const SocialMedia = () => {
       icon: 'icon-linkedin',
       link: 'https://www.linkedin.com/in/ramon-mota-3b4b9413a/'
     },
-    // {
-    //   icon: 'icon-Instagram',
-    //   link: 'https://www.instagram.com/ramon_mota117/'
-    // },
     {
       icon: 'icon-github',
       link: 'https://github.com/ramonmota'

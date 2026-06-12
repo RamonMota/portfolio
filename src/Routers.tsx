@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { HashRouter, Route, useLocation } from "react-router-dom";
 import { Paths, PathsPages } from "./config/paths/path";
 import { Sebrae } from "./pages/sebrae";
 import { ContentPage } from "./components/organisms/content-page";
 import { BetTemplate } from "./pages/bet-template";
 import { Home } from "./pages/home/Home";
-import { Resume } from "./pages/resume";
 
 export const Routers = () => {
     const location = useLocation();
@@ -32,11 +31,6 @@ export const Routers = () => {
             <Route path={PathsPages.SPORT_BETTING_PLATAFORM}>
                 <ContentPage>
                     <BetTemplate />
-                </ContentPage>
-            </Route>
-            <Route path={PathsPages.RESUME}>
-                <ContentPage>
-                    <Resume />
                 </ContentPage>
             </Route>
         </HashRouter>

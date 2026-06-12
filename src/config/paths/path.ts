@@ -7,5 +7,4 @@ export enum PathsPages {
   SEBRAE = "/sebrae",
   SPORT_BETTING_PLATAFORM = "/sports-betting-platform",
   LOGIN_CASE = "/login-case",
-  RESUME = "/resume",
 }

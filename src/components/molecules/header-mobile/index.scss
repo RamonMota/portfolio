@@ -4,9 +4,14 @@
     justify-content: space-between;
 
     h1 {
-        color: var(--color-white);
-        font-weight: 300;
-        font-size: var(--font-lg);
+        button {
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: var(--color-white);
+            font: 300 var(--font-lg) 'Inter', sans-serif;
+            cursor: pointer;
+        }
     }
 
     .content-social {

@@ -1,226 +1,197 @@
 {
-  "candidate": {
-    "name": "Ramon Mota",
-    "headline": "Front-end & UI/UX",
-    "summary": "Front-End Engineer e UI/UX Designer com mais de 9 anos de experiência, transformando conceitos complexos em interfaces intuitivas e eficientes. Especialista em criar experiências digitais que equilibram design, código e performance, com foco em usabilidade, acessibilidade, inovação e alto desempenho. Domínio de JavaScript, React, Vue e Angular, além de experiência com outras tecnologias e integrações para desenvolvimento escalável e otimização de aplicações."
+  "header": {
+    "title": "Ramon Mota",
+    "subtitle": "Front-end & UI/UX",
+    "description": "Front-End Engineer e UI/UX Designer com mais de 9 anos de experiência, transformando conceitos complexos em interfaces intuitivas e eficientes."
   },
-  "contact": {
-    "email": "ramonmotha@gmail.com",
-    "phone": "+55 83 98709 5331",
-    "linkedin": "linkedin.com/in/ramon-motha",
-    "portfolio": "ramonmota.github.io/portfolio/"
-  },
-  "languages": [
-    {
-      "name": "Inglês",
-      "level": "Avançado"
-    }
-  ],
-  "education": [
-    {
-      "degree": "Pós-graduação em Front-end Engineering",
-      "institution": "FIAP",
-      "expected_completion": "2025-10"
-    },
-    {
-      "degree": "Graduação em Design Gráfico",
-      "institution": "IFPB",
-      "year": "2016"
-    }
-  ],
-  "skills": {
-    "languages": [
-      "JavaScript",
-      "TypeScript",
-      "SQL"
+  "layout": {
+    "sidebarLabel": "Informações adicionais",
+    "sidebar": [
+      {
+        "id": "contact",
+        "title": "Contato",
+        "type": "links",
+        "items": [
+          {
+            "label": "linkedin.com/in/ramon-motha",
+            "href": "https://linkedin.com/in/ramon-motha",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"65\" height=\"65\" viewBox=\"0 0 65 65\" fill=\"none\" aria-hidden=\"true\"><path d=\"M55.205 55.2044H45.605V40.1704C45.605 36.5854 45.541 31.9704 40.612 31.9704C35.612 31.9704 34.847 35.8764 34.847 39.9094V55.2034H25.2469V24.2874H34.463V28.5124H34.592C35.5143 26.9355 36.847 25.6382 38.4483 24.7587C40.0496 23.8793 41.8594 23.4506 43.685 23.5184C53.415 23.5184 55.209 29.9184 55.209 38.2444L55.205 55.2044ZM14.415 20.0614C13.3131 20.0616 12.236 19.7351 11.3197 19.1231C10.4034 18.5111 9.68929 17.6412 9.26746 16.6233C8.84562 15.6054 8.73506 14.4853 8.94983 13.4045C9.16459 12.3238 9.69502 11.3311 10.474 10.5518C11.253 9.77257 12.2455 9.24181 13.3262 9.02665C14.4068 8.8115 15.5269 8.92163 16.545 9.3431C17.563 9.76457 18.4332 10.4785 19.0455 11.3945C19.6578 12.3105 19.9848 13.3876 19.985 14.4894C19.9851 15.221 19.8411 15.9455 19.5613 16.6214C19.2814 17.2974 18.8712 17.9116 18.354 18.429C17.8368 18.9464 17.2227 19.3569 16.5468 19.637C15.871 19.917 15.1466 20.0613 14.415 20.0614ZM19.215 55.2044H9.60498V24.2874H19.215V55.2044ZM59.991 0.00441416H4.78101C3.5279 -0.00972719 2.32037 0.474209 1.42389 1.34988C0.527404 2.22555 0.0152935 3.42132 0 4.67441V60.1134C0.0147701 61.3671 0.52658 62.5637 1.42303 63.4403C2.31949 64.3169 3.52727 64.8018 4.78101 64.7884H59.991C61.2472 64.8042 62.4583 64.3207 63.3583 63.4441C64.2583 62.5676 64.7736 61.3696 64.791 60.1134V4.67041C64.773 3.41483 64.2574 2.21771 63.3574 1.34206C62.4574 0.466407 61.2466 -0.0161471 59.991 0.000412547\" fill=\"var(--resume-color-primary)\" /></svg>"
+          },
+          {
+            "label": "ramonmota.github.io/portfolio/",
+            "href": "https://ramonmota.github.io/portfolio/",
+            "icon": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"8.5\" /><path d=\"M3.75 12h16.5M12 3.5c2.2 2.3 3.35 5.15 3.35 8.5S14.2 18.2 12 20.5C9.8 18.2 8.65 15.35 8.65 12S9.8 5.8 12 3.5Z\" /></svg>"
+          },
+          {
+            "label": "ramonmotha@gmail.com",
+            "href": "mailto:ramonmotha@gmail.com",
+            "icon": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3.5\" y=\"5.5\" width=\"17\" height=\"13\" rx=\"2\" /><path d=\"m4.5 7 7.5 6 7.5-6\" /></svg>"
+          },
+          {
+            "label": "+55 83 98709 5331",
+            "href": "tel:5583987095331",
+            "icon": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M8.1 4.25 10 8.6 7.6 10a13.5 13.5 0 0 0 6.4 6.4l1.4-2.4 4.35 1.9v3a1.85 1.85 0 0 1-2 1.85A15.75 15.75 0 0 1 3.25 6.25a1.85 1.85 0 0 1 1.85-2h3Z\" /></svg>"
+          }
+        ]
+      },
+      {
+        "id": "education",
+        "title": "Formação acadêmica",
+        "type": "details",
+        "items": [
+          {
+            "title": "Pós-graduação em Engenharia Front-end",
+            "lines": [
+              "FIAP",
+              "2025"
+            ]
+          },
+          {
+            "title": "Graduação em Design Gráfico",
+            "lines": [
+              "IFPB",
+              "2016"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "language",
+        "title": "Idioma",
+        "type": "text",
+        "items": [
+          "Inglês avançado"
+        ]
+      },
+      {
+        "id": "main-skills",
+        "title": "Linguagens, frameworks e bibliotecas",
+        "type": "tags",
+        "items": [
+          "JavaScript",
+          "TypeScript",
+          "SQL",
+          "React",
+          "Next.js",
+          "Vue",
+          "Nuxt.js",
+          "Angular",
+          "React Native",
+          "CSS",
+          "SCSS",
+          "Sass",
+          "Tailwind CSS",
+          "Styled Components",
+          "Redux",
+          "Jest",
+          "Teste Unitário"
+        ]
+      },
+      {
+        "id": "knowledge",
+        "title": "Conhecimentos e ferramentas",
+        "type": "tags",
+        "items": [
+          "Acessibilidade Web",
+          "API REST",
+          "SEO",
+          "Design System",
+          "Ilustração Vetorial",
+          "Git",
+          "Figma",
+          "Illustrator",
+          "Photoshop"
+        ]
+      },
+      {
+        "id": "courses",
+        "title": "Cursos",
+        "type": "bullets",
+        "items": [
+          "Formação React JS",
+          "Angular - The Complete Guide",
+          "Progressive Web Apps (PWA) - The Complete Guide"
+        ]
+      },
+      {
+        "id": "freelance",
+        "title": "Outros projetos",
+        "type": "bullets",
+        "items": [
+          "Desenvolvimento da aplicação web (Next.js) e móvel (React Native com Expo), incluindo arquitetura front-end, implementação de funcionalidades e criação completa da interface e experiência do usuário (Figma) - EzzyBanking | 2025",
+          "Desenvolvimento de uma aplicação PWA para monitoramento e registro de atividades físicas em academias, integrando captura de imagens pela câmera do dispositivo para documentação e acompanhamento da evolução dos usuários - Personal trainer | 2024"
+        ]
+      }
     ],
-    "frameworks": [
-      "React",
-      "Next.js",
-      "Vue",
-      "Nuxt.js",
-      "Angular",
-      "React Native"
-    ],
-    "styling": [
-      "CSS",
-      "SCSS",
-      "Sass",
-      "Tailwind CSS",
-      "Styled Components"
-    ],
-    "state_management": [
-      "Redux"
-    ],
-    "testing": [
-      "Jest",
-      "Teste Unitário"
-    ],
-    "tools": [
-      "Git",
-      "Figma",
-      "Illustrator",
-      "Photoshop"
-    ],
-    "knowledge": [
-      "Acessibilidade Web",
-      "API REST",
-      "SEO",
-      "Design System",
-      "Ilustração Vetorial"
+    "main": [
+      {
+        "id": "professional-experience",
+        "title": "Experiência profissional",
+        "type": "entries",
+        "items": [
+          {
+            "title": "Front-end",
+            "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFrJcG99Vky-A/company-logo_200_200/company-logo_200_200/0/1730977229055/garantiabr_logo?e=1782950400&v=beta&t=Z8VHc04J-i34O6J5KjRFxZU6khEya0qXpMn3G5kSYl4",
+            "subtitle": "GarantiaBR",
+            "meta": "2025 - Atual",
+            "groups": [
+              {
+                "description": "Atuei na idealização, arquitetura e implementação da biblioteca de componentes compartilhada da empresa, conectando Design e Engenharia por meio de um Design System centralizado, documentação técnica e visual e distribuição automatizada de Design Tokens para múltiplos produtos.",
+                "bullets": [
+                  "Criação e governança do Design System corporativo, promovendo padronização, reuso e qualidade entre todos os produtos da empresa.",
+                  "Integração entre design e código por meio de Design Tokens e automação de pipelines utilizando Supernova e Storybook.",
+                  "Documentação técnica e visual com Storybook, incluindo diretrizes, estados e exemplos de implementação.",
+                  "Uso de inteligência artificial para automação de documentação, aceleração do desenvolvimento e suporte à qualidade técnica."
+                ]
+              },
+              {
+                "description": "Também atuo na evolução de uma plataforma de originação de crédito.",
+                "bullets": [
+                  "Estruturação da arquitetura front-end com foco em escalabilidade, modularização e facilidade de manutenção.",
+                  "Implementação de fluxos complexos de negócio integrando múltiplos serviços e APIs.",
+                  "Colaboração próxima com equipes de Produto, UX/UI e Backend para alinhar negócio, experiência e implementação.",
+                  "Definição de padrões técnicos e boas práticas para garantir sustentabilidade e evolução da plataforma."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Front-end e Lead UI/UX",
+            "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQGNaZOer5fZpQ/company-logo_200_200/B4DZybHHoIGUAM-/0/1772128861155/lifters_tech_logo?e=1782950400&v=beta&t=fNsSy0E6gIYxukY84TQiLk5tILpxYG6jO7EDzcPNBBw",
+            "subtitle": "Lifters Technology",
+            "meta": "2022 - 2025",
+            "groups": [
+              {
+                "description": "Sistema de apostas esportivas e cassino",
+                "bullets": [
+                  "Participação ativa na estruturação do front-end, colaborando na definição da arquitetura e nos padrões para o projeto, com foco em Redux e TypeScript.",
+                  "Integração de fluxos de verificação de identidade no front-end, desenvolvendo processos de verificação e registro de biometria facial (KYC), garantindo a conformidade com a LGPD, o GDPR e outras regulamentações de privacidade e segurança de dados.",
+                  "Desenvolvimento de fluxos de gerenciamento de estado com Redux, otimizado para manipulação eficiente de dados em tempo real provenientes do Firebase, utilizando gerenciamento assíncrono para garantir atualizações consistentes da interface, com redução de re-renderizações desnecessárias e melhoria de performance.",
+                  "Manutenção e refatoração de código, adotando boas práticas de clean architecture e padrões modernos para garantir legibilidade, modularidade e escalabilidade.",
+                  "Atuação na garantia da qualidade do código e na liderança técnica da equipe, com mentoria para desenvolvedores juniores e plenos. Condução de code reviews em pull requests em colaboração com o time de QA, assegurando a adoção de boas práticas de codificação e a manutenção de uma base escalável, modular e de fácil manutenção. Foco na consistência, desempenho e clareza do código.",
+                  "Liderança da equipe de UI/UX, incluindo levantamento de demandas e implementação de melhorias na usabilidade da plataforma. Condução de pesquisas, benchmarks e análises de mapas de calor (Hotjar) para otimizar a experiência do usuário."
+                ]
+              }
+            ]
+          },
+           {
+            "title": "Front-end e Lead UI/UX",
+            "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQGiD3Cd36qk0Q/company-logo_200_200/B4DZl3BRNRJQAM-/0/1758638445909/behoh_logo?e=1782950400&v=beta&t=GFXdIgVlWuTnAkG_vmcY355GbXT9QB-mbsmGV_6GuLY",
+            "subtitle": "BeHoH",
+            "meta": "2016 - 2022",
+            "groups": [
+              {
+                "description": "Sistema de e-commerce",
+                "bullets": [
+                  "Prototipagem e implementação da adaptação do sistema de eventos presenciais para suporte a vídeos e transmissões ao vivo, ajustando a plataforma para atender às novas demandas surgidas durante a pandemia, garantindo performance otimizada e experiência do usuário em eventos virtuais.",
+                  "Desenvolvimento de funcionalidades avançadas de interatividade para eventos ao vivo, utilizando JavaScript com WebSockets para permitir interação em tempo real, como comentários ao vivo, votações e feedback instantâneo, garantindo uma experiência dinâmica para os participantes.",
+                  "Manutenção e otimização de aplicações móveis em React Native, com foco em estabilidade, usabilidade e performance. Implementação de melhorias em renderização de componentes , além de otimização de transições de tela para garantir uma navegação fluida e responsiva."
+                ]
+              }
+            ]
+          }
+        ]
+      }
     ]
-  },
-  "experience": [
-    {
-      "company": "GarantiaBR",
-      "period": {
-        "start": "2025",
-        "end": "Atual"
-      },
-      "role": "Front-end e Lead UI/UX",
-      "industry": "Sistema de apostas esportivas e cassino",
-      "responsibilities": [
-        "Integração de fluxos de verificação de identidade no front-end.",
-        "Desenvolvimento de processos de verificação e registro de biometria facial (KYC).",
-        "Garantia de conformidade com LGPD, GDPR e regulamentações de privacidade.",
-        "Participação ativa na estruturação do front-end.",
-        "Definição de arquitetura e padrões do projeto.",
-        "Desenvolvimento utilizando React, Redux e TypeScript.",
-        "Gerenciamento de estado com Redux.",
-        "Manipulação eficiente de dados em tempo real provenientes do Firebase.",
-        "Redução de re-renderizações desnecessárias.",
-        "Melhoria de performance.",
-        "Refatoração e manutenção de código.",
-        "Aplicação de Clean Architecture.",
-        "Liderança técnica.",
-        "Mentoria de desenvolvedores juniores e plenos.",
-        "Code reviews em colaboração com QA.",
-        "Garantia de qualidade, escalabilidade e manutenção da base de código."
-      ],
-      "technologies": [
-        "React",
-        "Redux",
-        "TypeScript",
-        "Firebase"
-      ]
-    },
-    {
-      "company": "Lifters Technology",
-      "period": {
-        "start": "2022",
-        "end": "2025"
-      },
-      "role": "Front-end e UI/UX",
-      "industry": "Jogos digitais web",
-      "responsibilities": [
-        "Desenvolvimento e manutenção de funcionalidades para sistemas de jogos digitais web.",
-        "Foco em performance e experiência do usuário.",
-        "Uso de Nuxt.js e TypeScript.",
-        "Adaptação de plataforma de eventos presenciais para vídeos e transmissões ao vivo.",
-        "Adequação da plataforma para demandas surgidas durante a pandemia.",
-        "Desenvolvimento de funcionalidades de interatividade em tempo real.",
-        "Implementação de comentários ao vivo, votações e feedback instantâneo.",
-        "Uso de JavaScript e WebSockets.",
-        "Manutenção e otimização de aplicações React Native.",
-        "Melhoria de renderização de componentes.",
-        "Otimização de transições de tela."
-      ],
-      "technologies": [
-        "Nuxt.js",
-        "TypeScript",
-        "JavaScript",
-        "WebSockets",
-        "React Native"
-      ]
-    },
-    {
-      "company": "Smile & Go",
-      "period": {
-        "start": "2022",
-        "end": "2022"
-      },
-      "duration": "5 meses",
-      "role": "Front-end e UI/UX",
-      "industry": "Sistema legado de operadora de cartão",
-      "responsibilities": [
-        "Redesenho da arquitetura visual.",
-        "Implementação de nova arquitetura em Angular.",
-        "Integração de funcionalidades ao sistema legado.",
-        "Criação de componentes reutilizáveis.",
-        "Uso de serviços Angular.",
-        "Otimização com lazy loading.",
-        "Implementação de routing dinâmico."
-      ],
-      "technologies": [
-        "Angular"
-      ]
-    },
-    {
-      "company": "BeHoH",
-      "period": {
-        "start": "2016",
-        "end": "2022"
-      },
-      "role": "Front-end e UI/UX",
-      "industry": "Sistema de e-commerce",
-      "responsibilities": [
-        "Liderança da equipe de UI/UX.",
-        "Levantamento de demandas.",
-        "Implementação de melhorias de usabilidade.",
-        "Pesquisas com usuários.",
-        "Benchmarks.",
-        "Análise de mapas de calor utilizando Hotjar.",
-        "Otimização da experiência do usuário."
-      ],
-      "technologies": [
-        "Angular",
-        "Hotjar"
-      ]
-    },
-    {
-      "company": "Octus Hub",
-      "period": {
-        "start": "2025",
-        "end": "Atual"
-      },
-      "role": "Front-end e UI/UX",
-      "industry": "Jogos digitais web",
-      "responsibilities": [
-        "Desenvolvimento e manutenção de funcionalidades para sistemas de jogos digitais web.",
-        "Foco em performance e experiência do usuário.",
-        "Utilização de Nuxt.js e TypeScript."
-      ],
-      "technologies": [
-        "Nuxt.js",
-        "TypeScript"
-      ]
-    }
-  ],
-  "courses": [
-    {
-      "name": "Formação React JS"
-    },
-    {
-      "name": "Angular - The Complete Guide"
-    },
-    {
-      "name": "Progressive Web Apps (PWA) - The Complete Guide"
-    }
-  ],
-  "freelance_projects": [
-    {
-      "client": "Natura Nordeste",
-      "year": "2023",
-      "description": "Criação de aplicações web interativas com dashboards de dados e gráficos em tempo real."
-    },
-    {
-      "client": "Personal Trainer",
-      "year": "2024",
-      "description": "Desenvolvimento de aplicação PWA para monitoramento e registro de atividades físicas em academias, incluindo captura de imagens para documentação e acompanhamento da evolução dos usuários."
-    },
-    {
-      "client": "Eventos e Shows",
-      "description": "Desenvolvimento de landing pages para divulgação de shows, eventos e promoções, com foco em captação de usuários e otimização de conversão."
-    }
-  ]
+  }
 }
