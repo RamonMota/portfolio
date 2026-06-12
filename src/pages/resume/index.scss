@@ -158,7 +158,6 @@
 }
 
 :where(.resume-header p) {
-  max-width: 162mm;
   margin-top: 2mm;
   color: var(--resume-color-body);
   font-size: var(--resume-font-size-base);
@@ -367,6 +366,7 @@
     padding-left: 0.8mm;
     font-size: var(--resume-font-size-base);
     line-height: 1.45;
+    position: relative;
 
     &::marker {
       color: var(--resume-color-secondary);
