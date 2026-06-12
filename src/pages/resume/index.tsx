@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { ChangeEvent, useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import resumeData from './resume.json'
 import './index.scss'
@@ -85,6 +85,87 @@ type ResumeData = {
 }
 
 const data = resumeData as ResumeData
+
+const isRecord = (value: unknown): value is Record<string, unknown> => (
+  typeof value === 'object' && value !== null
+)
+
+const isStringArray = (value: unknown): value is string[] => (
+  Array.isArray(value) && value.every((item) => typeof item === 'string')
+)
+
+const isResumeSection = (value: unknown): value is ResumeSection => {
+  if (
+    !isRecord(value)
+    || typeof value.id !== 'string'
+    || typeof value.title !== 'string'
+    || !Array.isArray(value.items)
+  ) {
+    return false
+  }
+
+  switch (value.type) {
+    case 'links':
+      return value.items.every((item) => (
+        isRecord(item)
+        && typeof item.label === 'string'
+        && typeof item.href === 'string'
+        && (item.icon === undefined || typeof item.icon === 'string')
+      ))
+
+    case 'details':
+      return value.items.every((item) => (
+        isRecord(item)
+        && typeof item.title === 'string'
+        && isStringArray(item.lines)
+      ))
+
+    case 'text':
+    case 'tags':
+    case 'bullets':
+      return isStringArray(value.items)
+
+    case 'entries':
+      return value.items.every((item) => {
+        if (!isRecord(item) || typeof item.title !== 'string') {
+          return false
+        }
+
+        const optionalStrings = ['logo', 'subtitle', 'meta', 'description']
+        const hasValidStrings = optionalStrings.every((key) => (
+          item[key] === undefined || typeof item[key] === 'string'
+        ))
+        const hasValidBullets = item.bullets === undefined || isStringArray(item.bullets)
+        const hasValidGroups = item.groups === undefined || (
+          Array.isArray(item.groups)
+          && item.groups.every((group) => (
+            isRecord(group)
+            && (group.description === undefined || typeof group.description === 'string')
+            && isStringArray(group.bullets)
+          ))
+        )
+
+        return hasValidStrings && hasValidBullets && hasValidGroups
+      })
+
+    default:
+      return false
+  }
+}
+
+const isResumeData = (value: unknown): value is ResumeData => (
+  isRecord(value)
+  && isRecord(value.header)
+  && typeof value.header.title === 'string'
+  && (value.header.subtitle === undefined || typeof value.header.subtitle === 'string')
+  && (value.header.description === undefined || typeof value.header.description === 'string')
+  && isRecord(value.layout)
+  && typeof value.layout.sidebarLabel === 'string'
+  && Array.isArray(value.layout.sidebar)
+  && value.layout.sidebar.every(isResumeSection)
+  && Array.isArray(value.layout.main)
+  && value.layout.main.every(isResumeSection)
+)
 
 const SectionContent = ({ section }: { section: ResumeSection }) => {
   switch (section.type) {
@@ -209,8 +290,8 @@ const ResumeSectionBlock = ({ section }: { section: ResumeSection }) => (
   </section>
 )
 
-const ResumeDocument = () => {
-  const { header, layout } = data
+const ResumeDocument = ({ resume }: { resume: ResumeData }) => {
+  const { header, layout } = resume
 
   return (
     <article className="resume-document">
@@ -239,7 +320,33 @@ const ResumeDocument = () => {
 
 export const ResumeModal = ({ onClose }: { onClose: () => void }) => {
   const [isClosing, setIsClosing] = useState(false)
+  const [resume, setResume] = useState<ResumeData>(data)
+  const [uploadError, setUploadError] = useState('')
+  const fileInputRef = useRef<HTMLInputElement>(null)
   const requestClose = useCallback(() => setIsClosing(true), [])
+
+  const handleResumeUpload = async (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0]
+
+    if (!file) {
+      return
+    }
+
+    try {
+      const uploadedData: unknown = JSON.parse(await file.text())
+
+      if (!isResumeData(uploadedData)) {
+        throw new Error('Formato inválido')
+      }
+
+      setResume(uploadedData)
+      setUploadError('')
+    } catch {
+      setUploadError('Não foi possível carregar o JSON. Verifique se ele segue a estrutura do currículo.')
+    } finally {
+      event.target.value = ''
+    }
+  }
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow
@@ -297,11 +404,18 @@ export const ResumeModal = ({ onClose }: { onClose: () => void }) => {
             <button
               className="resume-modal-download"
               type="button"
-              aria-label="Alterar"
-              onClick={() => {}}
+              aria-label="Carregar currículo por JSON"
+              onClick={() => fileInputRef.current?.click()}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1" /><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1" /></svg>
             </button>
+            <input
+              ref={fileInputRef}
+              className="resume-modal-file-input"
+              type="file"
+              accept=".json,application/json"
+              onChange={handleResumeUpload}
+            />
             <button
               className="resume-modal-download"
               type="button"
@@ -319,11 +433,17 @@ export const ResumeModal = ({ onClose }: { onClose: () => void }) => {
             onClick={requestClose}
             autoFocus
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
           </button>
         </div>
 
-        <ResumeDocument />
+        {uploadError && (
+          <p className="resume-modal-error" role="alert">
+            {uploadError}
+          </p>
+        )}
+
+        <ResumeDocument resume={resume} />
       </div>
     </div>,
     document.body,
