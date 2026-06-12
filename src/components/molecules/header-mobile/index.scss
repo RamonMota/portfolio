@@ -1,0 +1,30 @@
+.content-header, .content-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+        button {
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: var(--color-white);
+            font: 300 var(--font-lg) 'Inter', sans-serif;
+            cursor: pointer;
+        }
+    }
+
+    .content-social {
+        gap: var(--space-sm);
+        display: flex;
+    }
+}
+
+.content-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    max-width: 1024px;
+    margin: auto;
+}

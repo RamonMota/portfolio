@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { HashRouter, Route, useLocation } from "react-router-dom";
 import { Paths, PathsPages } from "./config/paths/path";
 import { Sebrae } from "./pages/sebrae";
-import { ContentPage } from "./components/content-page";
+import { ContentPage } from "./components/organisms/content-page";
 import { BetTemplate } from "./pages/bet-template";
 import { Home } from "./pages/home/Home";
 

@@ -1,9 +1,9 @@
-import { CardItem } from '../../components/card';
-import { HeaderMobile } from '../../components/header-mobile';
+import { CardItem } from '../../components/molecules/card';
+import { HeaderMobile } from '../../components/molecules/header-mobile';
 import { Paths, PathsPages } from '../../config/paths/path';
 import bannerVaidebet from '../../assets/img/banner-vaidebet.png'
 import bannerSebrae from '../../assets/img/banner-sebrae.png'
-import { Footer } from '../../components/footer';
+import { Footer } from '../../components/organisms/footer';
 import './home.scss'
 import { useHandleChangePage } from '../../config/usehandleChangePage';
 import { useEffect, useState } from 'react';
@@ -87,4 +87,3 @@ export const Home = () => {
         </>
     )
 }
-

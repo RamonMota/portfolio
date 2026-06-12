@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import "./App.scss";
 import './assets/img/iconmoon/style.css'
-import { CustomCursor } from "./components/custom-mouse";
+import { CustomCursor } from "./components/atoms/custom-mouse";
 import { RouteProvider } from "./context/RouteContext";
 import { LanguageProvider } from "./context/LanguageContext";
 
@@ -24,4 +24,3 @@ function App() {
 }
 
 export default App;
-
