@@ -579,10 +579,32 @@
   align-items: center;
   gap: var(--space-sm);
   width: fit-content;
-
   border-radius: 50px;
   background: #5460748c;
   box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
   backdrop-filter: blur(6px);
   border: 1.5px solid rgba(242, 242, 242, .1);
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.content-top-action--dragging {
+  background: rgba(33, 61, 143, .92);
+  border-color: rgba(255, 255, 255, .85);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, .2),
+    0 0 0 4px rgba(77, 116, 189, .35);
+  transform: scale(1.05);
+
+  &::before {
+    content: "Solte o JSON";
+    padding-left: 6px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
 }

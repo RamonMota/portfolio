@@ -1,8 +1,8 @@
 {
   "header": {
     "title": "Ramon Mota",
-    "subtitle": "Front-end & UI/UX",
-    "description": "Front-End Engineer e UI/UX Designer com mais de 9 anos de experiência, transformando conceitos complexos em interfaces intuitivas e eficientes."
+    "subtitle": "Senior Front-end Engineer | UI/UX Lead | Design Systems",
+    "description": "Senior Front-end Engineer e UI/UX Lead com mais de 9 anos de experiência em arquitetura front-end, Design Systems, produtos digitais e aplicações web/mobile. Atuação em plataformas B2B, fintechs, apostas esportivas, e-commerce, eventos, EAD e streaming, combinando visão técnica, experiência do usuário, performance, integração com APIs, qualidade de entrega e liderança técnica."
   },
   "layout": {
     "sidebarLabel": "Informações adicionais",
@@ -36,13 +36,14 @@
       },
       {
         "id": "education",
-        "title": "Formação acadêmica",
+        "title": "Formação e cursos",
         "type": "details",
         "items": [
           {
             "title": "Pós-graduação em Engenharia Front-end",
             "lines": [
               "FIAP",
+              "⁃",
               "2025"
             ]
           },
@@ -50,14 +51,39 @@
             "title": "Graduação em Design Gráfico",
             "lines": [
               "IFPB",
+              "⁃",
               "2016"
+            ]
+          },
+          {
+            "title": "Angular - The Complete Guide",
+            "lines": [
+              "Alura",
+              "⁃",
+              "2016"
+            ]
+          },
+          {
+            "title": "Formação React JS",
+            "lines": [
+              "Alura",
+              "⁃",
+              "2021"
+            ]
+          },
+          {
+            "title": "Progressive Web Apps (PWA) - The Complete Guide",
+            "lines": [
+              "udemy",
+              "⁃",
+              "2018"
             ]
           }
         ]
       },
       {
         "id": "language",
-        "title": "Idioma",
+        "title": "Idiomas",
         "type": "text",
         "items": [
           "Inglês avançado"
@@ -65,61 +91,96 @@
       },
       {
         "id": "main-skills",
-        "title": "Linguagens, frameworks e bibliotecas",
+        "title": "Stack Front-end",
         "type": "tags",
         "items": [
           "JavaScript",
           "TypeScript",
-          "SQL",
           "React",
           "Next.js",
-          "Vue",
+          "Vue.js",
           "Nuxt.js",
           "Angular",
           "React Native",
+          "Expo",
+          "HTML",
           "CSS",
           "SCSS",
-          "Sass",
-          "Tailwind CSS",
-          "Styled Components",
-          "Redux",
-          "Jest",
-          "Teste Unitário"
+          "Tailwind",
+          "Styled Components"
         ]
       },
       {
-        "id": "knowledge",
-        "title": "Conhecimentos e ferramentas",
+        "id": "architecture-design-system",
+        "title": "Arquitetura e Design System",
         "type": "tags",
         "items": [
-          "Acessibilidade Web",
-          "API REST",
-          "SEO",
+          "Arquitetura front-end",
+          "Componentização",
+          "Atomic Design",
           "Design System",
-          "Ilustração Vetorial",
-          "Git",
+          "Design Tokens",
+          "WebKit UI",
+          "Storybook",
+          "Supernova",
+          "Redux",
+          "Zustand",
+          "Context API"
+        ]
+      },
+      {
+        "id": "quality-delivery",
+        "title": "Qualidade e Entrega",
+        "type": "tags",
+        "items": [
+          "Jest",
+          "Testing Library",
+          "Testes unitários",
+          "CI/CD",
+          "Testes de integração",
+          "Cobertura de componentes",
+          "Otimização de performance",
+          "Acessibilidade Web",
+          "SEO técnico",
+          "Code review",
+          "Refatoração",
+          "Documentação técnica",
+          "Versionamento"
+        ]
+      },
+      {
+        "id": "product-design",
+        "title": "Produto, UX e Design",
+        "type": "tags",
+        "items": [
           "Figma",
-          "Illustrator",
-          "Photoshop"
+          "UX/UI",
+          "Produto",
+          "Prototipação",
+          "Criação de interfaces",
+          "Usabilidade",
+          "Jornadas do usuário",
+          "Ilustração vetorial",
+          "Adobe Illustrator",
+          "Adobe Photoshop"
         ]
       },
       {
-        "id": "courses",
-        "title": "Cursos",
-        "type": "bullets",
+        "id": "backend-integrations-workflow",
+        "title": "Backend, Integrações e Workflow",
+        "type": "tags",
         "items": [
-          "Formação React JS",
-          "Angular - The Complete Guide",
-          "Progressive Web Apps (PWA) - The Complete Guide"
-        ]
-      },
-      {
-        "id": "freelance",
-        "title": "Outros projetos",
-        "type": "bullets",
-        "items": [
-          "Desenvolvimento da aplicação web (Next.js) e móvel (React Native com Expo), incluindo arquitetura front-end, implementação de funcionalidades e criação completa da interface e experiência do usuário (Figma) - EzzyBanking | 2025",
-          "Desenvolvimento de uma aplicação PWA para monitoramento e registro de atividades físicas em academias, integrando captura de imagens pela câmera do dispositivo para documentação e acompanhamento da evolução dos usuários - Personal trainer | 2024"
+          "SQL",
+          "Node.js",
+          "BFF",
+          "Cache",
+          "Consumo de serviços",
+          "APIs REST",
+          "Firebase",
+          "WebSockets",
+          "Git",
+          "GitHub",
+          "ChatGPT"
         ]
       }
     ],
@@ -130,62 +191,115 @@
         "type": "entries",
         "items": [
           {
-            "title": "Front-end",
+            "title": "Senior Front-end Engineer",
             "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFrJcG99Vky-A/company-logo_200_200/company-logo_200_200/0/1730977229055/garantiabr_logo?e=1782950400&v=beta&t=Z8VHc04J-i34O6J5KjRFxZU6khEya0qXpMn3G5kSYl4",
-            "subtitle": "GarantiaBR",
+            "subtitle": "GuarantiaBR",
             "meta": "2025 - Atual",
             "groups": [
               {
-                "description": "Atuei na idealização, arquitetura e implementação da biblioteca de componentes compartilhada da empresa, conectando Design e Engenharia por meio de um Design System centralizado, documentação técnica e visual e distribuição automatizada de Design Tokens para múltiplos produtos.",
+                "description": "WebKit UI - Design System corporativo inicialmente projetado para Next.js e React, com arquitetura escalável para adoção em outros frameworks.",
                 "bullets": [
-                  "Criação e governança do Design System corporativo, promovendo padronização, reuso e qualidade entre todos os produtos da empresa.",
-                  "Integração entre design e código por meio de Design Tokens e automação de pipelines utilizando Supernova e Storybook.",
-                  "Documentação técnica e visual com Storybook, incluindo diretrizes, estados e exemplos de implementação.",
-                  "Uso de inteligência artificial para automação de documentação, aceleração do desenvolvimento e suporte à qualidade técnica."
+                  "Liderança técnica na criação, documentação e evolução do WebKit UI, biblioteca de componentes compartilhada adotada em 3 projetos distintos da empresa, com mais de 50 componentes documentados em Storybook.",
+                  "Estruturação da base de qualidade do Design System com testes unitários, padronização de desenvolvimento, versionamento e pipeline completa de CI/CD para validação, build e publicação dos pacotes.",
+                  "Distribuição e governança de Design Tokens com Supernova e Storybook, conectando design e código para padronizar interfaces e reduzir retrabalho entre squads.",
+                  "Definição de boas práticas de componentização, acessibilidade, testes automatizados, code review e documentação técnica para elevar consistência, reuso e qualidade das entregas."
                 ]
               },
               {
-                "description": "Também atuo na evolução de uma plataforma de originação de crédito.",
+                "description": "Plataforma B2B de originação de crédito imobiliário para fluxos críticos do domínio financeiro.",
                 "bullets": [
-                  "Estruturação da arquitetura front-end com foco em escalabilidade, modularização e facilidade de manutenção.",
-                  "Implementação de fluxos complexos de negócio integrando múltiplos serviços e APIs.",
-                  "Colaboração próxima com equipes de Produto, UX/UI e Backend para alinhar negócio, experiência e implementação.",
-                  "Definição de padrões técnicos e boas práticas para garantir sustentabilidade e evolução da plataforma."
+                  "Evolução da arquitetura front-end com foco em escalabilidade, modularização, manutenibilidade e qualidade técnica em jornadas enterprise de originação de crédito.",
+                  "Implementação de interfaces complexas integradas a múltiplos serviços e APIs, considerando regras de negócio, tratamento de dados sensíveis, segurança e experiência operacional do usuário B2B.",
+                  "Aplicação de estratégias de cache na jornada do usuário para preservar contexto, reduzir chamadas repetidas, melhorar performance percebida e dar mais fluidez a fluxos longos de originação.",
+                  "Consumo e adaptação dos componentes do WebKit UI no produto, acelerando a construção de telas, reduzindo retrabalho e aumentando previsibilidade, consistência visual e qualidade das entregas.",
+                  "Atuação próxima a produto, design, backend e QA para transformar requisitos de negócio em soluções técnicas viáveis, sustentáveis e alinhadas aos objetivos da plataforma."
                 ]
               }
             ]
           },
           {
-            "title": "Front-end e Lead UI/UX",
+            "title": "Senior Front-end Engineer | UI/UX Lead",
             "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQGNaZOer5fZpQ/company-logo_200_200/B4DZybHHoIGUAM-/0/1772128861155/lifters_tech_logo?e=1782950400&v=beta&t=fNsSy0E6gIYxukY84TQiLk5tILpxYG6jO7EDzcPNBBw",
             "subtitle": "Lifters Technology",
             "meta": "2022 - 2025",
             "groups": [
               {
-                "description": "Sistema de apostas esportivas e cassino",
+                "description": "Atuação em plataforma de apostas esportivas e cassino, conduzindo arquitetura, padrões técnicos, qualidade de código, performance e segurança da interface.",
                 "bullets": [
-                  "Participação ativa na estruturação do front-end, colaborando na definição da arquitetura e nos padrões para o projeto, com foco em Redux e TypeScript.",
-                  "Integração de fluxos de verificação de identidade no front-end, desenvolvendo processos de verificação e registro de biometria facial (KYC), garantindo a conformidade com a LGPD, o GDPR e outras regulamentações de privacidade e segurança de dados.",
-                  "Desenvolvimento de fluxos de gerenciamento de estado com Redux, otimizado para manipulação eficiente de dados em tempo real provenientes do Firebase, utilizando gerenciamento assíncrono para garantir atualizações consistentes da interface, com redução de re-renderizações desnecessárias e melhoria de performance.",
-                  "Manutenção e refatoração de código, adotando boas práticas de clean architecture e padrões modernos para garantir legibilidade, modularidade e escalabilidade.",
-                  "Atuação na garantia da qualidade do código e na liderança técnica da equipe, com mentoria para desenvolvedores juniores e plenos. Condução de code reviews em pull requests em colaboração com o time de QA, assegurando a adoção de boas práticas de codificação e a manutenção de uma base escalável, modular e de fácil manutenção. Foco na consistência, desempenho e clareza do código.",
-                  "Liderança da equipe de UI/UX, incluindo levantamento de demandas e implementação de melhorias na usabilidade da plataforma. Condução de pesquisas, benchmarks e análises de mapas de calor (Hotjar) para otimizar a experiência do usuário."
+                  "Liderança técnica da frente de front-end, apoiando decisões de arquitetura, organização da base de código e padrões com React, TypeScript, Redux e Firebase.",
+                  "Implementação de fluxos críticos de KYC e biometria facial, considerando segurança, privacidade, LGPD/GDPR e tratamento de dados pessoais.",
+                  "Gerenciamento de estado com Redux integrado a dados em tempo real do Firebase, com foco em consistência da interface, fluxos assíncronos, redução de re-renderizações desnecessárias e melhoria de performance.",
+                  "Manutenção, refatoração e evolução da base front-end com boas práticas de clean architecture, modularidade, escalabilidade e legibilidade de código.",
+                  "Atuação em testes automatizados, validações em pipeline, code reviews, colaboração com QA e mentoria técnica para desenvolvedores juniores e plenos.",
+                  "Liderança de UI/UX com levantamento de demandas, benchmarks, análise de comportamento e uso de ferramentas como Hotjar para orientar melhorias de usabilidade."
                 ]
               }
             ]
           },
-           {
-            "title": "Front-end e Lead UI/UX",
+          {
+            "title": "Front-end Engineer | UI/UX Lead",
             "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQGiD3Cd36qk0Q/company-logo_200_200/B4DZl3BRNRJQAM-/0/1758638445909/behoh_logo?e=1782950400&v=beta&t=GFXdIgVlWuTnAkG_vmcY355GbXT9QB-mbsmGV_6GuLY",
             "subtitle": "BeHoH",
             "meta": "2016 - 2022",
             "groups": [
               {
-                "description": "Sistema de e-commerce",
+                "description": "Desenvolvimento de plataforma digital com atuação em aplicações web e mobile para e-commerce, eventos, EAD e streaming.",
                 "bullets": [
-                  "Prototipagem e implementação da adaptação do sistema de eventos presenciais para suporte a vídeos e transmissões ao vivo, ajustando a plataforma para atender às novas demandas surgidas durante a pandemia, garantindo performance otimizada e experiência do usuário em eventos virtuais.",
-                  "Desenvolvimento de funcionalidades avançadas de interatividade para eventos ao vivo, utilizando JavaScript com WebSockets para permitir interação em tempo real, como comentários ao vivo, votações e feedback instantâneo, garantindo uma experiência dinâmica para os participantes.",
-                  "Manutenção e otimização de aplicações móveis em React Native, com foco em estabilidade, usabilidade e performance. Implementação de melhorias em renderização de componentes , além de otimização de transições de tela para garantir uma navegação fluida e responsiva."
+                  "Prototipagem e implementação da adaptação da plataforma de eventos presenciais para suporte a vídeos, transmissões ao vivo e conteúdos sob demanda durante a pandemia.",
+                  "Desenvolvimento de funcionalidades para eventos digitais e presenciais, cursos EAD, vídeos, lives, conteúdos sob demanda, venda de ingressos e jornadas de acesso.",
+                  "Implementação de recursos em tempo real com JavaScript e WebSockets, incluindo comentários ao vivo, votações e interações durante transmissões.",
+                  "Evolução de fluxos de e-commerce, acesso a conteúdos e consumo de mídias digitais, com foco em usabilidade, estabilidade e performance.",
+                  "Manutenção e otimização de aplicações mobile em React Native, com melhorias de renderização, transições de tela e fluidez de navegação."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "independent-projects",
+        "title": "Projetos independentes e consultorias",
+        "type": "entries",
+        "items": [
+          {
+            "title": "Senior Front-end Engineer | UI/UX Lead",
+            "subtitle": "EzzyBanking — Fintech",
+            "meta": "2025",
+            "groups": [
+              {
+                "description": "Projeto fintech com atuação ponta a ponta em produto, UI/UX, arquitetura front-end e desenvolvimento web/mobile com Figma, Next.js e React Native com Expo.",
+                "bullets": [
+                  "Definição de jornadas, fluxos e telas para aplicação financeira, com foco em usabilidade, clareza operacional, consistência visual e percepção de confiança.",
+                  "Arquitetura e implementação das aplicações web e mobile, garantindo consistência entre plataformas e base preparada para evolução do produto.",
+                  "Integração entre prototipação, design de interface e engenharia front-end para acelerar decisões de produto e reduzir handoff entre design e desenvolvimento."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Front-end Engineer e Lead UI/UX",
+            "subtitle": "Personal Trainer — Plataforma Fitness",
+            "meta": "2024",
+            "groups": [
+              {
+                "description": "Plataforma fitness para personal trainers e alunos, com gestão de treinos, registro de atividades e acompanhamento de evolução.",
+                "bullets": [
+                  "Implementação de funcionalidades para criação de treinos, registro de atividades, acompanhamento de desempenho e evolução dos alunos.",
+                  "Desenvolvimento de PWA com recursos de câmera para documentação visual e suporte à rotina de avaliação física."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Front-end Engineer | Lead UI/UX",
+            "subtitle": "Smile Go — Sistema de Leitura Facial para E-commerce",
+            "meta": "2023",
+            "groups": [
+              {
+                "description": "Solução de leitura facial aplicada ao e-commerce, integrando captura, análise visual e experiência do usuário em ambiente web.",
+                "bullets": [
+                  "Desenvolvimento de interfaces para captura e processamento de leitura facial em ambiente web.",
+                  "Implementação de fluxos front-end para integração da solução com jornadas digitais de e-commerce."
                 ]
               }
             ]

@@ -1,4 +1,4 @@
-import { ChangeEvent, useCallback, useEffect, useRef, useState } from 'react'
+import { ChangeEvent, DragEvent, useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import resumeData from './resume.json'
 import './index.scss'
@@ -320,18 +320,13 @@ const ResumeDocument = ({ resume }: { resume: ResumeData }) => {
 
 export const ResumeModal = ({ onClose }: { onClose: () => void }) => {
   const [isClosing, setIsClosing] = useState(false)
+  const [isDraggingFile, setIsDraggingFile] = useState(false)
   const [resume, setResume] = useState<ResumeData>(data)
   const [uploadError, setUploadError] = useState('')
   const fileInputRef = useRef<HTMLInputElement>(null)
   const requestClose = useCallback(() => setIsClosing(true), [])
 
-  const handleResumeUpload = async (event: ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0]
-
-    if (!file) {
-      return
-    }
-
+  const loadResumeFile = async (file: File) => {
     try {
       const uploadedData: unknown = JSON.parse(await file.text())
 
@@ -343,8 +338,27 @@ export const ResumeModal = ({ onClose }: { onClose: () => void }) => {
       setUploadError('')
     } catch {
       setUploadError('Não foi possível carregar o JSON. Verifique se ele segue a estrutura do currículo.')
-    } finally {
-      event.target.value = ''
+    }
+  }
+
+  const handleResumeUpload = async (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0]
+
+    if (file) {
+      await loadResumeFile(file)
+    }
+
+    event.target.value = ''
+  }
+
+  const handleResumeDrop = (event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault()
+    setIsDraggingFile(false)
+
+    const file = event.dataTransfer.files[0]
+
+    if (file) {
+      void loadResumeFile(file)
     }
   }
 
@@ -400,7 +414,25 @@ export const ResumeModal = ({ onClose }: { onClose: () => void }) => {
         }}
       >
         <div className="resume-modal-actions">
-          <div className='content-top-action'>
+          <div
+            className={`content-top-action ${isDraggingFile ? 'content-top-action--dragging' : ''}`}
+            role="group"
+            aria-label="Ações do currículo. Arraste um arquivo JSON para carregar."
+            onDragEnter={(event) => {
+              event.preventDefault()
+              setIsDraggingFile(true)
+            }}
+            onDragOver={(event) => {
+              event.preventDefault()
+              event.dataTransfer.dropEffect = 'copy'
+            }}
+            onDragLeave={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                setIsDraggingFile(false)
+              }
+            }}
+            onDrop={handleResumeDrop}
+          >
             <button
               className="resume-modal-download"
               type="button"
