@@ -1,20 +1,18 @@
-import { CardItem } from '../../components/molecules/card';
 import { HeaderMobile } from '../../components/molecules/header-mobile';
 import { Footer } from '../../components/organisms/footer';
 import './home.scss'
-import { useHandleChangePage } from '../../config/usehandleChangePage';
 import { useEffect, useState } from 'react';
 import { useRoute } from '../../context/RouteContext';
 import pt from '../../config/locales/pt.json'
 import en from '../../config/locales/en.json'
 import { useLanguageContext } from '../../context/LanguageContext';
 import { projects } from '../../config/projects/projects';
+import { ProjectMosaic } from '../../components/organisms/project-mosaic';
 
 
 
 export const Home = () => {
 
-    const handleChangePage = useHandleChangePage()
     const { actualRoute, interval } = useRoute();
     const [renderHome, setRenderHome] = useState<boolean>(false)
     const [renderCards, setRenderCards] = useState<boolean>(false)
@@ -46,11 +44,6 @@ export const Home = () => {
 
     }, [actualRoute]);
 
-    const handleSelectContent = (path: string) => {
-        setRenderHome(false)
-        handleChangePage(path)
-    }
-
     return (
         <>
             {/* <Welcome isOpen={isWelcome} setIsOpen={() => setIsWelcome(!isWelcome)} /> */}
@@ -74,17 +67,7 @@ export const Home = () => {
                 </div>
                 <div className={`${renderCards ? '' : 'hidden-cards'} d-flex flex-column gap-sm`}>
                     <p className='title-project'>{languegeRender.home.labelProject}</p>
-                    <div className='content-list-card'>
-                        {projects.map((project) => (
-                            <CardItem
-                                key={project.link}
-                                name={project.name}
-                                image={project.image}
-                                isLocked={project.isLocked}
-                                handleChangePath={() => handleSelectContent(project.link)}
-                            />
-                        ))}
-                    </div>
+                    <ProjectMosaic projects={projects} onProjectSelect={() => setRenderHome(false)} />
                 </div>
                 <Footer isHome={true} />
             </div >

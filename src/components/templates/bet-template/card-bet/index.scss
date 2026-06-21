@@ -1,8 +1,8 @@
 .card-bet {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
-  padding: var(--space-sm);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
   // min-width: 320px;
   background: #2a3038;
   backdrop-filter: blur(17px);
@@ -72,7 +72,7 @@
 
   .content-competitor {
     display: flex;
-    gap: var(--space-xs);
+    gap: var(--spacing-xs);
     align-items: center;
     img {
       width: 25px;

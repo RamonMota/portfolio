@@ -145,7 +145,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-lg);
+    gap: var(--spacing-lg);
 
     p {
       max-width: 800px;
@@ -210,7 +210,7 @@
 
 
   .content-grid-template {
-    gap: var(--space-lg);
+    gap: var(--spacing-lg);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;

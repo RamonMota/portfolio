@@ -9,6 +9,10 @@
         "knologyThird": "UI/UX",
         "labelProject": "Projetos"
     },
+    "otherProjects": {
+        "title": "Explore Outros Trabalhos",
+        "subtitle": "Cada projeto carrega um contexto, decisões e desafios próprios. Veja outras interfaces, sistemas e experiências digitais que ajudei a tirar do papel."
+    },
     "footer": {
         "title": "Procurando alguém criativo?",
         "subtitle": "Mande uma mensagem",

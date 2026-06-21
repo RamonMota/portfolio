@@ -9,6 +9,10 @@
         "knologyThird": "UI/UX",
         "labelProject": "Project"
     },
+    "otherProjects": {
+        "title": "Explore More Work",
+        "subtitle": "Each project has its own context, constraints, and decisions. Take a look at other interfaces, systems, and product experiences I helped bring to life."
+    },
     "footer": {
         "title": "Up for some Creativity?",
         "subtitle": "Drop a Message",

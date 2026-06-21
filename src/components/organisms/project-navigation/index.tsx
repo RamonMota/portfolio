@@ -1,46 +1,24 @@
-import { useMemo } from 'react';
-import { useLocation } from 'react-router-dom';
-import { ProjectNavigationCard } from '../../molecules/project-navigation-card';
-import { availableProjects } from '../../../config/projects/projects';
-import { useHandleChangePage } from '../../../config/usehandleChangePage';
+import { projects } from '../../../config/projects/projects';
+import { useLanguageContext } from '../../../context/LanguageContext';
+import pt from '../../../config/locales/pt.json';
+import en from '../../../config/locales/en.json';
+import { ProjectMosaic } from '../project-mosaic';
 
 export const ProjectNavigation = () => {
-  const location = useLocation();
-  const handleChangePage = useHandleChangePage();
-
-  const currentPath = location.pathname;
-  const currentIndex = availableProjects.findIndex((project) => project.link === currentPath);
-
-  const navigationProjects = useMemo(() => {
-    if (currentIndex < 0) {
-      return null;
-    }
-
-    const previousIndex = (currentIndex - 1 + availableProjects.length) % availableProjects.length;
-    const nextIndex = (currentIndex + 1) % availableProjects.length;
-
-    return {
-      previous: availableProjects[previousIndex],
-      next: availableProjects[nextIndex],
-    };
-  }, [currentIndex]);
-
-  if (!navigationProjects || availableProjects.length < 2) {
-    return null;
-  }
+  const { language } = useLanguageContext();
+  const languageRender = language === 'en' ? en : pt;
 
   return (
-    <nav className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-4 px-4 py-12 sm:grid-cols-2">
-      <ProjectNavigationCard
-        label="Previous project"
-        project={navigationProjects.previous}
-        onClick={() => handleChangePage(navigationProjects.previous.link)}
-      />
-      <ProjectNavigationCard
-        label="Next project"
-        project={navigationProjects.next}
-        onClick={() => handleChangePage(navigationProjects.next.link)}
-      />
+    <nav className="flex flex-column w-full gap-3xl px-xl py-5xl rounded-t-xl border-t-[1.5px] border-t-[rgba(242,242,242,0.1)] bg-[linear-gradient(180deg,#1b212a,#151a22)]  shadow-[0px_-18px_14px_0_rgba(0,0,0,0.25)]">
+      <div className="flex flex-col gap-2 m-auto">
+        <h3 className="text-center text-[35px] font-semibold text-white">
+          {languageRender.otherProjects.title}
+        </h3>
+        <p className="text-center text-md font-light not-italic text-white opacity-70">
+          {languageRender.otherProjects.subtitle}
+        </p>
+      </div>
+      <ProjectMosaic projects={projects} />
     </nav>
   );
 };

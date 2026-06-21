@@ -10,7 +10,7 @@
 .grid-cards-sebrae {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: var(--space-md);
+    grid-gap: var(--spacing-md);
     max-width: 1024px;
     margin: auto;
 
@@ -138,7 +138,7 @@
         position: relative;
 
         &.large-card {
-            gap: var(--space-md);
+            gap: var(--spacing-md);
             height: fit-content;
             display: flex;
             justify-content: space-between;
@@ -206,7 +206,7 @@
             .content-description {
                 display: flex;
                 flex-direction: column;
-                gap: var(--space-xs);
+                gap: var(--spacing-xs);
 
                 h3 {
                     color: var(--color-black);

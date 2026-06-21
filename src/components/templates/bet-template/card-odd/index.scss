@@ -48,7 +48,7 @@
 .grid-card-odd {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--spacing-sm);
 
   .title-card-odd {
     color: var(--color-white);
