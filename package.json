@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "icomoon-react": "2.0.19",
+    "lucide-react": "^1.21.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router": "5.2.0",
@@ -14,8 +15,11 @@
     "web-vitals": "1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"npm:tailwind:watch\" \"react-scripts start\"",
+    "prebuild": "npm run tailwind:build",
     "build": "react-scripts build",
+    "tailwind:build": "tailwindcss -i ./src/tailwind.css -o ./src/tailwind.generated.css --minify",
+    "tailwind:watch": "tailwindcss -i ./src/tailwind.css -o ./src/tailwind.generated.css --watch",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -39,9 +43,12 @@
     ]
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.3.1",
     "@types/react": "18.0.12",
     "@types/react-dom": "18.0.5",
     "@types/react-router-dom": "5.3.3",
-    "gh-pages": "^6.1.1"
+    "concurrently": "^10.0.3",
+    "gh-pages": "^6.1.1",
+    "tailwindcss": "^4.3.1"
   }
 }

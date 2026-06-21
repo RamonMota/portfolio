@@ -12,6 +12,7 @@ import './index.scss'
 import pt from '../../config/locales/pt.json'
 import en from '../../config/locales/en.json'
 import { useLanguageContext } from "../../context/LanguageContext";
+import { ProjectNavigation } from '../../components/organisms/project-navigation';
 
 export const Sebrae = () => {
 
@@ -102,6 +103,7 @@ export const Sebrae = () => {
         </div>
         <DeviceScreen />
         <ContentIframe src='https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FG5LP5npZCmW2gBvDFcVrec%2FE-commerce-Sebrae%3Ftype%3Ddesign%26node-id%3D1408%253A96%26mode%3Ddesign%26t%3DkgUDVQKdT4kZFEuC-1' />
+        <ProjectNavigation />
         <Footer />
       </div>
     </div>

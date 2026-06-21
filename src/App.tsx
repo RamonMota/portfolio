@@ -1,6 +1,7 @@
 import { Routers } from "./Routers";
 import { BrowserRouter } from "react-router-dom";
 
+import "./tailwind.generated.css";
 import "./App.scss";
 import './assets/img/iconmoon/style.css'
 import { CustomCursor } from "./components/atoms/custom-mouse";

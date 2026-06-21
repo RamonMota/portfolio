@@ -1,39 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-:root {
-  // COLORS
-  --color-black: #151A22;
-  --color-gray: #2d3645;
-  --color-black-transparent: #151a2234;
-  --color-principal: #A74EFF;
-  --color-principal-shadow: #561894;
-  --color-principal-light: #c692f9;
-  --color-principal-transparent: #732cbac5;
-  --color-white: #fff;
-
-  // FONTS
-  --font-xs: 0.8rem;
-  --font-sm: 0.9rem;
-  --font-md: 1rem;
-  --font-lg: 1.6rem;
-  --font-xl: 2.5rem;
-
-  // SPACES
-  --space-xs: 8px;
-  --space-sm: 14px;
-  --space-md: 16px;
-  --space-lg: 18px;
-  --space-xl: 22px;
-
-  --breakpoint-mobile: 480px;
-  --breakpoint-tablet: 768px;
-  --breakpoint-desktop: 1024px;
-  --breakpoint-wide: 1440px;
-
-  --height-flouting-navegation: 68px;
-}
-
 html {
   touch-action: pan-x pan-y;
   -ms-touch-action: pan-x pan-y;
@@ -190,32 +157,32 @@ body {
 }
 
 .mb-xl {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .mt-md {
-  margin-top: var(--space-md);
+  margin-top: var(--spacing-md);
 }
 .pb-xs {
-  padding-bottom: var(--space-xs);
+  padding-bottom: var(--spacing-xs);
 
 }
 
 .px-md {
-  padding-left: var(--space-md);
-  padding-right: var(--space-md);
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
 }
 
 .gap-md {
-  gap: var(--space-md);
+  gap: var(--spacing-md);
 }
 
 .gap-sm {
-  gap: var(--space-sm);
+  gap: var(--spacing-sm);
 }
 
 .gap-xs {
-  gap: var(--space-xs);
+  gap: var(--spacing-xs);
 }
 
 .show {

@@ -1,23 +1,19 @@
-import { CardItem } from '../../components/molecules/card';
 import { HeaderMobile } from '../../components/molecules/header-mobile';
-import { Paths, PathsPages } from '../../config/paths/path';
-import bannerVaidebet from '../../assets/img/banner-vaidebet.png'
-import bannerSebrae from '../../assets/img/banner-sebrae.png'
 import { Footer } from '../../components/organisms/footer';
 import './home.scss'
-import { useHandleChangePage } from '../../config/usehandleChangePage';
 import { useEffect, useState } from 'react';
 import { useRoute } from '../../context/RouteContext';
 import pt from '../../config/locales/pt.json'
 import en from '../../config/locales/en.json'
 import { useLanguageContext } from '../../context/LanguageContext';
+import { projects } from '../../config/projects/projects';
+import { ProjectMosaic } from '../../components/organisms/project-mosaic';
 
 
 
 export const Home = () => {
 
-    const handleChangePage = useHandleChangePage()
-    const { actualRoute, setRoute, interval } = useRoute();
+    const { actualRoute, interval } = useRoute();
     const [renderHome, setRenderHome] = useState<boolean>(false)
     const [renderCards, setRenderCards] = useState<boolean>(false)
     const { language } = useLanguageContext();
@@ -48,11 +44,6 @@ export const Home = () => {
 
     }, [actualRoute]);
 
-    const handleSelectContent = (path: string) => {
-        setRenderHome(false)
-        handleChangePage(path)
-    }
-
     return (
         <>
             {/* <Welcome isOpen={isWelcome} setIsOpen={() => setIsWelcome(!isWelcome)} /> */}
@@ -76,11 +67,7 @@ export const Home = () => {
                 </div>
                 <div className={`${renderCards ? '' : 'hidden-cards'} d-flex flex-column gap-sm`}>
                     <p className='title-project'>{languegeRender.home.labelProject}</p>
-                    <div className='content-list-card'>
-                        <CardItem name='Betting Sport Template' image={bannerVaidebet} handleChangePath={() => handleSelectContent(PathsPages.SPORT_BETTING_PLATAFORM)} />
-                        <CardItem name='E-commerce Sebrae events' image={bannerSebrae} handleChangePath={() => handleSelectContent(PathsPages.SEBRAE)} />
-                        <CardItem name='Case login UX' isLocked={true} />
-                    </div>
+                    <ProjectMosaic projects={projects} onProjectSelect={() => setRenderHome(false)} />
                 </div>
                 <Footer isHome={true} />
             </div >

@@ -1,7 +1,7 @@
 {
   "header": {
     "title": "Ramon Mota",
-    "subtitle": "Senior Front-end Engineer | UI/UX Lead | Design Systems",
+    "subtitle": "Senior Front-end Engineer & UI/UX",
     "description": "Mais de 9 anos de experiência na construção de produtos digitais, aplicações web/mobile, arquitetura front-end e Design Systems. Atuação em plataformas B2B, fintechs, apostas esportivas, e-commerce, eventos, EAD e streaming, combinando visão técnica, experiência do usuário, performance, integração com APIs, qualidade de entrega e liderança técnica."
   },
   "layout": {
@@ -264,14 +264,14 @@
           {
             "title": "Senior Front-end Engineer | UI/UX Lead",
             "subtitle": "EzzyBanking — Fintech",
-            "meta": "2025",
             "groups": [
               {
                 "description": "Projeto fintech com atuação ponta a ponta em produto, UI/UX, arquitetura front-end e desenvolvimento web/mobile com Figma, Next.js e React Native com Expo.",
                 "bullets": [
-                  "Definição de jornadas, fluxos e telas para aplicação financeira, com foco em usabilidade, clareza operacional, consistência visual e percepção de confiança.",
-                  "Arquitetura e implementação das aplicações web e mobile, garantindo consistência entre plataformas e base preparada para evolução do produto.",
-                  "Integração entre prototipação, design de interface e engenharia front-end para acelerar decisões de produto e reduzir handoff entre design e desenvolvimento."
+                  "Definição de jornadas, fluxos e telas para aplicação financeira, conectando decisões de produto, usabilidade, clareza operacional, consistência visual e percepção de confiança.",
+                  "Arquitetura e implementação das aplicações web e mobile com Next.js e React Native/Expo, garantindo consistência entre plataformas, modularidade e base preparada para evolução do produto.",
+                  "Configuração de APIs nativas no mobile, incluindo push notifications Android via Firebase e autenticação por biometria, elevando segurança, engajamento e experiência de uso no app.",
+                  "Aplicação de estratégias de cache no app e na web para reduzir consultas desnecessárias, preservar contexto da jornada e tornar a plataforma mais performática e responsiva."
                 ]
               }
             ]
@@ -284,22 +284,9 @@
               {
                 "description": "Plataforma fitness para personal trainers e alunos, com gestão de treinos, registro de atividades e acompanhamento de evolução.",
                 "bullets": [
-                  "Implementação de funcionalidades para criação de treinos, registro de atividades, acompanhamento de desempenho e evolução dos alunos.",
-                  "Desenvolvimento de PWA com recursos de câmera para documentação visual e suporte à rotina de avaliação física."
-                ]
-              }
-            ]
-          },
-          {
-            "title": "Front-end Engineer | Lead UI/UX",
-            "subtitle": "Smile Go — Sistema de Leitura Facial para E-commerce",
-            "meta": "2023",
-            "groups": [
-              {
-                "description": "Solução de leitura facial aplicada ao e-commerce, integrando captura, análise visual e experiência do usuário em ambiente web.",
-                "bullets": [
-                  "Desenvolvimento de interfaces para captura e processamento de leitura facial em ambiente web.",
-                  "Implementação de fluxos front-end para integração da solução com jornadas digitais de e-commerce."
+                  "Implementação de funcionalidades para criação de treinos, registro de atividades, acompanhamento de desempenho e evolução dos alunos, conectando necessidades operacionais do personal trainer à experiência do aluno.",
+                  "Uso de cache associado ao gerenciamento de estado global com Zustand, reduzindo consultas desnecessárias, preservando contexto de uso e tornando a navegação mais fluida.",
+                  "Desenvolvimento de PWA mobile first com UX adequada ao contexto de uso em academia, priorizando navegação simples, botões acessíveis e baixa fricção para usuários em treino ou fadiga, além de recursos de câmera para documentação visual e avaliação física."
                 ]
               }
             ]

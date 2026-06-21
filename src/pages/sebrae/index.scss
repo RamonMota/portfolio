@@ -138,7 +138,7 @@
     .content-introduction {
         display: flex;
         flex-direction: column;
-        gap: var(--space-sm);
+        gap: var(--spacing-sm);
         max-width: 1000px;
 
         h2 {
@@ -174,7 +174,7 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        gap: var(--space-sm);
+        gap: var(--spacing-sm);
     }
 
     .cover-phone {
@@ -188,7 +188,7 @@
     .content-title {
         display: flex;
         flex-direction: column;
-        gap: var(--space-sm);
+        gap: var(--spacing-sm);
         justify-content: center;
         align-items: center;
 
@@ -229,7 +229,7 @@
         margin: 0 auto;
         width: 100%;
         display: flex;
-        gap: var(--space-lg);
+        gap: var(--spacing-lg);
         flex-direction: column;
 
         .title {
@@ -250,7 +250,7 @@
         .grid-colors {
             display: flex;
             justify-content: center;
-            gap: var(--space-xl);
+            gap: var(--spacing-xl);
             flex-direction: column;
 
             @media (min-width:600px) {
@@ -272,7 +272,7 @@
         width: 100%;
         display: flex;
         align-items: center;
-        gap: var(--space-lg);
+        gap: var(--spacing-lg);
         flex-direction: column;
 
 

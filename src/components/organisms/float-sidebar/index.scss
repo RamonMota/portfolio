@@ -4,14 +4,14 @@
     padding: 8px;
     align-items: center;
     z-index: 99;
-    gap: var(--space-sm);
+    gap: var(--spacing-sm);
     width: fit-content;
     margin: auto;
 
     position: fixed;
-    left: var(--space-sm);
-    right: var(--space-sm);
-    bottom: calc(var(--space-sm) + 3px);
+    left: var(--spacing-sm);
+    right: var(--spacing-sm);
+    bottom: calc(var(--spacing-sm) + 3px);
     height: var(--height-flouting-navegation);
     
     border-radius: 50px;
