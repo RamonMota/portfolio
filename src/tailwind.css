@@ -1,0 +1,43 @@
+@import "tailwindcss/theme.css" layer(theme);
+
+:root {
+  /* COLORS */
+  --color-black: #151A22;
+  --color-gray: #2d3645;
+  --color-black-transparent: #151a2234;
+  --color-principal: #A74EFF;
+  --color-principal-shadow: #561894;
+  --color-principal-light: #c692f9;
+  --color-principal-transparent: #732cbac5;
+  --color-white: #fff;
+
+  /* FONTS */
+  --font-xs: 0.8rem;
+  --font-sm: 0.9rem;
+  --font-md: 1rem;
+  --font-lg: 1.6rem;
+  --font-xl: 2.5rem;
+
+  /* SPACES */
+  --space-xs: 8px;
+  --space-sm: 14px;
+  --space-md: 16px;
+  --space-lg: 18px;
+  --space-xl: 22px;
+
+  /* RADIUS */
+  --radius-xs: 8px;
+  --radius-sm: 14px;
+  --radius-md: 16px;
+  --radius-lg: 18px;
+  --radius-xl: 22px;
+
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1440px;
+
+  --height-flouting-navegation: 68px;
+}
+
+@tailwind utilities source("./");

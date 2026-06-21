@@ -20,6 +20,7 @@ import { ScrollTopContent } from "../../components/atoms/scroll-top-content";
 import pt from '../../config/locales/pt.json'
 import en from '../../config/locales/en.json'
 import { useLanguageContext } from "../../context/LanguageContext";
+import { ProjectNavigation } from "../../components/organisms/project-navigation";
 
 export const BetTemplate = () => {
   const { language } = useLanguageContext();
@@ -148,6 +149,7 @@ export const BetTemplate = () => {
           img={FigmaBetting}
           src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F4SMcNumfgCs0zxg4IvNjkB%2FOrion-Ramon-_-Twinfo%3Ftype%3Ddesign%26node-id%3D2943%253A348%26mode%3Ddesign%26t%3DgV3RBnUBUTPzRWUO-1"
         />
+        <ProjectNavigation />
         <Footer />
       </div>
     </div>
