@@ -66,7 +66,7 @@ export const Home = () => {
                     </div>
                 </div>
                 <div className={`${renderCards ? '' : 'hidden-cards'} d-flex flex-column gap-sm`}>
-                    <p className='title-project'>{languegeRender.home.labelProject}</p>
+                    <p className='max-w-[1024px] text-sm text-white/30 m-auto w-full'>{languegeRender.home.labelProject}</p>
                     <ProjectMosaic projects={projects} onProjectSelect={() => setRenderHome(false)} />
                 </div>
                 <Footer isHome={true} />

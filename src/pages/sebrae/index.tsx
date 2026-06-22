@@ -1,8 +1,8 @@
-import { GridCardSebrae } from '../../components/organisms/page-sebrae/grid-cards';
-import { ContentIframe } from '../../components/organisms/page-sebrae/content-iframe/intex';
+import { GridCardSebrae } from '../../components/templates/sebrae-template/grid-cards';
+import { ContentIframe } from '../../components/templates/sebrae-template/content-iframe/intex';
 import { CircleColor } from '../../components/atoms/circle-color';
-import { GridIcon } from '../../components/organisms/page-sebrae/grid-icon';
-import { DeviceScreen } from '../../components/organisms/page-sebrae/device-screen';
+import { GridIcon } from '../../components/templates/sebrae-template/grid-icon';
+import { DeviceScreen } from '../../components/templates/sebrae-template/device-screen';
 import { Footer } from '../../components/organisms/footer';
 import { IconsLint } from './svg/icons';
 import { Astronaut } from './svg/astronaut';

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Footer } from "../../components/organisms/footer";
-import { BallMain } from "../../components/organisms/page-betting/ball-main";
-import { ContentIframe } from "../../components/organisms/page-sebrae/content-iframe/intex";
+import { BallMain } from "../../components/templates/bet-template/ball-main";
+import { ContentIframe } from "../../components/templates/sebrae-template/content-iframe/intex";
 import screenMobile from "../../assets/img/screen-mobile-vaidebet.webp";
 import screenDesk from "../../assets/img/screen-desk-vaidebet.webp";
 import screenWide from "../../assets/img/screen-wide-vaidebet.webp";
