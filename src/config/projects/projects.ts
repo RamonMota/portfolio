@@ -12,13 +12,13 @@ export type ProjectItem = {
 };
 
 export const projects: ProjectItem[] = [
-  {
-    name: 'Webkit UI Corporativo',
-    link: PathsPages.WEBKIT_UI,
-    image: webkit_UI,
-    isLocked: true,
-    tags: ['Front']
-  },
+  // {
+  //   name: 'Webkit UI Corporativo',
+  //   link: PathsPages.WEBKIT_UI,
+  //   image: webkit_UI,
+  //   isLocked: true,
+  //   tags: ['Front']
+  // },
   {
     name: 'Betting Sport Template',
     link: PathsPages.SPORT_BETTING_PLATAFORM,
