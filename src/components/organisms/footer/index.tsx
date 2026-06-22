@@ -15,7 +15,6 @@ export const Footer = (props: { isHome?: boolean | false }) => {
             {props.isHome &&
                 <a className='btn-principal mx-auto d-flex mt-md'
                     href="mailto:ramonmotha@gmail.com"
-                    target="_blank"
                 >{languegeRender.footer.button}</a>
             }
         </div>

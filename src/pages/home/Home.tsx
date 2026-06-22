@@ -35,14 +35,19 @@ export const Home = () => {
         //     localStorage.setItem("WELCOME", JSON.stringify({ timestamp: now }));
         // }
 
-        setTimeout(() => {
+        let cardsTimeout: ReturnType<typeof setTimeout> | undefined;
+        const homeTimeout = setTimeout(() => {
             setRenderHome(true);
-            setTimeout(() => {
+            cardsTimeout = setTimeout(() => {
                 setRenderCards(true);
             }, interval / 3);
         }, interval / 2);
 
-    }, [actualRoute]);
+        return () => {
+            clearTimeout(homeTimeout);
+            if (cardsTimeout) clearTimeout(cardsTimeout);
+        };
+    }, [actualRoute, interval]);
 
     return (
         <>

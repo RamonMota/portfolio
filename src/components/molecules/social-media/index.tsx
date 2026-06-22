@@ -25,8 +25,12 @@ export const SocialMedia = () => {
         <a key={i}
           className={`icon-social ${social.icon}`}
           aria-label='ícone social'
-          target='blank'
-          href={social.link} />
+          target='_blank'
+          rel="noreferrer"
+          href={social.link}
+        >
+          <span className="sr-only">Abrir rede social</span>
+        </a>
       ))}
     </Fragment>
   )

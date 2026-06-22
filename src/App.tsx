@@ -4,7 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import "./tailwind.generated.css";
 import "./App.scss";
 import './assets/img/iconmoon/style.css'
-import { CustomCursor } from "./components/atoms/custom-mouse";
 import { RouteProvider } from "./context/RouteContext";
 import { LanguageProvider } from "./context/LanguageContext";
 
@@ -15,7 +14,6 @@ function App() {
       <BrowserRouter>
         <RouteProvider>
           <main>
-            {/*<CustomCursor />*/}
             <Routers />
           </main>
         </RouteProvider>

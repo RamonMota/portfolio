@@ -14,25 +14,30 @@ export const ContentPage = (props: { children?: any | null }) => {
 
   // FloatMenu
   useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout> | undefined;
+
     if (pathsListCases) {
-      setTimeout(() => {
+      timeout = setTimeout(() => {
         setIsOpenFloatMenu(true)
       }, interval)
     } else {
       setIsOpenFloatMenu(false)
     }
-  }, [actualRoute])
+
+    return () => {
+      if (timeout) clearTimeout(timeout);
+    };
+  }, [pathsListCases, interval])
 
   // OpenContent
   useEffect(() => {
-    if (isOpenContent) {
-      setIsOpenContent(false)
-    }
-    setTimeout(() => {
+    setIsOpenContent(false)
+    const timeout = setTimeout(() => {
       setIsOpenContent(true)
     }, interval / 2)
 
-  }, [actualRoute])
+    return () => clearTimeout(timeout);
+  }, [actualRoute, interval])
 
   return (
     <Fragment>

@@ -3,7 +3,7 @@ import { useRoute } from "../context/RouteContext";
 
 export const useHandleChangePage = () => {
     const history = useHistory();
-    const { actualRoute, setRoute, interval } = useRoute();
+    const { setRoute, interval } = useRoute();
 
     const handleChangePage = (router: string) => {
         setRoute(router);

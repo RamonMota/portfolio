@@ -6,7 +6,6 @@ import { DeviceScreen } from '../../components/templates/sebrae-template/device-
 import { Footer } from '../../components/organisms/footer';
 import { IconsLint } from './svg/icons';
 import { Astronaut } from './svg/astronaut';
-import { useEffect, useState } from 'react';
 import { ScrollTopContent } from '../../components/atoms/scroll-top-content';
 import './index.scss'
 import pt from '../../config/locales/pt.json'
@@ -18,29 +17,9 @@ export const Sebrae = () => {
 
   const { language } = useLanguageContext();
   const languegeRender = language === 'en' ? en : pt;
-  const [padding, setPadding] = useState(68);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight / 2;
-      let newPadding = 68 * (1 - Math.min(scrollY / windowHeight, 1));
-
-      setPadding(newPadding);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div className='content-page-sebrae'>
-
-
-
       <div className="content-top">
         <ScrollTopContent className="center-content">
           <div className="content-text" >
@@ -56,8 +35,6 @@ export const Sebrae = () => {
           </div>
         </ScrollTopContent>
       </div>
-
-
 
       <div className='content-page-sebrae-padding'>
         <div className='content-title'>
