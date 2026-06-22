@@ -20,7 +20,6 @@
     "build": "react-scripts build",
     "tailwind:build": "tailwindcss -i ./src/tailwind.css -o ./src/tailwind.generated.css --minify",
     "tailwind:watch": "tailwindcss -i ./src/tailwind.css -o ./src/tailwind.generated.css --watch",
-    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -48,7 +47,6 @@
     "@types/react-dom": "18.0.5",
     "@types/react-router-dom": "5.3.3",
     "concurrently": "^10.0.3",
-    "gh-pages": "^6.1.1",
     "tailwindcss": "^4.3.1"
   }
 }
