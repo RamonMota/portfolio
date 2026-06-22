@@ -1,6 +1,5 @@
 import bannerSebrae from '../../assets/img/banner-sebrae.png';
 import bannerVaidebet from '../../assets/img/banner-vaidebet.png';
-import webkit_UI from '../../assets/img/webkit_UI.png';
 import { PathsPages } from '../paths/path';
 
 export type ProjectItem = {
