@@ -35,14 +35,19 @@ export const Home = () => {
         //     localStorage.setItem("WELCOME", JSON.stringify({ timestamp: now }));
         // }
 
-        setTimeout(() => {
+        let cardsTimeout: ReturnType<typeof setTimeout> | undefined;
+        const homeTimeout = setTimeout(() => {
             setRenderHome(true);
-            setTimeout(() => {
+            cardsTimeout = setTimeout(() => {
                 setRenderCards(true);
             }, interval / 3);
         }, interval / 2);
 
-    }, [actualRoute]);
+        return () => {
+            clearTimeout(homeTimeout);
+            if (cardsTimeout) clearTimeout(cardsTimeout);
+        };
+    }, [actualRoute, interval]);
 
     return (
         <>
@@ -66,7 +71,7 @@ export const Home = () => {
                     </div>
                 </div>
                 <div className={`${renderCards ? '' : 'hidden-cards'} d-flex flex-column gap-sm`}>
-                    <p className='title-project'>{languegeRender.home.labelProject}</p>
+                    <p className='max-w-[1024px] text-sm text-white/30 m-auto w-full'>{languegeRender.home.labelProject}</p>
                     <ProjectMosaic projects={projects} onProjectSelect={() => setRenderHome(false)} />
                 </div>
                 <Footer isHome={true} />

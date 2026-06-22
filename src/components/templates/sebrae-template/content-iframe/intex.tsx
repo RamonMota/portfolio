@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Eye } from "lucide-react";
 import { useLanguageContext } from "../../../../context/LanguageContext";
 import pt from '../../../../config/locales/pt.json'
 import en from '../../../../config/locales/en.json'
@@ -26,7 +27,7 @@ export const ContentIframe = (props: { src: string; img?: string }) => {
             ${index ? "z-under" : ""}
             `}
       >
-        <i className="icon-visibility" />
+        <Eye size={40} strokeWidth={1.8} />
         <p>{languegeRender.figmaBox}</p>
       </div>
       {isHiddend ? (

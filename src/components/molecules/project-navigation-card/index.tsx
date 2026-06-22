@@ -39,7 +39,7 @@ export const ProjectNavigationCard = ({
             ))}
           </div>
         )}
-        <span className="text-lg font-semibold text-white">
+        <span className="text-lg font-semibold leading-8.25 text-white">
           {name}
         </span>
       </div>

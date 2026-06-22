@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './tag.scss'
 
 interface ITag {
@@ -7,6 +5,6 @@ interface ITag {
 }
 export const Tag = (props: ITag) => {
   return (
-    <a className='container-tag'>{props.name}</a>
+    <span className='container-tag'>{props.name}</span>
   )
 }

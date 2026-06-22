@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import './index.scss'
 
 export const BallMain = () => {

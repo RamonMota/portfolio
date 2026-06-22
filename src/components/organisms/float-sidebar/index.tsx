@@ -23,7 +23,7 @@ export const FloatSidebar = (props: {
       </button>
       <i className="vertical-line" />
       <SocialMedia />
-      <a className="btn-principal" href="mailto:ramonmotha@gmail.com" target="_blank" >
+      <a className="btn-principal" href="mailto:ramonmotha@gmail.com">
         {languegeRender.footer.button}
       </a>
     </div>

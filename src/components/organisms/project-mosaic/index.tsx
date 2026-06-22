@@ -41,7 +41,7 @@ export const ProjectMosaic = ({
     {projects.map((project, index) => (
       <ProjectNavigationCard
         key={project.link}
-        className={`h-[260px] ${getMosaicClassName(index)}`}
+        className={`h-[280px] ${getMosaicClassName(index)}`}
         onSelect={onProjectSelect}
         {...project}
       />

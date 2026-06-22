@@ -45,7 +45,7 @@
       display: flex;
       justify-content: center;
       flex-direction: column-reverse;
-      align-items: start;
+      align-items: flex-start;
       padding: 1rem;
       gap: 5vw;
       position: absolute;
@@ -187,7 +187,7 @@
         grid-template-rows: repeat(2, 1fr);
         gap: 2rem;
 
-        a {
+        > * {
           &:nth-child(1) {
             grid-area: 1 / 1 / 2 / 2;
           }
@@ -242,7 +242,7 @@
         display: flex;
         flex-direction: column;
         padding: 1.5rem;
-        align-items: start;
+        align-items: flex-start;
         justify-content: space-between;
         gap: 1rem;
 

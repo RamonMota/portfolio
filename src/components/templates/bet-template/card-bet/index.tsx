@@ -13,11 +13,18 @@ export const CardBet = () => {
   
 
   useEffect(() => {
-    if (secondOddChange > 0) {
-      setTimeout(() => {
-        setSecondOddChange(0);
-      }, 1000);
+    if (secondOddChange <= 0) {
+      return;
     }
+
+    const timeout = setTimeout(() => {
+      setSecondOddChange(0);
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  }, [secondOddChange]);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       const handleNumber = Math.floor(Math.random() * 3) + 1;
       setSecondOddChange(handleNumber);
@@ -28,26 +35,33 @@ export const CardBet = () => {
 
   useEffect(() => {
     if (secondOddChange === 1) {
-      setSecondOdd(secondOdd + 0.13);
+      setSecondOdd((currentOdd) => currentOdd + 0.13);
     } else if (secondOddChange === 2) {
-      setSecondOdd(secondOdd - 0.11);
+      setSecondOdd((currentOdd) => currentOdd - 0.11);
     }
   }, [secondOddChange]);
 
   useEffect(() => {
     if (thirdOddChange === 1) {
-      setThirdOdd(thirdOdd + 0.13);
+      setThirdOdd((currentOdd) => currentOdd + 0.13);
     } else if (thirdOddChange === 2) {
-      setThirdOdd(thirdOdd - 0.15);
+      setThirdOdd((currentOdd) => currentOdd - 0.15);
     }
   }, [thirdOddChange]);
 
   useEffect(() => {
-    if (thirdOddChange > 0) {
-      setTimeout(() => {
-        setThirdOddChange(0);
-      }, 500);
+    if (thirdOddChange <= 0) {
+      return;
     }
+
+    const timeout = setTimeout(() => {
+      setThirdOddChange(0);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, [thirdOddChange]);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       const handleNumber = Math.floor(Math.random() * 3) + 1;
       setThirdOddChange(handleNumber);
@@ -189,11 +203,18 @@ export const CardBetClone = () => {
   const [thirdOdd, setThirdOdd] = useState(3.46);
 
   useEffect(() => {
-    if (secondOddChange > 0) {
-      setTimeout(() => {
-        setSecondOddChange(0);
-      }, 1600);
+    if (secondOddChange <= 0) {
+      return;
     }
+
+    const timeout = setTimeout(() => {
+      setSecondOddChange(0);
+    }, 1600);
+
+    return () => clearTimeout(timeout);
+  }, [secondOddChange]);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       const handleNumber = Math.floor(Math.random() * 3) + 1;
       setSecondOddChange(handleNumber);
@@ -204,26 +225,33 @@ export const CardBetClone = () => {
 
   useEffect(() => {
     if (secondOddChange === 1) {
-      setSecondOdd(secondOdd + 0.13);
+      setSecondOdd((currentOdd) => currentOdd + 0.13);
     } else if (secondOddChange === 2) {
-      setSecondOdd(secondOdd - 0.11);
+      setSecondOdd((currentOdd) => currentOdd - 0.11);
     }
   }, [secondOddChange]);
 
   useEffect(() => {
     if (thirdOddChange === 1) {
-      setThirdOdd(thirdOdd + 0.13);
+      setThirdOdd((currentOdd) => currentOdd + 0.13);
     } else if (thirdOddChange === 2) {
-      setThirdOdd(thirdOdd - 0.15);
+      setThirdOdd((currentOdd) => currentOdd - 0.15);
     }
   }, [thirdOddChange]);
 
   useEffect(() => {
-    if (thirdOddChange > 0) {
-      setTimeout(() => {
-        setThirdOddChange(0);
-      }, 500);
+    if (thirdOddChange <= 0) {
+      return;
     }
+
+    const timeout = setTimeout(() => {
+      setThirdOddChange(0);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, [thirdOddChange]);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       const handleNumber = Math.floor(Math.random() * 3) + 1;
       setThirdOddChange(handleNumber);

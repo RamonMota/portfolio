@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import './index.scss'
 import calendar from './icons/calendar.svg'
 import cart from './icons/cart.svg'
@@ -22,7 +22,7 @@ import user from './icons/user.svg'
 
 export const GridIcon = () => {
 
-    const icons = [calendar, cart, certify, contact, document, email, home, inscription, location, menu, multimedia, notify, search, sign_out, ticket, time, trash, close, user]
+    const icons = useMemo(() => [calendar, cart, certify, contact, document, email, home, inscription, location, menu, multimedia, notify, search, sign_out, ticket, time, trash, close, user], [])
     const [currentIcon, setCurrentIcon] = useState(icons[0]);
 
     useEffect(() => {
@@ -32,7 +32,7 @@ export const GridIcon = () => {
             setCurrentIcon(newIcon);
         }, 300);
         return () => clearInterval(intervalId);
-    }, [])
+    }, [icons])
 
     return (
         <div className='content-grid-icon'>

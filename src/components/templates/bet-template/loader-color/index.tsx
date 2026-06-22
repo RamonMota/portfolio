@@ -7,25 +7,29 @@ export const LoadingColor = (props: {
   timer: number;
 }) => {
   const [strock, setStrock] = useState(0);
+  const { color, startTime, timer } = props;
 
   useEffect(() => {
-    if (props.startTime) {
+    if (startTime) {
       const interval = setInterval(() => {
-        if (strock < 560) {
-          setStrock(strock + 1);
-        } else {
+        setStrock((currentStrock) => {
+          if (currentStrock < 560) {
+            return currentStrock + 1;
+          }
+
           clearInterval(interval);
-        }
-      }, props.timer);
+          return currentStrock;
+        });
+      }, timer);
       return () => clearInterval(interval);
     } else {
       setStrock(0);
     }
-  }, [strock, props.startTime]);
+  }, [startTime, timer]);
 
   return (
     <div className="content-circle-change-color">
-      {props.startTime && (
+      {startTime && (
         <svg
           className="animated-line"
           viewBox="0 0 200 200"
@@ -35,7 +39,7 @@ export const LoadingColor = (props: {
           <path
             d="M 100 100 m 0 -90 a 90 90 0 1 1 0 180 a 90 90 0 0 1 0 -180"
             strokeLinecap="round"
-            stroke={props.color}
+            stroke={color}
           ></path>
         </svg>
       )}
@@ -45,7 +49,7 @@ export const LoadingColor = (props: {
         viewBox="0 0 55 55"
         fill="none"
       >
-        <circle cx="27.5" cy="27.5" r="27.5" fill={props.color} />
+        <circle cx="27.5" cy="27.5" r="27.5" fill={color} />
       </svg>
     </div>
   );

@@ -15,14 +15,15 @@
         transform: translatey(8rem);
     }
 
-
     @media (min-width:600px) {
-        max-width: 1024px;
+        max-width: 1440px;
         margin: auto;
     }
 
     .content-top {
+        margin: auto;
         width: 100%;
+        max-width: 1024px;
     }
 
     .content-float-main {
