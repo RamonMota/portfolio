@@ -5,6 +5,7 @@ import { Sebrae } from "./pages/sebrae";
 import { ContentPage } from "./components/organisms/content-page";
 import { BetTemplate } from "./pages/bet-template";
 import { Home } from "./pages/home/Home";
+import { WebkitUi } from "./pages/webkit-ui";
 
 export const Routers = () => {
     const location = useLocation();
@@ -31,6 +32,11 @@ export const Routers = () => {
             <Route path={PathsPages.SPORT_BETTING_PLATAFORM}>
                 <ContentPage>
                     <BetTemplate />
+                </ContentPage>
+            </Route>
+            <Route path={PathsPages.WEBKIT_UI}>
+                <ContentPage>
+                    <WebkitUi />
                 </ContentPage>
             </Route>
         </HashRouter>
