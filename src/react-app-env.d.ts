@@ -1,5 +1,8 @@
 /// <reference types="react-scripts" />
 
+declare module "*.css";
+declare module "*.scss";
+
 interface Window {
   gtag?: (
     command: "event",
