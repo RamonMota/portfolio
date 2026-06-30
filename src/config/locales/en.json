@@ -53,5 +53,48 @@
         "colorAttention": "Attention",
         "sectionTitleIcon": "Vector Iconography Development",
         "sectionSubtitleIcon": "Incorporate illustrations to enhance user communication, employing SVG format for web optimization without compromising performance. Notably, all icons showcased on this project have been personally designed, adding a distinct touch to the creative work presented."
+    },
+    "webkitUi": {
+        "title": "WebKit UI",
+        "subtitle": "A corporate Design System built to scale interface development across multiple products, connecting design tokens, reusable components, technical documentation, and delivery automation within a decoupled architecture.",
+        "heroImageAlt": "Dashboard built with WebKit UI components",
+        "introTitle": "Technical leadership in the creation, documentation, and evolution of a Design System adopted by different teams and products, with a focus on visual consistency, code quality, and delivery speed.",
+        "introSubtitle": "Accelerating interface development through visual standardization, code reuse, and technical governance.",
+        "metrics": [
+            {
+                "value": "50+",
+                "title": "Documented components",
+                "description": "Versioned and documented components for use in React and Next.js applications"
+            },
+            {
+                "value": "3+",
+                "title": "Consumer products",
+                "description": "Projects configured to consume components on demand, with terminal-based installation and source code versioned within each repository"
+            },
+            {
+                "value": "5",
+                "title": "Automated steps",
+                "description": "Unit tests, lint validation, application build, Storybook build, and component registry build validated through the CI/CD pipeline"
+            }
+        ],
+        "modularInterfacesTitle": "Modular and standardized interfaces",
+        "modularInterfacesDescription": "Reusable components that reduce rework, improve visual consistency, and allow products to focus more on business rules and user experience.",
+        "interfaceImageAlt": "Screen showing WebKit UI in action",
+        "terminalImageAlt": "Terminal installing a WebKit UI component",
+        "componentConsumptionTitle": "Individual consumption via terminal",
+        "componentConsumptionDescription": "Each project installs only the components it needs, keeping the code versioned inside the application itself. This approach reduces coupling, avoids unnecessary dependencies, decreases bundle size, and enables controlled product-level customization.",
+        "architectureTitle": "Decoupled and scalable architecture",
+        "architectureDescription": "Architecture based on the separation between tokens, components, registry, and consumer applications, enabling independent evolution, controlled reuse, and visual standardization across products.",
+        "cicdTitle": "CI/CD pipeline and automated quality",
+        "cicdDescription": "GitHub Actions automation to validate tests, lint, and builds before publication, increasing delivery safety, consistency, and reliability.",
+        "documentationTitle": "Technical documentation and usage governance",
+        "documentationDescription": "Structured usage guides, implementation standards, maintenance criteria, and best practices to support adoption, review, and evolution of components across different products.",
+        "pipelineActions": [
+            "Unit tests",
+            "Application build",
+            "Storybook build",
+            "Component registry build",
+            "Lint validation"
+        ]
     }
 }
