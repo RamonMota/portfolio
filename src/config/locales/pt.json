@@ -53,5 +53,50 @@
         "colorAttention": "Destaque",
         "sectionTitleIcon": "Iconografia Vetorial",
         "sectionSubtitleIcon": "Ilustrações personalizadas em SVG para otimização web. Todos os ícones foram desenhados manualmente, diferenciando a experiência visual."
+    },
+    "webkitUi": {
+        "title": "WebKit UI",
+        "subtitle": "Design System baseado em componentes individuais no estilo shadcn, baixados via terminal para acelerar produtos, padronizar interfaces e conectar design e código.",
+        "heroImageAlt": "Dashboard construído com componentes do WebKit UI",
+        "introTitle": "Liderança técnica na criação, documentação e evolução de Design System adotado por squads diferentes, com foco em consistência, qualidade e velocidade de entrega.",
+        "introSubtitle": "entregando performance no desenvolvimento, consistência e padronização",
+        "metrics": [
+            {
+                "value": "50+",
+                "title": "Componentes documentados",
+                "description": "Componentes documentados e versionados para uso em produtos React e Next.js"
+            },
+            {
+                "value": "3+",
+                "title": "Projetos consumindo a lib",
+                "description": "Repositórios configurados via automação IA para consumir os componentes do WebKit UI"
+            },
+            {
+                "value": "100%",
+                "title": "Pipeline de build e publicação",
+                "description": "Automação de testes unitários para garantir qualidade e consistência na publicação de pacotes"
+            }
+        ],
+        "modularInterfacesTitle": "Interfaces modulares e padronizadas",
+        "modularInterfacesDescription": "direcionando o foco para a regra de negócio e a experiência do usuário, com consistência e padronização de interfaces",
+        "interfaceImageAlt": "Tela mostrando o WebKit UI em ação",
+        "terminalImageAlt": "Terminal instalando componente do WebKit UI",
+        "componentConsumptionTitle": "Consumo individual de Componentes",
+        "componentConsumptionDescription": "Cada squad instala apenas o componente que precisa, versiona o código no próprio projeto e evita carregar uma biblioteca inteira. Menos dependências, bundle menor e mais performance para o usuário.",
+        "architectureTitle": "Governança entre design e código",
+        "architectureDescription": "Pipeline de Design Tokens integrado ao Supernova, aos repositórios de tokens e ao WebKit UI para sincronizar decisões de design com os produtos consumidores.",
+        "cicdTitle": "CI/CD para validar, buildar e publicar pacotes",
+        "cicdDescription": "Pipeline de Design Tokens integrado ao Supernova, aos repositórios de tokens e ao WebKit UI.",
+        "documentationTitle": "Documentação técnica orientada por IA",
+        "documentationDescription": "Estruturei guias, padrões e critérios de uso com apoio de SKILL.md, usando IA como acelerador de escrita e revisão sem abrir mão da curadoria técnica, consistência e manutenção esperadas de um design system em escala.",
+        "pipelineActions": [
+            "Testes unitários",
+            "Build da aplicação",
+            "Build do Storybook",
+            "Build do registry de componentes",
+            "Análise de lint"
+        ],
+        "pipelineCompletedLabel": "concluído com sucesso: ",
+        "pipelineRunningLabel": "em execução: "
     }
 }

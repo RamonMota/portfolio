@@ -53,5 +53,50 @@
         "colorAttention": "Attention",
         "sectionTitleIcon": "Vector Iconography Development",
         "sectionSubtitleIcon": "Incorporate illustrations to enhance user communication, employing SVG format for web optimization without compromising performance. Notably, all icons showcased on this project have been personally designed, adding a distinct touch to the creative work presented."
+    },
+    "webkitUi": {
+        "title": "WebKit UI",
+        "subtitle": "A design system based on individual shadcn-style components, downloaded through the terminal to accelerate products, standardize interfaces, and connect design with code.",
+        "heroImageAlt": "Dashboard built with WebKit UI components",
+        "introTitle": "Technical leadership in the creation, documentation, and evolution of a design system adopted by multiple squads, focused on consistency, quality, and delivery speed.",
+        "introSubtitle": "improving development performance, consistency, and standardization",
+        "metrics": [
+            {
+                "value": "50+",
+                "title": "Documented components",
+                "description": "Documented and versioned components for React and Next.js products"
+            },
+            {
+                "value": "3+",
+                "title": "Projects consuming the library",
+                "description": "Repositories configured through AI automation to consume WebKit UI components"
+            },
+            {
+                "value": "100%",
+                "title": "Build and publishing pipeline",
+                "description": "Automated unit tests to ensure quality and consistency when publishing packages"
+            }
+        ],
+        "modularInterfacesTitle": "Modular and standardized interfaces",
+        "modularInterfacesDescription": "shifting focus back to business rules and user experience, with consistency and interface standardization",
+        "interfaceImageAlt": "Screen showing WebKit UI in action",
+        "terminalImageAlt": "Terminal installing a WebKit UI component",
+        "componentConsumptionTitle": "Individual component consumption",
+        "componentConsumptionDescription": "Each squad installs only the component it needs, versions the code inside its own project, and avoids shipping an entire library. Fewer dependencies, a smaller bundle, and better performance for users.",
+        "architectureTitle": "Governance between design and code",
+        "architectureDescription": "Design Tokens pipeline integrated with Supernova, token repositories, and WebKit UI to synchronize design decisions with consuming products.",
+        "cicdTitle": "CI/CD to validate, build, and publish packages",
+        "cicdDescription": "Design Tokens pipeline integrated with Supernova, token repositories, and WebKit UI.",
+        "documentationTitle": "AI-guided technical documentation",
+        "documentationDescription": "I structured guides, standards, and usage criteria with support from SKILL.md, using AI to accelerate writing and review while preserving the technical curation, consistency, and maintainability expected from a design system at scale.",
+        "pipelineActions": [
+            "Unit tests",
+            "Build application",
+            "Build Storybook",
+            "Build component registry",
+            "Lint analysis"
+        ],
+        "pipelineCompletedLabel": "completed successfully: ",
+        "pipelineRunningLabel": "currently running: "
     }
 }
