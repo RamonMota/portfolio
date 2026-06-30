@@ -56,47 +56,45 @@
     },
     "webkitUi": {
         "title": "WebKit UI",
-        "subtitle": "Design System baseado em componentes individuais no estilo shadcn, baixados via terminal para acelerar produtos, padronizar interfaces e conectar design e código.",
+        "subtitle": "Design System corporativo criado para escalar a construção de interfaces em múltiplos produtos, conectando design tokens, componentes reutilizáveis, documentação técnica e automação de entrega em uma arquitetura desacoplada.",
         "heroImageAlt": "Dashboard construído com componentes do WebKit UI",
-        "introTitle": "Liderança técnica na criação, documentação e evolução de Design System adotado por squads diferentes, com foco em consistência, qualidade e velocidade de entrega.",
-        "introSubtitle": "entregando performance no desenvolvimento, consistência e padronização",
+        "introTitle": "Liderança técnica na criação, documentação e evolução de um Design System adotado por diferentes times e produtos, com foco em consistência visual, qualidade de código e velocidade de entrega.",
+        "introSubtitle": "Acelerando o desenvolvimento de interfaces com padronização visual, reutilização de código e governança técnica.",
         "metrics": [
             {
                 "value": "50+",
                 "title": "Componentes documentados",
-                "description": "Componentes documentados e versionados para uso em produtos React e Next.js"
+                "description": "Componentes versionados e documentados para uso em aplicações React e Next.js"
             },
             {
                 "value": "3+",
-                "title": "Projetos consumindo a lib",
-                "description": "Repositórios configurados via automação IA para consumir os componentes do WebKit UI"
+                "title": "Produtos consumidores",
+                "description": "Projetos configurados para consumir componentes sob demanda, com instalação via terminal e código versionado no próprio repositório"
             },
             {
-                "value": "100%",
-                "title": "Pipeline de build e publicação",
-                "description": "Automação de testes unitários para garantir qualidade e consistência na publicação de pacotes"
+                "value": "5",
+                "title": "Etapas automatizadas",
+                "description": "Testes unitários, lint, build da aplicação, Storybook e registry validados no pipeline de CI/CD"
             }
         ],
         "modularInterfacesTitle": "Interfaces modulares e padronizadas",
-        "modularInterfacesDescription": "direcionando o foco para a regra de negócio e a experiência do usuário, com consistência e padronização de interfaces",
+        "modularInterfacesDescription": "Componentes reutilizáveis que reduzem retrabalho, aumentam a consistência visual e permitem que os produtos foquem mais na regra de negócio e na experiência do usuário.",
         "interfaceImageAlt": "Tela mostrando o WebKit UI em ação",
         "terminalImageAlt": "Terminal instalando componente do WebKit UI",
-        "componentConsumptionTitle": "Consumo individual de Componentes",
-        "componentConsumptionDescription": "Cada squad instala apenas o componente que precisa, versiona o código no próprio projeto e evita carregar uma biblioteca inteira. Menos dependências, bundle menor e mais performance para o usuário.",
-        "architectureTitle": "Governança entre design e código",
-        "architectureDescription": "Pipeline de Design Tokens integrado ao Supernova, aos repositórios de tokens e ao WebKit UI para sincronizar decisões de design com os produtos consumidores.",
-        "cicdTitle": "CI/CD para validar, buildar e publicar pacotes",
-        "cicdDescription": "Pipeline de Design Tokens integrado ao Supernova, aos repositórios de tokens e ao WebKit UI.",
-        "documentationTitle": "Documentação técnica orientada por IA",
-        "documentationDescription": "Estruturei guias, padrões e critérios de uso com apoio de SKILL.md, usando IA como acelerador de escrita e revisão sem abrir mão da curadoria técnica, consistência e manutenção esperadas de um design system em escala.",
+        "componentConsumptionTitle": "Consumo individual via terminal",
+        "componentConsumptionDescription": "Cada projeto instala apenas os componentes necessários, mantendo o código versionado dentro do próprio app. Essa abordagem reduz acoplamento, evita dependências desnecessárias, diminui o bundle e facilita customizações controladas por produto.",
+        "architectureTitle": "Arquitetura Desacoplada e Escalável",
+        "architectureDescription": "Arquitetura baseada na separação entre tokens, componentes, registry e aplicações consumidoras, permitindo evolução independente, reutilização controlada e padronização visual entre produtos.",
+        "cicdTitle": "Pipeline de CI/CD e Qualidade Automatizada",
+        "cicdDescription": "Automação no GitHub Actions para validar testes, lint e builds antes da publicação, aumentando a segurança, a consistência e a confiabilidade das entregas.",
+        "documentationTitle": "Documentação técnica e governança de uso",
+        "documentationDescription": "Estruturei guias de uso, padrões de implementação, critérios de manutenção e boas práticas para facilitar adoção, revisão e evolução dos componentes em diferentes produtos.",
         "pipelineActions": [
             "Testes unitários",
             "Build da aplicação",
             "Build do Storybook",
             "Build do registry de componentes",
-            "Análise de lint"
-        ],
-        "pipelineCompletedLabel": "concluído com sucesso: ",
-        "pipelineRunningLabel": "em execução: "
+            "Validação de lint"
+        ]
     }
 }

@@ -56,47 +56,45 @@
     },
     "webkitUi": {
         "title": "WebKit UI",
-        "subtitle": "A design system based on individual shadcn-style components, downloaded through the terminal to accelerate products, standardize interfaces, and connect design with code.",
+        "subtitle": "A corporate Design System built to scale interface development across multiple products, connecting design tokens, reusable components, technical documentation, and delivery automation within a decoupled architecture.",
         "heroImageAlt": "Dashboard built with WebKit UI components",
-        "introTitle": "Technical leadership in the creation, documentation, and evolution of a design system adopted by multiple squads, focused on consistency, quality, and delivery speed.",
-        "introSubtitle": "improving development performance, consistency, and standardization",
+        "introTitle": "Technical leadership in the creation, documentation, and evolution of a Design System adopted by different teams and products, with a focus on visual consistency, code quality, and delivery speed.",
+        "introSubtitle": "Accelerating interface development through visual standardization, code reuse, and technical governance.",
         "metrics": [
             {
                 "value": "50+",
                 "title": "Documented components",
-                "description": "Documented and versioned components for React and Next.js products"
+                "description": "Versioned and documented components for use in React and Next.js applications"
             },
             {
                 "value": "3+",
-                "title": "Projects consuming the library",
-                "description": "Repositories configured through AI automation to consume WebKit UI components"
+                "title": "Consumer products",
+                "description": "Projects configured to consume components on demand, with terminal-based installation and source code versioned within each repository"
             },
             {
-                "value": "100%",
-                "title": "Build and publishing pipeline",
-                "description": "Automated unit tests to ensure quality and consistency when publishing packages"
+                "value": "5",
+                "title": "Automated steps",
+                "description": "Unit tests, lint validation, application build, Storybook build, and component registry build validated through the CI/CD pipeline"
             }
         ],
         "modularInterfacesTitle": "Modular and standardized interfaces",
-        "modularInterfacesDescription": "shifting focus back to business rules and user experience, with consistency and interface standardization",
+        "modularInterfacesDescription": "Reusable components that reduce rework, improve visual consistency, and allow products to focus more on business rules and user experience.",
         "interfaceImageAlt": "Screen showing WebKit UI in action",
         "terminalImageAlt": "Terminal installing a WebKit UI component",
-        "componentConsumptionTitle": "Individual component consumption",
-        "componentConsumptionDescription": "Each squad installs only the component it needs, versions the code inside its own project, and avoids shipping an entire library. Fewer dependencies, a smaller bundle, and better performance for users.",
-        "architectureTitle": "Governance between design and code",
-        "architectureDescription": "Design Tokens pipeline integrated with Supernova, token repositories, and WebKit UI to synchronize design decisions with consuming products.",
-        "cicdTitle": "CI/CD to validate, build, and publish packages",
-        "cicdDescription": "Design Tokens pipeline integrated with Supernova, token repositories, and WebKit UI.",
-        "documentationTitle": "AI-guided technical documentation",
-        "documentationDescription": "I structured guides, standards, and usage criteria with support from SKILL.md, using AI to accelerate writing and review while preserving the technical curation, consistency, and maintainability expected from a design system at scale.",
+        "componentConsumptionTitle": "Individual consumption via terminal",
+        "componentConsumptionDescription": "Each project installs only the components it needs, keeping the code versioned inside the application itself. This approach reduces coupling, avoids unnecessary dependencies, decreases bundle size, and enables controlled product-level customization.",
+        "architectureTitle": "Decoupled and scalable architecture",
+        "architectureDescription": "Architecture based on the separation between tokens, components, registry, and consumer applications, enabling independent evolution, controlled reuse, and visual standardization across products.",
+        "cicdTitle": "CI/CD pipeline and automated quality",
+        "cicdDescription": "GitHub Actions automation to validate tests, lint, and builds before publication, increasing delivery safety, consistency, and reliability.",
+        "documentationTitle": "Technical documentation and usage governance",
+        "documentationDescription": "Structured usage guides, implementation standards, maintenance criteria, and best practices to support adoption, review, and evolution of components across different products.",
         "pipelineActions": [
             "Unit tests",
-            "Build application",
-            "Build Storybook",
-            "Build component registry",
-            "Lint analysis"
-        ],
-        "pipelineCompletedLabel": "completed successfully: ",
-        "pipelineRunningLabel": "currently running: "
+            "Application build",
+            "Storybook build",
+            "Component registry build",
+            "Lint validation"
+        ]
     }
 }

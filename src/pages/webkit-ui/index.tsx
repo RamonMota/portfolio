@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 import { ScrollTopContent } from "../../components/atoms/scroll-top-content";
 import { Footer } from "../../components/organisms/footer";
 import { ProjectNavigation } from "../../components/organisms/project-navigation";
-import interface_fixed from "./img/interface_fixed.png";
-import interface_scale from "./img/interface_scale.png";
+import interface_fixed from "./img/interface_fixed.webp";
+import interface_scale from "./img/interface_scale.webp";
 import storybook_v1 from "./img/storybook_v1.webp";
-import terminal from "./img/terminal.png";
+import terminal from "./img/terminal.webp";
 import { PipelineUi } from "../../components/templates/webkit-ui/pipeline-ui";
 import { ArchitectureSvg } from "../../components/templates/webkit-ui/architecture-svg";
 import pt from "../../config/locales/pt.json";
@@ -147,7 +147,7 @@ export const WebkitUi = () => {
           </div>
 
         </section>
-        <section className="flex flex-col gap-5xl pt-5xl">
+        <section className="flex flex-col gap-5xl">
           <div className="flex flex-col gap-2 m-auto max-w-200">
             <h3 className="text-center text-[35px] font-semibold text-white">
               {content.modularInterfacesTitle}
@@ -176,12 +176,12 @@ export const WebkitUi = () => {
             <img
               src={terminal}
               alt={content.terminalImageAlt}
-              className="w-full"
+              className="w-full mt-[-70px]"
             />
             <h3 className="mt-3 text-3xl font-bold leading-[1.08] text-white">
               {content.componentConsumptionTitle}
             </h3>
-            <p className="mt-4 text-md font-light text-white opacity-70">
+            <p className="text-md font-light text-white opacity-70">
               {content.componentConsumptionDescription}
             </p>
           </article>
@@ -210,7 +210,7 @@ export const WebkitUi = () => {
             </div>
           </article>
         </section>
-        <section className="flex flex-col gap-2 m-auto max-w-200 py-5xl">
+        {/* <section className="flex flex-col gap-2 m-auto max-w-200 py-5xl">
           <h3 className="text-center text-[35px] font-semibold text-white">
             {content.documentationTitle}
           </h3>
@@ -218,6 +218,10 @@ export const WebkitUi = () => {
             {content.documentationDescription}
           </p>
         </section>
+        <div className="flex flex-col">
+          <img src={componentsImg} alt="components" />
+          <span className="h-[100px] "/>
+        </div> */}
         <ProjectNavigation />
         <Footer />
       </main>
