@@ -1,4 +1,4 @@
-import React, { createContext, useContext, ReactNode, useState } from 'react';
+import React, { createContext, useContext, ReactNode, useEffect, useState } from 'react';
 import { useLocation } from 'react-router';
 
 interface RouteContextType {
@@ -15,9 +15,13 @@ interface RouteProviderProps {
 
 export const RouteProvider: React.FC<RouteProviderProps> = ({ children }) => {
   const location = useLocation();
-  const currentPath = location.hash.substring(1);
+  const currentPath = location.pathname;
   const [actualRoute, setRoute] = useState<string>(currentPath);
   const interval = 800
+
+  useEffect(() => {
+    setRoute(currentPath);
+  }, [currentPath]);
 
   return (
     <RouteContext.Provider value={{ actualRoute, setRoute, interval }}>
