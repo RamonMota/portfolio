@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { HashRouter, Route, useLocation } from "react-router-dom";
+import { Route, useLocation } from "react-router-dom";
 import { Paths, PathsPages } from "./config/paths/path";
 import { Sebrae } from "./pages/sebrae";
 import { ContentPage } from "./components/organisms/content-page";
@@ -9,7 +9,7 @@ import { WebkitUi } from "./pages/webkit-ui";
 
 export const Routers = () => {
     const location = useLocation();
-    const currentPath = location.hash.substring(1);
+    const currentPath = location.pathname;
 
     useEffect(() => {
         window.scrollTo({
@@ -22,7 +22,7 @@ export const Routers = () => {
     }, [currentPath]);
 
     return (
-        <HashRouter>
+        <>
             <Route exact path={[Paths.HOME, Paths.HOME_REDIRECT]} component={Home} />
             <Route path={PathsPages.SEBRAE}>
                 <ContentPage>
@@ -39,6 +39,6 @@ export const Routers = () => {
                     <WebkitUi />
                 </ContentPage>
             </Route>
-        </HashRouter>
+        </>
     );
 };
