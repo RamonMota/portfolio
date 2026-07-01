@@ -3,7 +3,10 @@ import { ScrollTopContent } from "../../components/atoms/scroll-top-content";
 import { Footer } from "../../components/organisms/footer";
 import { ProjectNavigation } from "../../components/organisms/project-navigation";
 import interface_fixed from "./img/interface_fixed.webp";
+import interface_fixed_mobile from "./img/interface_fixed_mobile.webp";
 import interface_scale from "./img/interface_scale.webp";
+import interface_scale_mobile from "./img/interface_scale_mobile.webp";
+import storybook_mobile_v1 from "./img/storybook_mobile_v1.webp";
 import storybook_v1 from "./img/storybook_v1.webp";
 import terminal from "./img/terminal.webp";
 import { PipelineUi } from "../../components/templates/webkit-ui/pipeline-ui";
@@ -97,7 +100,7 @@ export const WebkitUi = () => {
 
   return (
     <div className="m-auto max-w-[1440px]">
-      <div className="relative m-auto flex h-[100dvh] w-full max-w-[1440px] items-center justify-center p-4 transition-none">
+      <div className="relative m-auto flex h-dvh w-full max-w-[1440px] items-center justify-center p-4 transition-none">
         <ScrollTopContent className="absolute inset-4 m-auto flex h-auto flex-col-reverse items-start justify-center overflow-hidden rounded-lg bg-[var(--color-gray)] p-4 transition-none min-[960px]:inset-12 min-[960px]:flex-row min-[960px]:items-center min-[960px]:gap-[5vw]">
           <div className="z-[2] flex w-full flex-col justify-center gap-lg pb-4 transition-none min-[960px]:max-w-[calc(50%_-_3rem_-_5vw)] min-[960px]:flex-1 min-[960px]:pb-0">
             <h1 className="whitespace-nowrap text-[min(4.5vmax,60px)] font-extrabold leading-[min(4.7vmax,70px)] text-white max-[520px]:text-[13vw] max-[520px]:leading-[13vw]">
@@ -108,17 +111,20 @@ export const WebkitUi = () => {
             </h2>
           </div>
           <div className="flex h-full w-full items-center md:justify-start justify-center min-[960px]:max-w-[calc(50%_-_3rem_-_5vw)] min-[960px]:flex-1">
-            <img
-              src={storybook_v1}
-              alt={content.heroImageAlt}
-              className="h-auto md:w-[60vw] w-full object-cover m-auto rounded-md"
-            />
+            <picture>
+              <source media="(max-width: 759px)" srcSet={storybook_mobile_v1} />
+              <img
+                src={storybook_v1}
+                alt={content.heroImageAlt}
+                className="h-auto md:w-[60vw] w-full object-cover m-auto rounded-sm max-w-[1150px]"
+              />
+            </picture>
           </div>
         </ScrollTopContent>
       </div>
 
       <main className="flex flex-col gap-10 px-4 pb-24 pt-4">
-        <section className="m-auto flex flex-col items-center gap-sm py-5xl">
+        <section className="m-auto flex flex-col items-center gap-sm md:py-5xl py-lg">
           <div className="flex flex-col gap-2 m-auto max-w-[1000px]">
             <h2 className="text-center text-[22px] font-thin text-white min-[600px]:text-[35px]">
               {content.introTitle}
@@ -157,26 +163,32 @@ export const WebkitUi = () => {
             </p>
           </div>
           <div ref={interfaceContainerRef} className="relative">
-            <img
-              src={interface_fixed}
-              alt={content.interfaceImageAlt}
-              className="w-full rounded-xl"
-            />
-            <img
-              ref={interfaceScaleRef}
-              src={interface_scale}
-              alt={content.interfaceImageAlt}
-              className="absolute top-0 left-0 right-0 w-full origin-top transition-none will-change-transform"
-              style={{ filter: "blur(20px)", opacity: 0.45, transform: "translateY(-100px) scale(1.5)", transition: "none" }}
-            />
+            <picture>
+              <source media="(max-width: 759px)" srcSet={interface_fixed_mobile} />
+              <img
+                src={interface_fixed}
+                alt={content.interfaceImageAlt}
+                className="w-full rounded-xl"
+              />
+            </picture>
+            <picture>
+              <source media="(max-width: 759px)" srcSet={interface_scale_mobile} />
+              <img
+                ref={interfaceScaleRef}
+                src={interface_scale}
+                alt={content.interfaceImageAlt}
+                className="absolute top-0 left-0 right-0 w-full origin-top transition-none will-change-transform"
+                style={{ filter: "blur(20px)", opacity: 0.45, transform: "translateY(-100px) scale(1.5)", transition: "none" }}
+              />
+            </picture>
           </div>
         </section>
         <section className="grid grid-cols-1 gap-md min-[960px]:grid-cols-2 min-[960px]:grid-rows-2">
-          <article className="flex flex-col gap-lg overflow-hidden rounded-md border bg-(--color-gray) p-2xl min-[960px]:row-span-2">
+          <article className="flex flex-col gap-lg overflow-hidden rounded-md bg-(--color-gray) p-2xl min-[960px]:row-span-2">
             <img
               src={terminal}
               alt={content.terminalImageAlt}
-              className="w-full mt-[-70px]"
+              className="w-full lg:-mt-17.5"
             />
             <h3 className="mt-3 text-3xl font-bold leading-[1.08] text-white">
               {content.componentConsumptionTitle}

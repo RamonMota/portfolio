@@ -20,21 +20,7 @@ export const Home = () => {
     const languegeRender = language === 'en' ? en : pt;
     const isBr = language === 'pt';
 
-    // const [isWelcome, setIsWelcome] = useState<boolean>(false)
-    // const now = Date.now();
-    // const hasWelcomeData = localStorage.getItem("WELCOME");
-    // const has24hShownWelcome = (() => {
-    //     if (!hasWelcomeData) return false;
-    //     const { timestamp } = JSON.parse(hasWelcomeData);
-    //     return (now - timestamp) >= 24 * 60 * 60 * 1000;
-    // })();
-
     useEffect(() => {
-        // if ((!hasWelcomeData || has24hShownWelcome) && actualRoute === Paths.HOME) {
-        //     setIsWelcome(true);
-        //     localStorage.setItem("WELCOME", JSON.stringify({ timestamp: now }));
-        // }
-
         let cardsTimeout: ReturnType<typeof setTimeout> | undefined;
         const homeTimeout = setTimeout(() => {
             setRenderHome(true);
@@ -50,32 +36,28 @@ export const Home = () => {
     }, [actualRoute, interval]);
 
     return (
-        <>
-            {/* <Welcome isOpen={isWelcome} setIsOpen={() => setIsWelcome(!isWelcome)} /> */}
-
-            <div className={`${renderHome ? '' : 'hidden-home'} container-home`}>
-                <div className='content-top'>
-                    <div className='content-float-main'>
-                        <HeaderMobile />
-                        <div className='content-text-main'>
-                            <p className='color-principal'>{languegeRender.home.titleFirst.toUpperCase()}</p>
-                            <p className={`color-principal ${isBr ? 'pt-text' : ''}`}>{languegeRender.home.titleSecond.toUpperCase()}</p>
-                            <p>{languegeRender.home.titleThird.toUpperCase()}</p>
-                            <p>{languegeRender.home.titleSince}</p>
-                        </div>
-                        <div className='content-skills'>
-                            <p>{languegeRender.home.knologyFirst.toUpperCase()}</p>
-                            <p>{languegeRender.home.knologySecond.toUpperCase()}</p>
-                            <p>{languegeRender.home.knologyThird.toUpperCase()}</p>
-                        </div>
+        <div className={`${renderHome ? '' : 'hidden-home'} container-home`}>
+            <div className='content-top'>
+                <div className='content-float-main'>
+                    <HeaderMobile />
+                    <div className='content-text-main'>
+                        <p className='color-principal'>{languegeRender.home.titleFirst.toUpperCase()}</p>
+                        <p className={`color-principal ${isBr ? 'pt-text' : ''}`}>{languegeRender.home.titleSecond.toUpperCase()}</p>
+                        <p>{languegeRender.home.titleThird.toUpperCase()}</p>
+                        <p>{languegeRender.home.titleSince}</p>
+                    </div>
+                    <div className='content-skills'>
+                        <p>{languegeRender.home.knologyFirst.toUpperCase()}</p>
+                        <p>{languegeRender.home.knologySecond.toUpperCase()}</p>
+                        <p>{languegeRender.home.knologyThird.toUpperCase()}</p>
                     </div>
                 </div>
-                <div className={`${renderCards ? '' : 'hidden-cards'} d-flex flex-column gap-sm`}>
-                    <p className='max-w-[1024px] text-sm text-white/30 m-auto w-full'>{languegeRender.home.labelProject}</p>
-                    <ProjectMosaic projects={projects} onProjectSelect={() => setRenderHome(false)} />
-                </div>
-                <Footer isHome={true} />
-            </div >
-        </>
+            </div>
+            <div className={`${renderCards ? '' : 'hidden-cards'} d-flex flex-column gap-sm`}>
+                <p className='max-w-[1024px] text-sm text-white/30 m-auto w-full'>{languegeRender.home.labelProject}</p>
+                <ProjectMosaic projects={projects} onProjectSelect={() => setRenderHome(false)} />
+            </div>
+            <Footer isHome={true} />
+        </div >
     )
 }

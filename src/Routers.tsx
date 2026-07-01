@@ -6,6 +6,7 @@ import { ContentPage } from "./components/organisms/content-page";
 import { BetTemplate } from "./pages/bet-template";
 import { Home } from "./pages/home/Home";
 import { WebkitUi } from "./pages/webkit-ui";
+import { Welcome } from "./pages/welcome";
 
 export const Routers = () => {
     const location = useLocation();
@@ -38,6 +39,9 @@ export const Routers = () => {
                 <ContentPage>
                     <WebkitUi />
                 </ContentPage>
+            </Route>
+            <Route path={PathsPages.WELCOME}>
+                <Welcome />
             </Route>
         </>
     );

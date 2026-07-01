@@ -37,7 +37,7 @@ export const ProjectMosaic = ({
   projects: ProjectItem[];
   onProjectSelect?: () => void;
 }) => (
-  <div className="mx-auto grid w-full grid-cols-1 gap-sm lg:grid-cols-12">
+  <div className="mx-auto grid w-full grid-cols-1 md:grid-cols-2 gap-sm lg:grid-cols-12">
     {projects.map((project, index) => (
       <ProjectNavigationCard
         key={project.link}
